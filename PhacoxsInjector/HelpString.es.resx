@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AspectRatio" xml:space="preserve">
+    <value>Relación de aspecto</value>
+  </data>
+  <data name="AspectRatioDescription" xml:space="preserve">
+    <value>Elige la relación de aspecto que prefieras para visualizar el juego tanto en la TV como en el GamePad.</value>
+  </data>
+  <data name="Base" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="BaseChecked" xml:space="preserve">
+    <value>Base admitida</value>
+  </data>
+  <data name="BaseCheckedDescription" xml:space="preserve">
+    <value>La base se cargó correctamente.</value>
+  </data>
+  <data name="BaseDescription" xml:space="preserve">
+    <value>Juego base cargado actualmente.</value>
+  </data>
+  <data name="BaseError" xml:space="preserve">
+    <value>Base error</value>
+  </data>
+  <data name="BaseInvalid" xml:space="preserve">
+    <value>La base no es válida.</value>
+  </data>
+  <data name="CDecryptWarning" xml:space="preserve">
+    <value>¡Advertencia! "resources\cdecrypt\CDecrypt.exe" no encontrado! CDecrypt te permite desempacar (descifrar) los juegos la consola virtual de Wii U para usarlos como base.</value>
+  </data>
+  <data name="ChooseN64ConfigFile" xml:space="preserve">
+    <value>Elegir archivo de configuración</value>
+  </data>
+  <data name="ChooseN64ConfigFileDescription" xml:space="preserve">
+    <value>Selecciona el archivo ".ini" que contiene datos de configuración para el juego que quieres inyectar.</value>
+  </data>
+  <data name="ChooseROM" xml:space="preserve">
+    <value>Elegir ROM</value>
+  </data>
+  <data name="ChooseROMDescription" xml:space="preserve">
+    <value>Selecciona el archivo ROM del juego que quieres inyectar.</value>
+  </data>
+  <data name="DarkFilter" xml:space="preserve">
+    <value>Dark filter</value>
+  </data>
+  <data name="DarkFilterDescription" xml:space="preserve">
+    <value>Habilita o deshabilita el filtro obscuro en la visualización del juego.</value>
+  </data>
+  <data name="EditN64ConfigFile" xml:space="preserve">
+    <value>Editar archivo de configuración</value>
+  </data>
+  <data name="EditN64ConfigFileDescription" xml:space="preserve">
+    <value>Crea o modifica el archivo ".ini" de configuración para el juego que quieres inyectar. Lamentablemente, no hay mucha información acerca de lo que hace cada opción. (Recomendado sólo para usuarios avanzados).</value>
+  </data>
+  <data name="EnableInjecting" xml:space="preserve">
+    <value>Para habilitar los botones en la sección de Inyectado tienes que elegir una ROM, poner un nombre y cargar una base.</value>
+  </data>
+  <data name="FolderResultSelect" xml:space="preserve">
+    <value>Selecciona la carpeta donde se guardará el resultado de la inyección.</value>
+  </data>
+  <data name="GamePad" xml:space="preserve">
+    <value>GamePad</value>
+  </data>
+  <data name="GamePadDescription" xml:space="preserve">
+    <value>Cambia la imagen que aparecerá en el GamePad al iniciar el juego.</value>
+  </data>
+  <data name="GamePadPreview" xml:space="preserve">
+    <value>Vista previa de GamePad</value>
+  </data>
+  <data name="GamePadPreviewDescription" xml:space="preserve">
+    <value>Vista previa de la imagen que aparecerá en el GamePad al iniciar el juego.</value>
+  </data>
+  <data name="GBABaseErrorDescription" xml:space="preserve">
+    <value>La base no se cargó. Usa uno los juegos de GBA lanzados para la consola virtual de Wii U.</value>
+  </data>
+  <data name="GBABaseSelect" xml:space="preserve">
+    <value>Selecciona la carpeta del juego de la consola virtual de GBA de Wii U que deseas usar como base.</value>
+  </data>
+  <data name="HelpBox" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="HelpDescription" xml:space="preserve">
+    <value>Habilita o deshabilita esté cuadro de ayuda.</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>Icono</value>
+  </data>
+  <data name="IconDescription" xml:space="preserve">
+    <value>Cambia el icono que aparecerá en el menú de la consola.</value>
+  </data>
+  <data name="IconPreview" xml:space="preserve">
+    <value>Vista previa de icono</value>
+  </data>
+  <data name="IconPreviewDescription" xml:space="preserve">
+    <value>Vista previa de la imagen que aparecerá en el menú de la consola.</value>
+  </data>
+  <data name="Injecting" xml:space="preserve">
+    <value>Inyectado</value>
+  </data>
+  <data name="InjectionFailed" xml:space="preserve">
+    <value>La inyección falló.</value>
+  </data>
+  <data name="InjectionSuccessfully" xml:space="preserve">
+    <value>¡La inyección se completó con éxito!</value>
+  </data>
+  <data name="InjectionWarningJava" xml:space="preserve">
+    <value>¡Advertencia! Si usas esta opción, recibirás una inyección fallida. Se necesita Java para NUSPacker (cifrar).</value>
+  </data>
+  <data name="InjectionWarningWiiUCK" xml:space="preserve">
+    <value>¡Advertencia! Si usas esta opción, recibirás una inyección fallida. Ingresa la clave común de Wii U (ve la sección de Ajustes).</value>
+  </data>
+  <data name="JavaWarning" xml:space="preserve">
+    <value>¡Advertencia! ¡Aparentemente el sistema no tiene Java instalado! Se necesita Java para NUSPacker (cifrar).</value>
+  </data>
+  <data name="KeepImageGamePad" xml:space="preserve">
+    <value>Mantener imagen para el GamePad</value>
+  </data>
+  <data name="KeepImageGamePadDescription" xml:space="preserve">
+    <value>Al seleccionar esta opción la imagen para el GamePad permanecerá sin cambios. Útil si sólo quieres editar alguna configuración de la consola virtual sin alterar nada más.</value>
+  </data>
+  <data name="KeepImageTV" xml:space="preserve">
+    <value>Mantener imagen para la TV</value>
+  </data>
+  <data name="KeepImageTVDescription" xml:space="preserve">
+    <value>Al seleccionar esta opción la imagen para la TV permanecerá sin cambios. Útil si sólo quieres editar alguna configuración de la consola virtual sin alterar nada más.</value>
+  </data>
+  <data name="KeepMenuIcon" xml:space="preserve">
+    <value>Mantener icono de menú</value>
+  </data>
+  <data name="KeepMenuIconDescription" xml:space="preserve">
+    <value>Al seleccionar esta opción el icono de menú permanecerá sin cambios. Útil si sólo quieres editar alguna configuración de la consola virtual sin alterar nada más.</value>
+  </data>
+  <data name="LoadBase" xml:space="preserve">
+    <value>Cargar base</value>
+  </data>
+  <data name="LoadBaseDescription" xml:space="preserve">
+    <value>Cambia el juego base actual.</value>
+  </data>
+  <data name="LoadBaseWarningWiiUCK" xml:space="preserve">
+    <value>¡Advertencia! No podrás cargar una base empacada (formato WUP). Ingresa la clave común de Wii U (ve la sección de Ajustes).</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="LogDescription" xml:space="preserve">
+    <value>Muestra el contenido del archivo de registro del programa.</value>
+  </data>
+  <data name="LongName" xml:space="preserve">
+    <value>Nombre largo</value>
+  </data>
+  <data name="LongNameBoxesDescription" xml:space="preserve">
+    <value>Nombre de dos líneas que aparecerá el menú de la consola y en las imágenes plantilla (ve la sección de Imágenes).</value>
+  </data>
+  <data name="LongNameDescription" xml:space="preserve">
+    <value>Habilita o deshabilita el nombre largo.</value>
+  </data>
+  <data name="ModeSelect" xml:space="preserve">
+    <value>Selección de modo</value>
+  </data>
+  <data name="ModeSelectDescription" xml:space="preserve">
+    <value>Selecciona el modo de la aplicación. "Auto" permite seleccionar cualquier ROM compatible y adapta la aplicación automáticamente. O selecciona la consola específica para disponer de las imágenes plantilla y limitar la selección de ROM acorde a la consola.</value>
+  </data>
+  <data name="N64BaseErrorDescription" xml:space="preserve">
+    <value>La base no se cargó. Usa uno los juegos de N64 lanzados para la consola virtual de Wii U.</value>
+  </data>
+  <data name="N64BaseSelect" xml:space="preserve">
+    <value>Selecciona la carpeta del juego de la consola virtual de N64 de Wii U que deseas usar como base.</value>
+  </data>
+  <data name="N64ConfigFile" xml:space="preserve">
+    <value>Archivo de configuración</value>
+  </data>
+  <data name="N64ConfigFileDescription" xml:space="preserve">
+    <value>Archivo ".ini" que contiene datos de configuración para el juego que quieres inyectar. No todos los juegos tienen su correspondiente archivo de configuración. Puedes probar dejándolo vacío.</value>
+  </data>
+  <data name="N64ConfigFileInvalid" xml:space="preserve">
+    <value>El archivo de configuración no es válido. Se inyectará un archivo vacío.</value>
+  </data>
+  <data name="NDSBaseErrorDescription" xml:space="preserve">
+    <value>La base no se cargó. Usa uno los juegos de NDS lanzados para la consola virtual de Wii U.</value>
+  </data>
+  <data name="NDSBaseSelect" xml:space="preserve">
+    <value>Selecciona la carpeta del juego de la consola virtual de NDS de Wii U que deseas usar como base.</value>
+  </data>
+  <data name="NDSIconBackground" xml:space="preserve">
+    <value>Fondo del icono de NDS</value>
+  </data>
+  <data name="NDSIconBackgroundDescription" xml:space="preserve">
+    <value>Algunos iconos no se ven bien con un fondo negro, puedes cambiarlo al color que prefieras.</value>
+  </data>
+  <data name="NDSIconPreview" xml:space="preserve">
+    <value>Previsualización del icono de NDS</value>
+  </data>
+  <data name="NDSIconPreviewDescription" xml:space="preserve">
+    <value>Muestra el icono que se extrajo de la ROM del juego de NDS.</value>
+  </data>
+  <data name="NESBaseErrorDescription" xml:space="preserve">
+    <value>La base no se cargó. Usa uno los juegos de NES lanzados para la consola virtual de Wii U.</value>
+  </data>
+  <data name="NESBaseSelect" xml:space="preserve">
+    <value>Selecciona la carpeta del juego de la consola virtual de NES de Wii U que deseas usar como base.</value>
+  </data>
+  <data name="NotPack" xml:space="preserve">
+    <value>No empacar</value>
+  </data>
+  <data name="NotPackDescription" xml:space="preserve">
+    <value>Realiza la inyección y copia el resultado en la ruta que selecciones. Para Loadiine.</value>
+  </data>
+  <data name="NUSPackerWarning" xml:space="preserve">
+    <value>¡Advertencia! "resources\nuspacker\NUSPacker.jar" no encontrado! NUSPacker te permite empacar el resultado para WUP Installer.</value>
+  </data>
+  <data name="Pack" xml:space="preserve">
+    <value>Empacar</value>
+  </data>
+  <data name="PackDescription" xml:space="preserve">
+    <value>Realiza la inyección y empaca el resultado en la ruta que selecciones. Para WUP Installer.</value>
+  </data>
+  <data name="Players" xml:space="preserve">
+    <value>Players</value>
+  </data>
+  <data name="PlayersDescription" xml:space="preserve">
+    <value>Número de jugadores del juego que se aparecerá en las imágenes plantilla.</value>
+  </data>
+  <data name="ProductCode" xml:space="preserve">
+    <value>Product code</value>
+  </data>
+  <data name="ProductCodeDescription" xml:space="preserve">
+    <value>Valor interno del archivo ROM que identifica al juego.</value>
+  </data>
+  <data name="ReleaseDate" xml:space="preserve">
+    <value>Release date</value>
+  </data>
+  <data name="ReleaseDateDescription" xml:space="preserve">
+    <value>Habilita o deshabilita la visualización de fecha de lanzamiento del juego en las imágenes plantilla.</value>
+  </data>
+  <data name="ROM" xml:space="preserve">
+    <value>ROM</value>
+  </data>
+  <data name="ROMDescription" xml:space="preserve">
+    <value>El archivo ROM del juego que quieres inyectar.</value>
+  </data>
+  <data name="ROMSize" xml:space="preserve">
+    <value>ROM size</value>
+  </data>
+  <data name="ROMSizeDescription" xml:space="preserve">
+    <value>Usa esta información para determinar si puedes inyectar la ROM en la base cargada. Por el momento sólo puedes inyectar ROMs del mismo o menor tamaño al que indica el tamaño de ROM de la base.</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>Nombre corto</value>
+  </data>
+  <data name="ShortNameDescription" xml:space="preserve">
+    <value>Si no se habilita el nombre largo, se usará el nombre corto para todos los menús de la consola y en las imágenes plantilla (ve la sección de Imágenes).</value>
+  </data>
+  <data name="ShowName" xml:space="preserve">
+    <value>Mostrar nombre</value>
+  </data>
+  <data name="ShowNameDescription" xml:space="preserve">
+    <value>Habilita o deshabilita la visualización del nombre del juego en las imágenes plantilla.</value>
+  </data>
+  <data name="SNESBaseErrorDescription" xml:space="preserve">
+    <value>La base no se cargó. Usa uno los juegos de SNES lanzados para la consola virtual de Wii U.</value>
+  </data>
+  <data name="SNESBaseSelect" xml:space="preserve">
+    <value>Selecciona la carpeta del juego de la consola virtual de SNES de Wii U que deseas usar como base.</value>
+  </data>
+  <data name="TitleID" xml:space="preserve">
+    <value>Title ID</value>
+  </data>
+  <data name="TitleIDDescription" xml:space="preserve">
+    <value>Valor que identifica al juego dentro de la consola.</value>
+  </data>
+  <data name="TitleScreen" xml:space="preserve">
+    <value>Pantalla de titulo</value>
+  </data>
+  <data name="TitleScreenDescription" xml:space="preserve">
+    <value>Selecciona una imagen para representar al juego en las imágenes plantilla.</value>
+  </data>
+  <data name="TV" xml:space="preserve">
+    <value>TV</value>
+  </data>
+  <data name="TVDescription" xml:space="preserve">
+    <value>Cambia la imagen que aparecerá en la TV al iniciar el juego.</value>
+  </data>
+  <data name="TVPreview" xml:space="preserve">
+    <value>Vista previa de TV</value>
+  </data>
+  <data name="TVPreviewDescription" xml:space="preserve">
+    <value>Vista previa de la imagen que aparecerá en la TV al iniciar el juego.</value>
+  </data>
+  <data name="UseNDSIcon" xml:space="preserve">
+    <value>Usar icono de NDS</value>
+  </data>
+  <data name="UseNDSIconDescription" xml:space="preserve">
+    <value>En lugar de una imagen de pantalla de título puedes usar el icono del juego de NDS.</value>
+  </data>
+  <data name="VirtualConsoleTarget" xml:space="preserve">
+    <value>Consola Virtual destino</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>¡Advertencia!</value>
+  </data>
+  <data name="Widescreen" xml:space="preserve">
+    <value>Widescreen</value>
+  </data>
+  <data name="WidescreenDescription" xml:space="preserve">
+    <value>Habilita o deshabilita la pantalla ancha en la visualización del juego. Esto modifica la relación de aspecto del juego de 4:3 a 16:9.</value>
+  </data>
+  <data name="WiiUCommonKey" xml:space="preserve">
+    <value>Clave común de Wii U</value>
+  </data>
+  <data name="WiiUCommonKeyBoxDescription" xml:space="preserve">
+    <value>Pon aquí la clave común de Wii U, si la clave es correcta esta caja de texto de deshabilitará y aparecerá una palomita verde al lado.</value>
+  </data>
+  <data name="WiiUCommonKeyChecked" xml:space="preserve">
+    <value>Clave común de Wii U admitida</value>
+  </data>
+  <data name="WiiUCommonKeyCheckedDescription" xml:space="preserve">
+    <value>La clave común se cargó correctamente.</value>
+  </data>
+  <data name="WiiUCommonKeyDescription" xml:space="preserve">
+    <value>Clave común para empacar o desempacar los juegos de Wii U.</value>
+  </data>
+  <data name="WiiUCommonKeyError" xml:space="preserve">
+    <value>Error en la clave común de Wii U</value>
+  </data>
+  <data name="WiiUCommonKeyErrorDescription" xml:space="preserve">
+    <value>No se encontró la clave común. Sin ella no podrás descifrar los juegos de Wii U para usarlos como base ni cifrar el resultado para WUP Installer. (Búscala en Google).</value>
+  </data>
+  <data name="Zoom" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="ZoomDescription" xml:space="preserve">
+    <value>Amplia o reduce el área de visualización del juego. Si la amplias mucho pude recortar la imagen del juego.</value>
+  </data>
+</root>
