@@ -40,7 +40,7 @@ namespace PhacoxsInjector
         {
             return "Hash: " + Hash.ToString("X8") + ", Release date: " + Release.ToString("yyyy/MM/dd") +
                 ", Type: " + Type.ToString() + ", ROM size: " + Useful.ToFileSize(ROMSize) + ", Extended footer: " + ExtendedFooter.ToString() + ", PCM data: " + PCMData.ToString() +
-                " \nTitle: " + Title;
+                "\r\nTitle: " + Title;
         }
 
         public static VCSNES GetVC(uint hash)

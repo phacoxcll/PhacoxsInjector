@@ -91,12 +91,18 @@ namespace PhacoxsInjector
 
         protected override WiiUVC GetLoadedBase()
         {
-            ValidateBase(BasePath);
-            
-            FileStream fs = File.Open(BasePath + "\\code\\m2engage.rpx", FileMode.Open);
-            uint hash = Cll.Security.ComputeCRC32(fs);
-            fs.Close();
-            return VCGBA.GetVC(hash);
+            try
+            {
+                ValidateBase(BasePath);            
+                FileStream fs = File.Open(BasePath + "\\code\\m2engage.rpx", FileMode.Open);
+                uint hash = Cll.Security.ComputeCRC32(fs);
+                fs.Close();
+                return VCGBA.GetVC(hash);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         protected override void ValidateBase(string path)

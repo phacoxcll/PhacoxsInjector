@@ -133,7 +133,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Warning! &quot;resources\cdecrypt\CDecrypt.exe&quot; not found! CDecrypt allows you to unpack (decrypt) Wii U VC games to use as base..
+        ///   Busca una cadena traducida similar a Warning! &quot;resources\unpack\CDecrypt.exe&quot; not found! CDecrypt allows you to unpack (decrypt) Wii U VC games to use as base..
         /// </summary>
         internal static string CDecryptWarning {
             get {
@@ -682,7 +682,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Warning! &quot;resources\nuspacker\NUSPacker.jar&quot; not found! NUSPacker allows you to pack the result for WUP Installer..
+        ///   Busca una cadena traducida similar a Warning! &quot;resources\pack\NUSPacker.jar&quot; not found! NUSPacker allows you to pack the result for WUP Installer..
         /// </summary>
         internal static string NUSPackerWarning {
             get {

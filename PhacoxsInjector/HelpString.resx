@@ -224,7 +224,7 @@
     <comment>@MutedRule(PunctuationLead)</comment>
   </data>
   <data name="CDecryptWarning" xml:space="preserve">
-    <value>Warning! "resources\cdecrypt\CDecrypt.exe" not found! CDecrypt allows you to unpack (decrypt) Wii U VC games to use as base.</value>
+    <value>Warning! "resources\unpack\CDecrypt.exe" not found! CDecrypt allows you to unpack (decrypt) Wii U VC games to use as base.</value>
     <comment>@MutedRule(PunctuationLead)</comment>
   </data>
   <data name="LoadBase" xml:space="preserve">
@@ -262,7 +262,7 @@
     <value>Perform the injection and copy the result in the path you select. For loadiine.</value>
   </data>
   <data name="NUSPackerWarning" xml:space="preserve">
-    <value>Warning! "resources\nuspacker\NUSPacker.jar" not found! NUSPacker allows you to pack the result for WUP Installer.</value>
+    <value>Warning! "resources\pack\NUSPacker.jar" not found! NUSPacker allows you to pack the result for WUP Installer.</value>
     
     
     <comment>@MutedRule(PunctuationLead)</comment>

@@ -16,7 +16,7 @@ namespace PhacoxsInjector
 
         public override string ToString()
         {
-            return "Hash: " + Hash.ToString("X8") + ", Release date: " + Release.ToString("yyyy/MM/dd") + " \nTitle: " + Title;
+            return "Hash: " + Hash.ToString("X8") + ", Release date: " + Release.ToString("yyyy/MM/dd") + "\r\nTitle: " + Title;
         }
 
         public static VCNDS GetVC(uint hash)

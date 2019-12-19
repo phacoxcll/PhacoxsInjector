@@ -98,10 +98,16 @@ namespace PhacoxsInjector
 
         protected override WiiUVC GetLoadedBase()
         {
-            ValidateBase(BasePath, false);
-            RPXSNES vc = ValidateRPX(BasePath);
-
-            return VCSNES.GetVC(vc.CRCsSum);
+            try
+            {
+                ValidateBase(BasePath, false);
+                RPXSNES vc = ValidateRPX(BasePath);
+                return VCSNES.GetVC(vc.CRCsSum);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         private RPXSNES ValidateRPX(string path)

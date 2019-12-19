@@ -142,7 +142,7 @@
     <value>La base no es válida.</value>
   </data>
   <data name="CDecryptWarning" xml:space="preserve">
-    <value>¡Advertencia! "resources\cdecrypt\CDecrypt.exe" no encontrado! CDecrypt te permite desempacar (descifrar) los juegos la consola virtual de Wii U para usarlos como base.</value>
+    <value>¡Advertencia! "resources\unpack\CDecrypt.exe" no encontrado! CDecrypt te permite desempacar (descifrar) los juegos la consola virtual de Wii U para usarlos como base.</value>
   </data>
   <data name="ChooseN64ConfigFile" xml:space="preserve">
     <value>Elegir archivo de configuración</value>
@@ -325,7 +325,7 @@
     <value>Realiza la inyección y copia el resultado en la ruta que selecciones. Para Loadiine.</value>
   </data>
   <data name="NUSPackerWarning" xml:space="preserve">
-    <value>¡Advertencia! "resources\nuspacker\NUSPacker.jar" no encontrado! NUSPacker te permite empacar el resultado para WUP Installer.</value>
+    <value>¡Advertencia! "resources\pack\NUSPacker.jar" no encontrado! NUSPacker te permite empacar el resultado para WUP Installer.</value>
   </data>
   <data name="Pack" xml:space="preserve">
     <value>Empacar</value>
