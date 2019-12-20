@@ -41,32 +41,23 @@ namespace PhacoxsInjector
 
             comboBoxConsole.SelectedIndex = 0;
 
-            if (NusContent.GetJavaVersion() == null)
+            StringBuilder sb = new StringBuilder();
+            bool warning = false;
+            if (!File.Exists("resources\\pack\\CNUSPACKER.exe"))
             {
-                Cll.Log.WriteLine(HelpString.JavaWarning);
-                MessageBox.Show(HelpString.JavaWarning, HelpString.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                sb.AppendLine(HelpString.CNUSPackerWarning);
+                sb.AppendLine("");
+                warning = true;
             }
-            else
+            if (!File.Exists("resources\\unpack\\CDecrypt.exe"))
             {
-                StringBuilder sb = new StringBuilder();
-                bool warning = false;
-                if (!File.Exists("resources\\pack\\NUSPacker.jar"))
-                {
-                    sb.AppendLine(HelpString.NUSPackerWarning);
-                    sb.AppendLine("");
-                    warning = true;
-                }
-                if (!File.Exists("resources\\unpack\\CDecrypt.exe"))
-                {
-                    sb.AppendLine(HelpString.CDecryptWarning);
-                    warning = true;
-                }
-
-                if (warning)
-                {
-                    Cll.Log.WriteLine(sb.ToString());
-                    MessageBox.Show(sb.ToString(), HelpString.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                sb.AppendLine(HelpString.CDecryptWarning);
+                warning = true;
+            }
+            if (warning)
+            {
+                Cll.Log.WriteLine(sb.ToString());
+                MessageBox.Show(sb.ToString(), HelpString.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             if (NusContent.CheckCommonKeyFiles())
@@ -2107,8 +2098,6 @@ namespace PhacoxsInjector
                 labelHelpText.Text = HelpString.PackDescription;
                 if (textBoxCommonKey.Enabled)
                     labelHelpText.Text += "\n" + HelpString.InjectionWarningWiiUCK;
-                if (NusContent.GetJavaVersion() == null)
-                    labelHelpText.Text += "\n" + HelpString.InjectionWarningJava;
             }
         }
 

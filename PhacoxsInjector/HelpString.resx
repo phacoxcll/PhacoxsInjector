@@ -211,16 +211,8 @@
     <value>The injection was completed successfully!</value>
     <comment>@MutedRule(PunctuationLead)</comment>
   </data>
-  <data name="InjectionWarningJava" xml:space="preserve">
-    <value>Warning! If you use this option, you will receive a failed injection. Java is needed for NUSPacker (encrypt).</value>
-    <comment>@MutedRule(PunctuationLead)</comment>
-  </data>
   <data name="InjectionWarningWiiUCK" xml:space="preserve">
     <value>Warning! If you use this option, you will receive a failed injection. Enter the Wii U common key (see Settings section).</value>
-    <comment>@MutedRule(PunctuationLead)</comment>
-  </data>
-  <data name="JavaWarning" xml:space="preserve">
-    <value>Warning! Apparently the system does not have Java installed! Java is needed to NUSPacker (encrypt).</value>
     <comment>@MutedRule(PunctuationLead)</comment>
   </data>
   <data name="CDecryptWarning" xml:space="preserve">
@@ -261,8 +253,8 @@
   <data name="NotPackDescription" xml:space="preserve">
     <value>Perform the injection and copy the result in the path you select. For loadiine.</value>
   </data>
-  <data name="NUSPackerWarning" xml:space="preserve">
-    <value>Warning! "resources\pack\NUSPacker.jar" not found! NUSPacker allows you to pack the result for WUP Installer.</value>
+  <data name="CNUSPackerWarning" xml:space="preserve">
+    <value>Warning! "resources\pack\CNUSPACKER.exe" not found! CNUSPacker allows you to pack (encrypt) the result for WUP Installer.</value>
     
     
     <comment>@MutedRule(PunctuationLead)</comment>

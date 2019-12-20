@@ -70,6 +70,7 @@ Global
 		{0D3458E2-05E8-4220-A698-65D0DBE38475}.Release|x86.ActiveCfg = Release|x86
 		{0D3458E2-05E8-4220-A698-65D0DBE38475}.Release|x86.Build.0 = Release|x86
 		{0D3458E2-05E8-4220-A698-65D0DBE38475}.Revision release|Any CPU.ActiveCfg = Revision release|Any CPU
+		{0D3458E2-05E8-4220-A698-65D0DBE38475}.Revision release|Any CPU.Build.0 = Revision release|Any CPU
 		{0D3458E2-05E8-4220-A698-65D0DBE38475}.Revision release|x64.ActiveCfg = Revision release|x64
 		{0D3458E2-05E8-4220-A698-65D0DBE38475}.Revision release|x86.ActiveCfg = Revision release|x86
 	EndGlobalSection

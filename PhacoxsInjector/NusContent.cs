@@ -18,40 +18,6 @@ namespace PhacoxsInjector
             Indeterminate
         }
 
-        public static string GetJavaVersion()
-        {
-            try
-            {
-                ProcessStartInfo startInfo = new ProcessStartInfo("java", "-version");
-                startInfo.RedirectStandardOutput = true;
-                startInfo.RedirectStandardError = true;
-                startInfo.UseShellExecute = false;
-                startInfo.CreateNoWindow = true;
-                Process java = Process.Start(startInfo);
-                java.Start();
-                java.WaitForExit();
-                string version = java.StandardError.ReadLine();
-                java.Dispose();
-                //version = version.Split(' ')[2].Replace("\"", "");                
-                return version;
-            }
-            catch
-            {
-                return null;
-            }
-
-            /*object vesion = null;
-            RegistryKey javaRE = Registry.LocalMachine.OpenSubKey("SOFTWARE\\JavaSoft\\Java Runtime Environment");
-
-            if (javaRE != null)
-                version = javaRE.GetValue("CurrentVersion");
-
-            if (version != null)
-                return version.ToString();
-            else
-                return null;*/
-        }
-
         public static string GetTitleID(string path)
         {
             if (File.Exists(path + "\\meta\\meta.xml"))
@@ -122,7 +88,7 @@ namespace PhacoxsInjector
                 StreamWriter sw = File.CreateText(Environment.CurrentDirectory + "\\resources\\pack\\run.bat");
                 sw.WriteLine("@echo off");
                 sw.WriteLine("cd resources\\pack");
-                sw.Write("java -jar NUSPacker.jar -in %1 -out %2");
+                sw.Write("CNUSPACKER.exe -in %1 -out %2");
                 sw.Close();
             }
 
@@ -247,10 +213,8 @@ namespace PhacoxsInjector
             Check(inputPath);
             if (!CheckCommonKeyFiles())
                 throw new Exception("Common Key Files error.");
-            if (GetJavaVersion() == null)
-                throw new Exception("Java is not installed.");
-            if (!File.Exists(Environment.CurrentDirectory + "\\resources\\pack\\NUSPacker.jar"))
-                throw new Exception("The \"" + Environment.CurrentDirectory + "\\resources\\pack\\NUSPacker.jar\" file not exist.");
+            if (!File.Exists(Environment.CurrentDirectory + "\\resources\\pack\\CNUSPACKER.exe"))
+                throw new Exception("The \"" + Environment.CurrentDirectory + "\\resources\\pack\\CNUSPACKER.exe\" file not exist.");
             
             CheckBatchFiles();
             Process encrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\pack\\run.bat", "\"" + inputPath + "\" \"" + outputPath + "\"");

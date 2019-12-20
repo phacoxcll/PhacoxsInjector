@@ -9,7 +9,7 @@ namespace PhacoxsInjector
 {
     public abstract class WiiUInjector
     {
-        public const string Release = "1.0 debug"; //CllVersionReplace "major.minor stability"
+        public const string Release = "1.0.1"; //CllVersionReplace "major.minor.revision"
 
         protected string RomPath;
         protected RomFile Rom;

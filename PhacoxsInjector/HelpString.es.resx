@@ -142,7 +142,7 @@
     <value>La base no es válida.</value>
   </data>
   <data name="CDecryptWarning" xml:space="preserve">
-    <value>¡Advertencia! "resources\unpack\CDecrypt.exe" no encontrado! CDecrypt te permite desempacar (descifrar) los juegos la consola virtual de Wii U para usarlos como base.</value>
+    <value>¡Advertencia! "resources\unpack\CDecrypt.exe" no encontrado! CDecrypt te permite desempacar (descifrar) los juegos de la Consola Virtual de Wii U para usarlos como base.</value>
   </data>
   <data name="ChooseN64ConfigFile" xml:space="preserve">
     <value>Elegir archivo de configuración</value>
@@ -219,14 +219,8 @@
   <data name="InjectionSuccessfully" xml:space="preserve">
     <value>¡La inyección se completó con éxito!</value>
   </data>
-  <data name="InjectionWarningJava" xml:space="preserve">
-    <value>¡Advertencia! Si usas esta opción, recibirás una inyección fallida. Se necesita Java para NUSPacker (cifrar).</value>
-  </data>
   <data name="InjectionWarningWiiUCK" xml:space="preserve">
     <value>¡Advertencia! Si usas esta opción, recibirás una inyección fallida. Ingresa la clave común de Wii U (ve la sección de Ajustes).</value>
-  </data>
-  <data name="JavaWarning" xml:space="preserve">
-    <value>¡Advertencia! ¡Aparentemente el sistema no tiene Java instalado! Se necesita Java para NUSPacker (cifrar).</value>
   </data>
   <data name="KeepImageGamePad" xml:space="preserve">
     <value>Mantener imagen para el GamePad</value>
@@ -324,8 +318,8 @@
   <data name="NotPackDescription" xml:space="preserve">
     <value>Realiza la inyección y copia el resultado en la ruta que selecciones. Para Loadiine.</value>
   </data>
-  <data name="NUSPackerWarning" xml:space="preserve">
-    <value>¡Advertencia! "resources\pack\NUSPacker.jar" no encontrado! NUSPacker te permite empacar el resultado para WUP Installer.</value>
+  <data name="CNUSPackerWarning" xml:space="preserve">
+    <value>¡Advertencia! "resources\pack\CNUSPACKER.exe" no encontrado! CNUSPacker te permite empacar (cifrar) el resultado para WUP Installer.</value>
   </data>
   <data name="Pack" xml:space="preserve">
     <value>Empacar</value>

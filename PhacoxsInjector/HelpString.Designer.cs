@@ -178,6 +178,15 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Warning! &quot;resources\pack\CNUSPACKER.exe&quot; not found! CNUSPacker allows you to pack (encrypt) the result for WUP Installer..
+        /// </summary>
+        internal static string CNUSPackerWarning {
+            get {
+                return ResourceManager.GetString("CNUSPackerWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Dark filter.
         /// </summary>
         internal static string DarkFilter {
@@ -367,29 +376,11 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Warning! If you use this option, you will receive a failed injection. Java is needed for NUSPacker (encrypt)..
-        /// </summary>
-        internal static string InjectionWarningJava {
-            get {
-                return ResourceManager.GetString("InjectionWarningJava", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Warning! If you use this option, you will receive a failed injection. Enter the Wii U common key (see Settings section)..
         /// </summary>
         internal static string InjectionWarningWiiUCK {
             get {
                 return ResourceManager.GetString("InjectionWarningWiiUCK", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Warning! Apparently the system does not have Java installed! Java is needed to NUSPacker (encrypt)..
-        /// </summary>
-        internal static string JavaWarning {
-            get {
-                return ResourceManager.GetString("JavaWarning", resourceCulture);
             }
         }
         
@@ -678,15 +669,6 @@ namespace PhacoxsInjector {
         internal static string NotPackDescription {
             get {
                 return ResourceManager.GetString("NotPackDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Warning! &quot;resources\pack\NUSPacker.jar&quot; not found! NUSPacker allows you to pack the result for WUP Installer..
-        /// </summary>
-        internal static string NUSPackerWarning {
-            get {
-                return ResourceManager.GetString("NUSPackerWarning", resourceCulture);
             }
         }
         
