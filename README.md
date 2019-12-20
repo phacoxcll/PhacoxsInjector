@@ -136,11 +136,8 @@ The tools packaged with this application belong to their respective developers.
 
 Credits
 
-CNUSPacker by NicoAICP, Morilli
-https://github.com/Hotbrawl20/CNUS_Packer
+CNUSPacker by NicoAICP, Morilli - https://github.com/Hotbrawl20/CNUS_Packer
 
-CDecrypt v3.0 by Crediar, phacox.cll
-https://github.com/phacoxcll/cdecrypt
+CDecrypt v3.0 by Crediar, phacox.cll - https://github.com/phacoxcll/cdecrypt
 
-inject_gba_C by Morilli
-https://github.com/Morilli/inject_gba_C
+inject_gba_C by Morilli - https://github.com/Morilli/inject_gba_C
