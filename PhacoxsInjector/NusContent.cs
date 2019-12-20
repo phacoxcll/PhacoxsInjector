@@ -219,7 +219,15 @@ namespace PhacoxsInjector
             CheckBatchFiles();
             Process encrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\pack\\run.bat", "\"" + inputPath + "\" \"" + outputPath + "\"");
             encrypt.WaitForExit();
-            encrypt.Dispose();
+
+
+            if (encrypt.ExitCode == 0)            
+                encrypt.Dispose();
+            else
+            {
+                encrypt.Dispose();
+                throw new Exception("Encrypt fail.");
+            }
         }
 
         public static void Decrypt(string inputPath, string outputPath)
@@ -236,6 +244,14 @@ namespace PhacoxsInjector
             Process decrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\unpack\\run.bat", "\"" + inputPath + "\" \"" + outputPath + "\"");
             decrypt.WaitForExit();
             decrypt.Dispose();
+
+            if (decrypt.ExitCode == 0)
+                decrypt.Dispose();
+            else
+            {
+                decrypt.Dispose();
+                throw new Exception("Decrypt fail.");
+            }
         }
 
         public static void Decrypt(string inputPath, string filename, string outputFilename)
@@ -252,6 +268,14 @@ namespace PhacoxsInjector
             Process decrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\unpack\\getfile.bat", "\"" + inputPath + "\" \"" + filename + "\" \"" + outputFilename + "\"");
             decrypt.WaitForExit();
             decrypt.Dispose();
+
+            if (decrypt.ExitCode == 0)
+                decrypt.Dispose();
+            else
+            {
+                decrypt.Dispose();
+                throw new Exception("Decrypt file fail.");
+            }
         }
 
         public static bool SaveTGA(Bitmap image, string outputFilename)
