@@ -14,9 +14,6 @@ Characteristics
 - You can use any game as a base (you can only inject the ROM if the base supports it, although this does not guarantee that the game works).
 - Use Wii U Virtual Console games packed (files, title.cert, title.tik, title.tmd, "*.app" and "*.h3") or unpacked (folders code, content and meta) as base.
 
-Have the Wii U Common Key on hand (search for it on Google).
-Requires .NET Framework 4.6 or higher.
-
 ## Use
 
 ### Mode selection
