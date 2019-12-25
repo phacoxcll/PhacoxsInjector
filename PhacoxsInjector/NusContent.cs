@@ -220,7 +220,6 @@ namespace PhacoxsInjector
             Process encrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\pack\\run.bat", "\"" + inputPath + "\" \"" + outputPath + "\"");
             encrypt.WaitForExit();
 
-
             if (encrypt.ExitCode == 0)            
                 encrypt.Dispose();
             else
@@ -243,7 +242,6 @@ namespace PhacoxsInjector
             CheckBatchFiles();
             Process decrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\unpack\\run.bat", "\"" + inputPath + "\" \"" + outputPath + "\"");
             decrypt.WaitForExit();
-            decrypt.Dispose();
 
             if (decrypt.ExitCode == 0)
                 decrypt.Dispose();
@@ -267,7 +265,6 @@ namespace PhacoxsInjector
             CheckBatchFiles();
             Process decrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\unpack\\getfile.bat", "\"" + inputPath + "\" \"" + filename + "\" \"" + outputFilename + "\"");
             decrypt.WaitForExit();
-            decrypt.Dispose();
 
             if (decrypt.ExitCode == 0)
                 decrypt.Dispose();
