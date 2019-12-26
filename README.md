@@ -14,7 +14,7 @@ Characteristics
 - You can use any game as a base (you can only inject the ROM if the base supports it, although this does not guarantee that the game works).
 - Use Wii U Virtual Console games packed (files, title.cert, title.tik, title.tmd, "*.app" and "*.h3") or unpacked (folders code, content and meta) as base.
 
-## Use
+## Usage
 
 ### Mode selection
 
@@ -118,6 +118,11 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
+1.0.3 (2019-12-26)
+- Fix an error in the way of transferring the common key to CNUSPacker.
+
+1.0.2 (2019-12-25)
+- Fix an error when loading encrypted base games, the load was always failed due to a resource management error.
 
 1.0.1 (2019-12-20)
 - Replaces the use of NUSPacker.jar in favor of CNUSPacker.exe.
