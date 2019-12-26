@@ -88,7 +88,7 @@ namespace PhacoxsInjector
                 StreamWriter sw = File.CreateText(Environment.CurrentDirectory + "\\resources\\pack\\run.bat");
                 sw.WriteLine("@echo off");
                 sw.WriteLine("cd resources\\pack");
-                sw.Write("CNUSPACKER.exe -in %1 -out %2");
+                sw.Write("CNUSPACKER.exe -in %1 -out %2 -encryptKeyWith %3");
                 sw.Close();
             }
 
@@ -133,7 +133,7 @@ namespace PhacoxsInjector
                     if (!Directory.Exists(Environment.CurrentDirectory + "\\resources\\unpack"))
                         Directory.CreateDirectory(Environment.CurrentDirectory + "\\resources\\unpack");
 
-                    StreamWriter sw = File.CreateText(Environment.CurrentDirectory + "\\resources\\pack\\encryptKeyWith");
+                    StreamWriter sw = File.CreateText(Environment.CurrentDirectory + "\\resources\\pack\\key.txt");
                     sw.WriteLine(key.ToUpper());
                     sw.Close();
                     sw = File.CreateText(Environment.CurrentDirectory + "\\resources\\unpack\\keys.txt");
@@ -166,9 +166,9 @@ namespace PhacoxsInjector
                 cdecryptKeyValid = IsValidCommonKey(cdecryptKey);
             }
 
-            if (File.Exists(Environment.CurrentDirectory + "\\resources\\pack\\encryptKeyWith"))
+            if (File.Exists(Environment.CurrentDirectory + "\\resources\\pack\\key.txt"))
             {
-                sr = File.OpenText(Environment.CurrentDirectory + "\\resources\\pack\\encryptKeyWith");
+                sr = File.OpenText(Environment.CurrentDirectory + "\\resources\\pack\\key.txt");
                 nuspackerKey = sr.ReadLine();
                 sr.Close();
                 nuspackerKeyValid = IsValidCommonKey(nuspackerKey);
@@ -180,7 +180,7 @@ namespace PhacoxsInjector
             {
                 try
                 {
-                    sw = File.CreateText(Environment.CurrentDirectory + "\\resources\\pack\\encryptKeyWith");
+                    sw = File.CreateText(Environment.CurrentDirectory + "\\resources\\pack\\key.txt");
                     sw.WriteLine(cdecryptKey);
                     sw.Close();
                     return true;
@@ -215,9 +215,13 @@ namespace PhacoxsInjector
                 throw new Exception("Common Key Files error.");
             if (!File.Exists(Environment.CurrentDirectory + "\\resources\\pack\\CNUSPACKER.exe"))
                 throw new Exception("The \"" + Environment.CurrentDirectory + "\\resources\\pack\\CNUSPACKER.exe\" file not exist.");
+
+            StreamReader sr = File.OpenText(Environment.CurrentDirectory + "\\resources\\pack\\key.txt");
+            string key = sr.ReadLine();
+            sr.Close();
             
             CheckBatchFiles();
-            Process encrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\pack\\run.bat", "\"" + inputPath + "\" \"" + outputPath + "\"");
+            Process encrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\pack\\run.bat", "\"" + inputPath + "\" \"" + outputPath + "\" \"" + key + "\"");
             encrypt.WaitForExit();
 
             if (encrypt.ExitCode == 0)            
