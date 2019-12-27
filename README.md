@@ -118,6 +118,10 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
+1.0.5 (2019-12-27)
+- Update the version of CNUSPacker.
+- Some minor fixes.
+
 1.0.4 (2019-12-27)
 - Fix a bug where the short name was always used as a long name.
 - Fix a bug where the name was not drawn on the template images if it was not previously passed through the Images section.
