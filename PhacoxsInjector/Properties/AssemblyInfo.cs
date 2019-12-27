@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("PhacoxsInjector debug")]
+[assembly: AssemblyTitle("PhacoxsInjector")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Puede especificar todos los valores o usar los valores predeterminados de número de compilación y de revisión
 // utilizando el carácter "*", como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.48.4")]
-[assembly: AssemblyFileVersion("1.0.48.4")]
+[assembly: AssemblyVersion("1.0.56.5")]
+[assembly: AssemblyFileVersion("1.0.56.5")]

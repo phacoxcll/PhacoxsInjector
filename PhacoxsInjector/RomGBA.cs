@@ -32,7 +32,9 @@ namespace PhacoxsInjector
 
                 byte[] titleBytes = new byte[0x0C];
                 Array.Copy(header, 0xA0, titleBytes, 0, 0x0C);
-                Title = Encoding.ASCII.GetString(titleBytes);
+                int count = 0x0C;
+                while (titleBytes[--count] == 0 && count > 0) ;                
+                Title = Encoding.ASCII.GetString(titleBytes, 0, count + 1);
 
                 fs = File.Open(filename, FileMode.Open);
                 Size = (int)fs.Length;

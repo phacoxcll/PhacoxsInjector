@@ -43,10 +43,20 @@ namespace PhacoxsInjector
                     byte[] shortTitle = new byte[2];
                     byte region;
 
-                    uniqueCode = data[headerOffset + 0x02];
-                    shortTitle[0] = data[headerOffset + 0x03];
-                    shortTitle[1] = data[headerOffset + 0x04];
-                    region = data[headerOffset + 0x05];
+                    if (data[headerOffset + 0x04] == 0x20 && data[headerOffset + 0x05] == 0x20)
+                    {
+                        uniqueCode = (byte)'?';
+                        shortTitle[0] = data[headerOffset + 0x02];
+                        shortTitle[1] = data[headerOffset + 0x03];
+                        region = (byte)'?';
+                    }
+                    else
+                    {
+                        uniqueCode = data[headerOffset + 0x02];
+                        shortTitle[0] = data[headerOffset + 0x03];
+                        shortTitle[1] = data[headerOffset + 0x04];
+                        region = data[headerOffset + 0x05];
+                    }
                     FormatCode = (char)uniqueCode;
                     ShortId = Encoding.ASCII.GetString(shortTitle);
                     RegionCode = (char)region;

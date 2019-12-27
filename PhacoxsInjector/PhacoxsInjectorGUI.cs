@@ -1300,8 +1300,15 @@ namespace PhacoxsInjector
 
         private void Inject(bool encrypt)
         {
+            RomFile.Format mode = Mode;
+            if (mode == RomFile.Format.Indeterminate)
+                mode = Injector.Console;
+
+            folderBrowserDialog.Description = HelpString.FolderResultSelect;            
             if (Directory.Exists(Properties.Settings.Default.DirectoryResult))
                 folderBrowserDialog.SelectedPath = Properties.Settings.Default.DirectoryResult;
+            else
+                folderBrowserDialog.SelectedPath = "";
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
@@ -1323,10 +1330,6 @@ namespace PhacoxsInjector
 
                     Cll.Log.WriteLine("Short name: " + textBoxShortName.Text);
                     Cll.Log.WriteLine("Long name: " + longName);
-
-                    RomFile.Format mode = Mode;
-                    if (mode == RomFile.Format.Indeterminate)
-                        mode = Injector.Console;
 
                     if (mode == RomFile.Format.Famicom ||
                         mode == RomFile.Format.NES)
