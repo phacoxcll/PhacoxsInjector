@@ -1314,9 +1314,9 @@ namespace PhacoxsInjector
                     string longName;
                     if (textBoxLNLine1.Text.Length > 0 && textBoxLNLine2.Text.Length > 0)
                         longName = textBoxLNLine1.Text + "\n" + textBoxLNLine2.Text;
-                    if (textBoxLNLine1.Text.Length > 0 && textBoxLNLine2.Text.Length == 0)
+                    else if (textBoxLNLine1.Text.Length > 0 && textBoxLNLine2.Text.Length == 0)
                         longName = textBoxLNLine1.Text;
-                    if (textBoxLNLine1.Text.Length == 0 && textBoxLNLine2.Text.Length > 0)
+                    else if (textBoxLNLine1.Text.Length == 0 && textBoxLNLine2.Text.Length > 0)
                         longName = textBoxLNLine2.Text;
                     else
                         longName = textBoxShortName.Text;
@@ -1361,6 +1361,10 @@ namespace PhacoxsInjector
                         Cll.Log.WriteLine("N64 widescreen: " + (Injector as N64Injector).Widescreen.ToString());
                         Cll.Log.WriteLine("N64 zoom: " + ((Injector as N64Injector).Scale * 100).ToString());
                     }
+
+                    UpdateBootName();
+                    UpdateBootTvPictureBox();
+                    UpdateBootDrcPictureBox();
 
                     Bitmap menuIconImg = null;
                     if (!checkBoxKeepMenuIcon.Checked)
