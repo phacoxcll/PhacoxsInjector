@@ -30,7 +30,8 @@ namespace PhacoxsInjector
 
             Endianness = GetFormat(header);
 
-            if (Endianness != Subformat.Indeterminate && Size % 4 == 0)
+            if (Endianness == Subformat.BigEndian || 
+               (Endianness != Subformat.Indeterminate && Size % 4 == 0))
             {
                 byte uniqueCode;
                 byte[] shortTitle = new byte[2];
@@ -98,7 +99,8 @@ namespace PhacoxsInjector
             fs.Read(header, 0, 0x40);
             fs.Close();
             Subformat format = GetFormat(header);
-            return format != Subformat.Indeterminate && size % 4 == 0;
+            return format == Subformat.BigEndian ||
+               (format != Subformat.Indeterminate && size % 4 == 0);
         }
 
         public static void ToBigEndian(string source, string destination)

@@ -72,16 +72,16 @@ namespace PhacoxsInjector
             switch (AspectRatioValue)
             {
                 case AspectRatio.H8V7:
-                    widthTv = 2353;
-                    widthDrc = 1047;
+                    widthTv = 2348;
+                    widthDrc = 1045;
                     break;
                 case AspectRatio.H4V3:
-                    widthTv = 2017;
-                    widthDrc = 897;
+                    widthTv = 2012;
+                    widthDrc = 896;
                     break;
                 case AspectRatio.H16V9:
-                    widthTv = 1512;
-                    widthDrc = 673;
+                    widthTv = 1510;
+                    widthDrc = 671;
                     break;
                 default:
                     widthTv = 1920;
