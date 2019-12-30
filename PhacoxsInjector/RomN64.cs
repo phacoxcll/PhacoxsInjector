@@ -112,7 +112,8 @@ namespace PhacoxsInjector
             fs.Close();
             Subformat format = GetFormat(header);
 
-            if (format != Subformat.Indeterminate && size % 4 == 0)
+            if (format == Subformat.BigEndian ||
+               (format != Subformat.Indeterminate && size % 4 == 0))
             {
                 fs = File.Open(source, FileMode.Open);
                 byte[] data = new byte[fs.Length];
