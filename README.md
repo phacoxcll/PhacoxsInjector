@@ -118,6 +118,10 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
+1.0.6 (2019-12-29)
+- Improves validation of N64 ROMs.
+- Improves NES aspect ratios.
+
 1.0.5 (2019-12-27)
 - Update the version of CNUSPacker.
 - Some minor fixes.
