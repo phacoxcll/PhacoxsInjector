@@ -77,10 +77,12 @@ namespace PhacoxsInjector
                 rodata[0x22 + romOffset] == 'S') ?
                 rodata[0x24 + romOffset] * 16384 + rodata[0x25 + romOffset] * 8192 + 16 :            
                 footerOffset - romOffset;*/
-            int romSize = VCNES.GetVC(crcsSum).ROMSize;
+            VCNES vcnes = VCNES.GetVC(crcsSum);
 
-            if (romSize == -1)
+            if (vcnes.ROMSize == -1)
                 throw new FormatException("The source RPXNES is unknown.");
+
+            int romSize = vcnes.ROMSize + (vcnes.FDSROM ? 0 : 16);
 
             FileStream fs = File.Open(rom, FileMode.Open);
             byte[] romBytes = new byte[fs.Length];
