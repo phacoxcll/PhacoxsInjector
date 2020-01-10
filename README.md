@@ -118,6 +118,9 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
+1.0.7 (2019-01-09)
+- Fix an bug in which the size of the NES ROMs to be injected is not correctly evaluated.
+
 1.0.6 (2019-12-29)
 - Improves validation of N64 ROMs.
 - Improves NES aspect ratios.
