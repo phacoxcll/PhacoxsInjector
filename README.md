@@ -118,6 +118,10 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
+1.0.8 (2019-01-11)
+- NDS ROM titles are now displayed correctly.
+- Some minor fixes.
+
 1.0.7 (2019-01-09)
 - Fix an bug in which the size of the NES ROMs to be injected is not correctly evaluated.
 
