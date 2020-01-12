@@ -24,7 +24,7 @@ namespace PhacoxsInjector
             IsSMC = false;
             Mode = Subformat.Indeterminate;
 
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             int smcHeaderSize = SMCHeaderSize((int)fs.Length);
             byte[] data = GetData(fs, smcHeaderSize);
             fs.Close();
@@ -187,7 +187,7 @@ namespace PhacoxsInjector
 
         public static bool Validate(string filename)
         {
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             int smcHeaderSize = SMCHeaderSize((int)fs.Length);
             byte[] data = GetData(fs, smcHeaderSize);
             fs.Close();

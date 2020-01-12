@@ -79,7 +79,11 @@ namespace PhacoxsInjector
             if (File.Exists(BasePath + "\\content\\0010\\rom.zip"))
                 File.Delete(BasePath + "\\content\\0010\\rom.zip");
 
-            File.Copy(RomPath, Environment.CurrentDirectory + "\\resources\\nds\\U" + Rom.ProductCodeVersion + ".nds");
+            string dest = Environment.CurrentDirectory + "\\resources\\nds\\U" + Rom.ProductCodeVersion + ".nds";
+            File.Copy(RomPath, dest);
+            FileAttributes attributes = File.GetAttributes(dest);
+            if ((attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+                File.SetAttributes(dest, attributes & ~FileAttributes.ReadOnly);            
             ZipFile.CreateFromDirectory(Environment.CurrentDirectory + "\\resources\\nds", BasePath + "\\content\\0010\\rom.zip");
 
             Directory.Delete(Environment.CurrentDirectory + "\\resources\\nds", true);

@@ -10,7 +10,7 @@ namespace PhacoxsInjector
             : base()
         {
             byte[] header = new byte[0xC0];
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
 
             fs.Read(header, 0, 0xC0);
             fs.Close();
@@ -64,7 +64,7 @@ namespace PhacoxsInjector
         public static bool Validate(string filename)
         {
             byte[] header = new byte[0xC0];
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             fs.Read(header, 0, 0xC0);
             fs.Close();
             return Validate(header);

@@ -62,7 +62,6 @@
             this.buttonLoadBase = new System.Windows.Forms.Button();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panelLoadedBase = new System.Windows.Forms.Panel();
             this.textBoxLNLine2 = new System.Windows.Forms.TextBox();
             this.labelRomInfo = new System.Windows.Forms.Label();
             this.textBoxShortName = new System.Windows.Forms.TextBox();
@@ -70,7 +69,6 @@
             this.checkBoxLongName = new System.Windows.Forms.CheckBox();
             this.labeShortName = new System.Windows.Forms.Label();
             this.panelInjecting = new System.Windows.Forms.Panel();
-            this.panelPackingQuestion = new System.Windows.Forms.Panel();
             this.textBoxLog = new System.Windows.Forms.TextBox();
             this.buttonInjectNotPack = new System.Windows.Forms.Button();
             this.buttonMain = new System.Windows.Forms.Button();
@@ -81,9 +79,6 @@
             this.buttonNDSIconBGColor = new System.Windows.Forms.Button();
             this.checkBoxReleaseDate = new System.Windows.Forms.CheckBox();
             this.numericUpDownReleaseDate = new System.Windows.Forms.NumericUpDown();
-            this.pictureBoxBootTv = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMenuIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBootDrc = new System.Windows.Forms.PictureBox();
             this.checkBoxKeepBootDrc = new System.Windows.Forms.CheckBox();
             this.checkBoxKeepMenuIcon = new System.Windows.Forms.CheckBox();
             this.checkBoxKeepBootTv = new System.Windows.Forms.CheckBox();
@@ -99,18 +94,23 @@
             this.groupBoxHelp = new System.Windows.Forms.GroupBox();
             this.labelHelpText = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.panelLoadedBase = new System.Windows.Forms.Panel();
+            this.panelPackingQuestion = new System.Windows.Forms.Panel();
+            this.pictureBoxBootTv = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMenuIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBootDrc = new System.Windows.Forms.PictureBox();
             this.groupBoxVCSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).BeginInit();
             this.panelMain.SuspendLayout();
             this.panelInjecting.SuspendLayout();
             this.panelImages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReleaseDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootTv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootDrc)).BeginInit();
             this.panelSettings.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.groupBoxHelp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootTv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootDrc)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonRom
@@ -490,15 +490,6 @@
             resources.ApplyResources(this.panelMain, "panelMain");
             this.panelMain.Name = "panelMain";
             // 
-            // panelLoadedBase
-            // 
-            this.panelLoadedBase.BackColor = System.Drawing.Color.Transparent;
-            this.panelLoadedBase.BackgroundImage = global::PhacoxsInjector.Properties.Resources.x_mark_16;
-            resources.ApplyResources(this.panelLoadedBase, "panelLoadedBase");
-            this.panelLoadedBase.Name = "panelLoadedBase";
-            this.panelLoadedBase.MouseEnter += new System.EventHandler(this.PanelLoadedBase_MouseEnter);
-            this.panelLoadedBase.MouseLeave += new System.EventHandler(this.PanelLoadedBase_MouseLeave);
-            // 
             // textBoxLNLine2
             // 
             this.textBoxLNLine2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
@@ -565,15 +556,6 @@
             this.panelInjecting.ForeColor = System.Drawing.Color.White;
             resources.ApplyResources(this.panelInjecting, "panelInjecting");
             this.panelInjecting.Name = "panelInjecting";
-            // 
-            // panelPackingQuestion
-            // 
-            this.panelPackingQuestion.BackColor = System.Drawing.Color.Transparent;
-            this.panelPackingQuestion.BackgroundImage = global::PhacoxsInjector.Properties.Resources.question;
-            resources.ApplyResources(this.panelPackingQuestion, "panelPackingQuestion");
-            this.panelPackingQuestion.Name = "panelPackingQuestion";
-            this.panelPackingQuestion.MouseEnter += new System.EventHandler(this.PanelPackingQuestion_MouseEnter);
-            this.panelPackingQuestion.MouseLeave += new System.EventHandler(this.PanelPackingQuestion_MouseLeave);
             // 
             // textBoxLog
             // 
@@ -708,36 +690,6 @@
             0});
             this.numericUpDownReleaseDate.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numericUpDownReleaseDate_MouseUp);
             this.numericUpDownReleaseDate.Validated += new System.EventHandler(this.numericUpDownReleaseDate_Validated);
-            // 
-            // pictureBoxBootTv
-            // 
-            this.pictureBoxBootTv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pictureBoxBootTv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxBootTv, "pictureBoxBootTv");
-            this.pictureBoxBootTv.Name = "pictureBoxBootTv";
-            this.pictureBoxBootTv.TabStop = false;
-            this.pictureBoxBootTv.MouseEnter += new System.EventHandler(this.PictureBoxBootTv_MouseEnter);
-            this.pictureBoxBootTv.MouseLeave += new System.EventHandler(this.PictureBoxBootTv_MouseLeave);
-            // 
-            // pictureBoxMenuIcon
-            // 
-            this.pictureBoxMenuIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pictureBoxMenuIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxMenuIcon, "pictureBoxMenuIcon");
-            this.pictureBoxMenuIcon.Name = "pictureBoxMenuIcon";
-            this.pictureBoxMenuIcon.TabStop = false;
-            this.pictureBoxMenuIcon.MouseEnter += new System.EventHandler(this.PictureBoxMenuIcon_MouseEnter);
-            this.pictureBoxMenuIcon.MouseLeave += new System.EventHandler(this.PictureBoxMenuIcon_MouseLeave);
-            // 
-            // pictureBoxBootDrc
-            // 
-            this.pictureBoxBootDrc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pictureBoxBootDrc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxBootDrc, "pictureBoxBootDrc");
-            this.pictureBoxBootDrc.Name = "pictureBoxBootDrc";
-            this.pictureBoxBootDrc.TabStop = false;
-            this.pictureBoxBootDrc.MouseEnter += new System.EventHandler(this.PictureBoxBootDrc_MouseEnter);
-            this.pictureBoxBootDrc.MouseLeave += new System.EventHandler(this.PictureBoxBootDrc_MouseLeave);
             // 
             // checkBoxKeepBootDrc
             // 
@@ -881,6 +833,54 @@
             resources.ApplyResources(this.labelHelpText, "labelHelpText");
             this.labelHelpText.Name = "labelHelpText";
             // 
+            // panelLoadedBase
+            // 
+            this.panelLoadedBase.BackColor = System.Drawing.Color.Transparent;
+            this.panelLoadedBase.BackgroundImage = global::PhacoxsInjector.Properties.Resources.x_mark_16;
+            resources.ApplyResources(this.panelLoadedBase, "panelLoadedBase");
+            this.panelLoadedBase.Name = "panelLoadedBase";
+            this.panelLoadedBase.MouseEnter += new System.EventHandler(this.PanelLoadedBase_MouseEnter);
+            this.panelLoadedBase.MouseLeave += new System.EventHandler(this.PanelLoadedBase_MouseLeave);
+            // 
+            // panelPackingQuestion
+            // 
+            this.panelPackingQuestion.BackColor = System.Drawing.Color.Transparent;
+            this.panelPackingQuestion.BackgroundImage = global::PhacoxsInjector.Properties.Resources.question;
+            resources.ApplyResources(this.panelPackingQuestion, "panelPackingQuestion");
+            this.panelPackingQuestion.Name = "panelPackingQuestion";
+            this.panelPackingQuestion.MouseEnter += new System.EventHandler(this.PanelPackingQuestion_MouseEnter);
+            this.panelPackingQuestion.MouseLeave += new System.EventHandler(this.PanelPackingQuestion_MouseLeave);
+            // 
+            // pictureBoxBootTv
+            // 
+            this.pictureBoxBootTv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pictureBoxBootTv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBootTv, "pictureBoxBootTv");
+            this.pictureBoxBootTv.Name = "pictureBoxBootTv";
+            this.pictureBoxBootTv.TabStop = false;
+            this.pictureBoxBootTv.MouseEnter += new System.EventHandler(this.PictureBoxBootTv_MouseEnter);
+            this.pictureBoxBootTv.MouseLeave += new System.EventHandler(this.PictureBoxBootTv_MouseLeave);
+            // 
+            // pictureBoxMenuIcon
+            // 
+            this.pictureBoxMenuIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pictureBoxMenuIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxMenuIcon, "pictureBoxMenuIcon");
+            this.pictureBoxMenuIcon.Name = "pictureBoxMenuIcon";
+            this.pictureBoxMenuIcon.TabStop = false;
+            this.pictureBoxMenuIcon.MouseEnter += new System.EventHandler(this.PictureBoxMenuIcon_MouseEnter);
+            this.pictureBoxMenuIcon.MouseLeave += new System.EventHandler(this.PictureBoxMenuIcon_MouseLeave);
+            // 
+            // pictureBoxBootDrc
+            // 
+            this.pictureBoxBootDrc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pictureBoxBootDrc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBootDrc, "pictureBoxBootDrc");
+            this.pictureBoxBootDrc.Name = "pictureBoxBootDrc";
+            this.pictureBoxBootDrc.TabStop = false;
+            this.pictureBoxBootDrc.MouseEnter += new System.EventHandler(this.PictureBoxBootDrc_MouseEnter);
+            this.pictureBoxBootDrc.MouseLeave += new System.EventHandler(this.PictureBoxBootDrc_MouseLeave);
+            // 
             // PhacoxsInjectorGUI
             // 
             resources.ApplyResources(this, "$this");
@@ -907,13 +907,13 @@
             this.panelImages.ResumeLayout(false);
             this.panelImages.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReleaseDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootTv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootDrc)).EndInit();
             this.panelSettings.ResumeLayout(false);
             this.panelSettings.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.groupBoxHelp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootTv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootDrc)).EndInit();
             this.ResumeLayout(false);
 
         }

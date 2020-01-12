@@ -23,7 +23,7 @@ namespace PhacoxsInjector
             Header = Subformat.Indeterminate;
 
             byte[] header = new byte[0x10];
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             fs.Read(header, 0, 0x10);
             fs.Close();
 
@@ -81,7 +81,7 @@ namespace PhacoxsInjector
         public static bool Validate(string filename)
         {
             byte[] header = new byte[0x10];
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             fs.Read(header, 0, 0x10);
             fs.Close();
             Subformat format = GetFormat(header);

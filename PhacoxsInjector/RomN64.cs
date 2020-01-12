@@ -94,7 +94,7 @@ namespace PhacoxsInjector
         public static bool Validate(string filename)
         {
             byte[] header = new byte[0x40];
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             int size = (int)fs.Length;
             fs.Read(header, 0, 0x40);
             fs.Close();
@@ -106,7 +106,7 @@ namespace PhacoxsInjector
         public static void ToBigEndian(string source, string destination)
         {
             byte[] header = new byte[0x40];
-            FileStream fs = File.Open(source, FileMode.Open);
+            FileStream fs = File.OpenRead(source);
             int size = (int)fs.Length;
             fs.Read(header, 0, 0x40);
             fs.Close();
@@ -115,7 +115,7 @@ namespace PhacoxsInjector
             if (format == Subformat.BigEndian ||
                (format != Subformat.Indeterminate && size % 4 == 0))
             {
-                fs = File.Open(source, FileMode.Open);
+                fs = File.OpenRead(source);
                 byte[] data = new byte[fs.Length];
                 fs.Read(data, 0, data.Length);
                 fs.Close();

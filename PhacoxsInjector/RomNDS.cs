@@ -22,7 +22,7 @@ namespace PhacoxsInjector
             Icon = null;
 
             byte[] header = new byte[0x200];
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             fs.Read(header, 0, 0x200);
             fs.Close();
 
@@ -46,7 +46,7 @@ namespace PhacoxsInjector
                 byte[] paletteBytes = new byte[0x20];
                 byte[] titleBytes = new byte[0x100];
 
-                fs = File.Open(filename, FileMode.Open);
+                fs = File.OpenRead(filename);
                 Size = (int)fs.Length;
                 fs.Seek(0x68, SeekOrigin.Begin);
                 fs.Read(offsetBytes, 0, 4);
@@ -64,10 +64,12 @@ namespace PhacoxsInjector
 
                 if (lines.Length == 2)
                 {
+                    Title = lines[0];
                     TitleLine1 = lines[0];
                 }
                 else if (lines.Length >= 3)
                 {
+                    Title = lines[0] + " " + lines[1];
                     TitleLine1 = lines[0];
                     TitleLine2 = lines[1];
                 }
@@ -147,7 +149,7 @@ namespace PhacoxsInjector
         public static bool Validate(string filename)
         {
             byte[] header = new byte[0x200];
-            FileStream fs = File.Open(filename, FileMode.Open);
+            FileStream fs = File.OpenRead(filename);
             fs.Read(header, 0, 0x200);
             fs.Close();
             return Validate(header);

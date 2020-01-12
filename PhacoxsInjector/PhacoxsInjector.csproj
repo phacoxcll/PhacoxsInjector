@@ -205,6 +205,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HelpString.resx</DependentUpon>
     </Compile>
+    <Compile Include="HelpString.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpString.es.resx</DependentUpon>
+    </Compile>
     <Compile Include="Log.cs" />
     <Compile Include="MenuIconImage.cs" />
     <Compile Include="N64Injector.cs" />
@@ -242,6 +247,8 @@
     <Compile Include="WiiUVC.cs" />
     <EmbeddedResource Include="HelpString.es.resx">
       <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpString.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpString.resx">
       <Generator>ResXFileCodeGenerator</Generator>
