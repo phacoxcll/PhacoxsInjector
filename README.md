@@ -118,6 +118,9 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
+1.0.9 (2019-01-26)
+- Fix a bug when placing a short name without a defined target console.
+
 1.0.8 (2019-01-11)
 - NDS ROM titles are now displayed correctly.
 - Some minor fixes.
