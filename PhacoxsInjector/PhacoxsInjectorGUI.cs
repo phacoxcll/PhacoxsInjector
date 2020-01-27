@@ -606,9 +606,14 @@ namespace PhacoxsInjector
 
         private void textBoxShortName_TextChanged(object sender, EventArgs e)
         {
-            if (Injector.BaseIsLoaded && textBoxShortName.Text.Length > 0 &&
-                ((Injector.RomIsValid && Injector.BaseSupportsRomSize) ||
-                !Injector.RomIsValid))
+            if (Injector != null &&
+                Injector.BaseIsLoaded &&
+                textBoxShortName.Text.Length > 0 &&
+                (
+                 (Injector.RomIsValid && Injector.BaseSupportsRomSize) ||
+                 !Injector.RomIsValid
+                )
+               )
             {
                 buttonInjectPack.Enabled = true;
                 buttonInjectNotPack.Enabled = true;
