@@ -118,14 +118,14 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
-1.0.9 (2019-01-26)
+1.0.9 (2020-01-26)
 - Fix a bug when placing a short name without a defined target console.
 
-1.0.8 (2019-01-11)
+1.0.8 (2020-01-11)
 - NDS ROM titles are now displayed correctly.
 - Some minor fixes.
 
-1.0.7 (2019-01-09)
+1.0.7 (2020-01-09)
 - Fix an bug in which the size of the NES ROMs to be injected is not correctly evaluated.
 
 1.0.6 (2019-12-29)
