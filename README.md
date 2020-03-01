@@ -76,14 +76,20 @@ You can change the Virtual Console settings.
 
 For Famicom and NES
 - Change the aspect ratio, 7:5 (default and not recommended), 8:7 (native, recommended for square pixels), 4:3 (used in old square televisions) and 16:9 (widescreen, to occupy the full width of modern televisions).
+- Change the speed emulation, 60 FPS (for NTSC games) or 50 FPS (for PAL games).
+- Change the number of players.
 
 For Super Famicom and SNES
 - Change the aspect ratio, 4:3 (default, it was used in old square televisions), 8:7 (native, recommended to obtain square pixels) and 16:9 (wide screen, to occupy the full width of the modern televisions).
+- Change the speed emulation, 60 FPS (for NTSC games) or 50 FPS (for PAL games).
+- Change the number of players.
+- Change the sound volume (only for SNES base games type B1 and B2).
 
 For Nintendo 64
 - Disable the dark filter.
 - Change the aspect ratio from 4:3 to 16:9 (this stretches the image if the ROM does not have a widescreen patch)
 - Change the display scale of the game.
+- Change the display position of the game.
 - Choose the configuration file that corresponds to the game you are going to inject (not all games have a configuration file and partly because of that they do not work in the Virtual Console).
 
 
@@ -118,6 +124,14 @@ You can change the language of the program and disable contextual help.
 
 
 ## Changelog
+1.1 (2020-02-29)
+- Allows modifying the frame rate and the number of players in the NES and SNES games.
+- Allows you to modify the sound volume for some SNES base games.
+- Add the option to individually modify the vertical and horizontal zoom of the N64 games.
+- Allows you to move the game image area of the N64 games.
+- Fixes an error that prevented editing the N64 Virtual Console settings without injecting a ROM.
+- Some minor fixes.
+
 1.0.9 (2020-01-26)
 - Fix a bug when placing a short name without a defined target console.
 
