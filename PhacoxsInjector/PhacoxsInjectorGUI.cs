@@ -258,13 +258,32 @@ namespace PhacoxsInjector
             comboBoxAspectRatioNES.SelectedIndex = 0;
             comboBoxAspectRatioSNES.Visible = false;
             comboBoxAspectRatioSNES.SelectedIndex = 0;
+            labelSpeed.Visible = false;
+            comboBoxSpeed.Visible = false;
+            comboBoxSpeed.SelectedIndex = 0;
+            labelPlayers.Visible = false;
+            comboBoxPlayers.Visible = false;
+            comboBoxPlayers.SelectedIndex = 0;
+            labelSoundVolume.Visible = false;
+            numericUpDownSoundVolume.Visible = false;
+            numericUpDownSoundVolume.Value = 100;
+
             checkBoxDarkFilter.Visible = false;
             checkBoxDarkFilter.Checked = true;
             checkBoxWidescreen.Visible = false;
             checkBoxWidescreen.Checked = false;
-            labelZoom.Visible = false;
-            numericUpDownZoom.Visible = false;
-            numericUpDownZoom.Value = 100.0M;
+            labelZoomH.Visible = false;
+            numericUpDownZoomH.Visible = false;
+            numericUpDownZoomH.Value = 100.0M;
+            labelZoomV.Visible = false;
+            numericUpDownZoomV.Visible = false;
+            numericUpDownZoomV.Value = 100.0M;
+            labelTranslationX.Visible = false;
+            numericUpDownTranslationX.Visible = false;
+            numericUpDownTranslationX.Value = 0.0M;
+            labelTranslationY.Visible = false;
+            numericUpDownTranslationY.Visible = false;
+            numericUpDownTranslationY.Value = 0.0M;
             buttonConfigFile.Visible = false;
             labelConfigFile.Visible = false;
             textBoxConfigFile.Visible = false;
@@ -280,9 +299,9 @@ namespace PhacoxsInjector
             checkBoxUseNDSIcon.Checked = false;
             panelNDSIcon.Visible = false;
             buttonNDSIconBGColor.Visible = false;
-            labelPlayers.Visible = false;
-            comboBoxPlayers.Visible = false;
-            comboBoxPlayers.SelectedIndex = 0;
+            labelShowPlayers.Visible = false;
+            comboBoxShowPlayers.Visible = false;
+            comboBoxShowPlayers.SelectedIndex = 0;
             checkBoxUseNDSIcon.Checked = false;
             if (panelNDSIcon.BackgroundImage != null)
             {
@@ -301,8 +320,12 @@ namespace PhacoxsInjector
                     titleScreenPath = "resources\\images\\title_screen_fc.png";
                     labelAspectRatio.Visible = true;
                     comboBoxAspectRatioNES.Visible = true;
+                    labelSpeed.Visible = true;
+                    comboBoxSpeed.Visible = true;
                     labelPlayers.Visible = true;
                     comboBoxPlayers.Visible = true;
+                    labelShowPlayers.Visible = true;
+                    comboBoxShowPlayers.Visible = true;
                     Cll.Log.WriteLine("GUI changed to Famicom.");
                     break;
                 case RomFile.Format.NES:
@@ -313,8 +336,12 @@ namespace PhacoxsInjector
                     titleScreenPath = "resources\\images\\title_screen_nes.png";
                     labelAspectRatio.Visible = true;
                     comboBoxAspectRatioNES.Visible = true;
+                    labelSpeed.Visible = true;
+                    comboBoxSpeed.Visible = true;
                     labelPlayers.Visible = true;
                     comboBoxPlayers.Visible = true;
+                    labelShowPlayers.Visible = true;
+                    comboBoxShowPlayers.Visible = true;
                     Cll.Log.WriteLine("GUI changed to NES.");
                     break;
                 case RomFile.Format.SuperFamicom:
@@ -325,8 +352,17 @@ namespace PhacoxsInjector
                     titleScreenPath = "resources\\images\\title_screen_sfc.png";
                     labelAspectRatio.Visible = true;
                     comboBoxAspectRatioSNES.Visible = true;
+                    labelSpeed.Visible = true;
+                    comboBoxSpeed.Visible = true;
                     labelPlayers.Visible = true;
                     comboBoxPlayers.Visible = true;
+                    labelShowPlayers.Visible = true;
+                    comboBoxShowPlayers.Visible = true;
+                    if (Injector.BaseSupportsSoundVolume)
+                    {
+                        labelSoundVolume.Visible = true;
+                        numericUpDownSoundVolume.Visible = true;
+                    }
                     Cll.Log.WriteLine("GUI changed to Super Famicom.");
                     break;
                 case RomFile.Format.SNES_EUR:
@@ -337,8 +373,17 @@ namespace PhacoxsInjector
                     titleScreenPath = "resources\\images\\title_screen_sfc.png";
                     labelAspectRatio.Visible = true;
                     comboBoxAspectRatioSNES.Visible = true;
+                    labelSpeed.Visible = true;
+                    comboBoxSpeed.Visible = true;
                     labelPlayers.Visible = true;
                     comboBoxPlayers.Visible = true;
+                    labelShowPlayers.Visible = true;
+                    comboBoxShowPlayers.Visible = true;
+                    if (Injector.BaseSupportsSoundVolume)
+                    {
+                        labelSoundVolume.Visible = true;
+                        numericUpDownSoundVolume.Visible = true;
+                    }
                     Cll.Log.WriteLine("GUI changed to SNES (EUR).");
                     break;
                 case RomFile.Format.SNES_USA:
@@ -349,8 +394,17 @@ namespace PhacoxsInjector
                     titleScreenPath = "resources\\images\\title_screen_snes.png";
                     labelAspectRatio.Visible = true;
                     comboBoxAspectRatioSNES.Visible = true;
+                    labelSpeed.Visible = true;
+                    comboBoxSpeed.Visible = true;
                     labelPlayers.Visible = true;
                     comboBoxPlayers.Visible = true;
+                    labelShowPlayers.Visible = true;
+                    comboBoxShowPlayers.Visible = true;
+                    if (Injector.BaseSupportsSoundVolume)
+                    {
+                        labelSoundVolume.Visible = true;
+                        numericUpDownSoundVolume.Visible = true;
+                    }
                     Cll.Log.WriteLine("GUI changed to SNES (USA).");
                     break;
                 case RomFile.Format.N64:
@@ -361,14 +415,20 @@ namespace PhacoxsInjector
                     titleScreenPath = "resources\\images\\title_screen_n64.png";
                     checkBoxDarkFilter.Visible = true;
                     checkBoxWidescreen.Visible = true;
-                    labelZoom.Visible = true;
-                    numericUpDownZoom.Visible = true;
+                    labelZoomH.Visible = true;
+                    numericUpDownZoomH.Visible = true;
+                    labelZoomV.Visible = true;
+                    numericUpDownZoomV.Visible = true;
+                    labelTranslationX.Visible = true;
+                    numericUpDownTranslationX.Visible = true;
+                    labelTranslationY.Visible = true;
+                    numericUpDownTranslationY.Visible = true;
                     buttonConfigFile.Visible = true;
                     labelConfigFile.Visible = true;
                     textBoxConfigFile.Visible = true;
                     buttonEditConfigFile.Visible = true;
-                    labelPlayers.Visible = true;
-                    comboBoxPlayers.Visible = true;
+                    labelShowPlayers.Visible = true;
+                    comboBoxShowPlayers.Visible = true;
                     Cll.Log.WriteLine("GUI changed to N64.");
                     break;
                 case RomFile.Format.GBA:
@@ -461,7 +521,7 @@ namespace PhacoxsInjector
 
         #region Main
 
-        private void ButtonRom_Click(object sender, EventArgs e)
+        private void buttonRom_Click(object sender, EventArgs e)
         {
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             openFileDialog.FileName = "";
@@ -505,7 +565,6 @@ namespace PhacoxsInjector
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                
                 switch (Mode)
                 {
                     case RomFile.Format.Famicom:
@@ -771,6 +830,11 @@ namespace PhacoxsInjector
                     Cll.Log.WriteLine("The base is valid.");
                     labelLoadedBase.Text = Injector.LoadedBase;
                     panelLoadedBase.BackgroundImage = Properties.Resources.checkmark_16;
+                    if (Injector.BaseSupportsSoundVolume)
+                    {
+                        labelSoundVolume.Visible = true;
+                        numericUpDownSoundVolume.Visible = true;
+                    }
                     Cll.Log.WriteLine("Loaded base:" + Injector.LoadedBase);
                     return true;
                 }
@@ -1108,7 +1172,7 @@ namespace PhacoxsInjector
 
         private void comboBoxPlayers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBoxPlayers.SelectedItem.ToString())
+            switch (comboBoxShowPlayers.SelectedItem.ToString())
             {
                 case "1":
                     BootTvImg.Players = 1;
@@ -1346,7 +1410,20 @@ namespace PhacoxsInjector
                             case 2: (Injector as NESInjector).AspectRatioValue = NESInjector.AspectRatio.H4V3; break;
                             case 3: (Injector as NESInjector).AspectRatioValue = NESInjector.AspectRatio.H16V9; break;
                         }
-                        Cll.Log.WriteLine("NES aspect ratio: " + (Injector as NESInjector).AspectRatioValue.ToString());
+                        switch (comboBoxSpeed.SelectedIndex)
+                        {
+                            default: (Injector as NESInjector).Speed = 60; break;
+                            case 1: (Injector as NESInjector).Speed = 50; break;
+                        }
+                        switch (comboBoxPlayers.SelectedIndex)
+                        {
+                            default: (Injector as NESInjector).Players = 2; break;
+                            case 1: (Injector as NESInjector).Players = 3; break;
+                            case 2: (Injector as NESInjector).Players = 4; break;
+                        }
+                        Cll.Log.WriteLine("NES Aspect Ratio: " + (Injector as NESInjector).AspectRatioValue.ToString());
+                        Cll.Log.WriteLine("NES Speed (FPS): " + (Injector as NESInjector).Speed.ToString());
+                        Cll.Log.WriteLine("NES Players: " + (Injector as NESInjector).Players.ToString());
                     }
                     else if (mode == RomFile.Format.SuperFamicom ||
                         mode == RomFile.Format.SNES_EUR ||
@@ -1358,16 +1435,37 @@ namespace PhacoxsInjector
                             case 1: (Injector as SNESInjector).AspectRatioValue = SNESInjector.AspectRatio.H8V7; break;
                             case 2: (Injector as SNESInjector).AspectRatioValue = SNESInjector.AspectRatio.H16V9; break;
                         }
-                        Cll.Log.WriteLine("SNES aspect ratio: " + (Injector as SNESInjector).AspectRatioValue.ToString());
+                        switch (comboBoxSpeed.SelectedIndex)
+                        {
+                            default: (Injector as SNESInjector).Speed = 60; break;
+                            case 1: (Injector as SNESInjector).Speed = 50; break;
+                        }
+                        switch (comboBoxPlayers.SelectedIndex)
+                        {
+                            default: (Injector as SNESInjector).Players = 2; break;
+                            case 1: (Injector as SNESInjector).Players = 3; break;
+                            case 2: (Injector as SNESInjector).Players = 4; break;
+                        }
+                        (Injector as SNESInjector).SoundVolume = (byte)(numericUpDownSoundVolume.Value);
+                        Cll.Log.WriteLine("SNES Aspect Ratio: " + (Injector as SNESInjector).AspectRatioValue.ToString());
+                        Cll.Log.WriteLine("SNES Speed (FPS): " + (Injector as SNESInjector).Speed.ToString());
+                        Cll.Log.WriteLine("SNES Players: " + (Injector as SNESInjector).Players.ToString());
+                        Cll.Log.WriteLine("SNES Sound Volume: " + (Injector as SNESInjector).SoundVolume.ToString());
                     }
                     else if (mode == RomFile.Format.N64)
                     {
                         (Injector as N64Injector).DarkFilter = checkBoxDarkFilter.Checked;
                         (Injector as N64Injector).Widescreen = checkBoxWidescreen.Checked;
-                        (Injector as N64Injector).Scale = (float)(numericUpDownZoom.Value / 100.0M);
-                        Cll.Log.WriteLine("N64 darkFilter: " + (Injector as N64Injector).DarkFilter.ToString());
-                        Cll.Log.WriteLine("N64 widescreen: " + (Injector as N64Injector).Widescreen.ToString());
-                        Cll.Log.WriteLine("N64 zoom: " + ((Injector as N64Injector).Scale * 100).ToString());
+                        (Injector as N64Injector).ScaleX = (float)(numericUpDownZoomH.Value / 100.0M);
+                        (Injector as N64Injector).ScaleY = (float)(numericUpDownZoomV.Value / 100.0M);
+                        (Injector as N64Injector).TranslationX = (float)(numericUpDownTranslationX.Value);
+                        (Injector as N64Injector).TranslationY = (float)(numericUpDownTranslationY.Value);
+                        Cll.Log.WriteLine("N64 DarkFilter: " + (Injector as N64Injector).DarkFilter.ToString());
+                        Cll.Log.WriteLine("N64 Widescreen: " + (Injector as N64Injector).Widescreen.ToString());
+                        Cll.Log.WriteLine("N64 Horizontal Zoom: " + ((Injector as N64Injector).ScaleX * 100).ToString());
+                        Cll.Log.WriteLine("N64 Vertical Zoom: " + ((Injector as N64Injector).ScaleY * 100).ToString());
+                        Cll.Log.WriteLine("N64 Translation X: " + (Injector as N64Injector).TranslationX.ToString());
+                        Cll.Log.WriteLine("N64 Translation Y: " + (Injector as N64Injector).TranslationY.ToString());
                     }
 
                     UpdateBootName();
@@ -1420,6 +1518,18 @@ namespace PhacoxsInjector
             }
         }
 
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (textBoxLog.SelectionLength > 0)
+                textBoxLog.Copy();
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxLog.Select();
+            textBoxLog.SelectAll();
+        }
+
         #endregion
 
         #region Settings
@@ -1432,14 +1542,14 @@ namespace PhacoxsInjector
                 textBoxCommonKey.BackColor = Color.FromArgb(33, 33, 33);
                 textBoxCommonKey.Enabled = false;
                 panelValidKey.BackgroundImage = Properties.Resources.checkmark_16;
-                Cll.Log.WriteLine("Valid Wii U Common Key.");
+                Cll.Log.WriteLine("Valid common key!");
             }
             else
             {
                 textBoxCommonKey.BackColor = Color.FromArgb(51, 51, 51);
                 textBoxCommonKey.Enabled = true;
                 panelValidKey.BackgroundImage = Properties.Resources.x_mark_16;
-                Cll.Log.WriteLine("Invalid Wii U Common Key: " + textBoxCommonKey.Text);
+                Cll.Log.WriteLine("Invalid common key.");
             }
         }
 
@@ -1467,6 +1577,7 @@ namespace PhacoxsInjector
             ChangeLanguage(resources, this.Controls, language);
             Thread.CurrentThread.CurrentCulture = new CultureInfo(language);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
+            ChangeGUI(Mode);
         }
 
         private void ChangeLanguage(ComponentResourceManager resources, Control.ControlCollection ctrls, string language)
@@ -1565,118 +1676,118 @@ namespace PhacoxsInjector
 
         #region HelpMain
 
-        private void LabelRom_MouseEnter(object sender, EventArgs e)
+        private void labelRom_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.ROM;
             labelHelpText.Text = HelpString.ROMDescription;
         }
 
-        private void TextBoxRom_MouseEnter(object sender, EventArgs e)
+        private void textBoxRom_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.ROM;
             labelHelpText.Text = HelpString.ROMDescription;
         }
 
-        private void ButtonRom_MouseEnter(object sender, EventArgs e)
+        private void buttonRom_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.ChooseROM;
             labelHelpText.Text = HelpString.ChooseROMDescription;
         }
 
-        private void LabelRomInfo_MouseEnter(object sender, EventArgs e)
+        private void labelRomInfo_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.ProductCode;
             labelHelpText.Text = HelpString.ProductCodeDescription;
         }
 
-        private void LabelRom_MouseLeave(object sender, EventArgs e)
+        private void labelRom_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void TextBoxRom_MouseLeave(object sender, EventArgs e)
+        private void textBoxRom_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void ButtonRom_MouseLeave(object sender, EventArgs e)
+        private void buttonRom_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void LabelRomInfo_MouseLeave(object sender, EventArgs e)
-        {
-            groupBoxHelp.Text = "";
-            labelHelpText.Text = "";
-        }
-
-        //********************************************************************************
-        private void LabeShortName_MouseEnter(object sender, EventArgs e)
-        {
-            groupBoxHelp.Text = HelpString.ShortName;
-            labelHelpText.Text = HelpString.ShortNameDescription;
-        }
-
-        private void TextBoxShortName_MouseEnter(object sender, EventArgs e)
-        {
-            groupBoxHelp.Text = HelpString.ShortName;
-            labelHelpText.Text = HelpString.ShortNameDescription;
-        }
-
-        private void LabeShortName_MouseLeave(object sender, EventArgs e)
-        {
-            groupBoxHelp.Text = "";
-            labelHelpText.Text = "";
-        }
-
-        private void TextBoxShortName_MouseLeave(object sender, EventArgs e)
+        private void labelRomInfo_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
         //********************************************************************************
-        private void CheckBoxLongName_MouseEnter(object sender, EventArgs e)
+        private void labeShortName_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.ShortName;
+            labelHelpText.Text = HelpString.ShortNameDescription;
+        }
+
+        private void textBoxShortName_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.ShortName;
+            labelHelpText.Text = HelpString.ShortNameDescription;
+        }
+
+        private void labeShortName_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void textBoxShortName_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        //********************************************************************************
+        private void checkBoxLongName_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.LongName;
             labelHelpText.Text = HelpString.LongNameDescription;
         }
 
-        private void TextBoxLNLine1_MouseEnter(object sender, EventArgs e)
+        private void textBoxLNLine1_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.LongName;
             labelHelpText.Text = HelpString.LongNameBoxesDescription;
         }
 
-        private void TextBoxLNLine2_MouseEnter(object sender, EventArgs e)
+        private void textBoxLNLine2_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.LongName;
             labelHelpText.Text = HelpString.LongNameBoxesDescription;
         }
 
-        private void CheckBoxLongName_MouseLeave(object sender, EventArgs e)
+        private void checkBoxLongName_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void TextBoxLNLine1_MouseLeave(object sender, EventArgs e)
+        private void textBoxLNLine1_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void TextBoxLNLine2_MouseLeave(object sender, EventArgs e)
+        private void textBoxLNLine2_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
         //********************************************************************************
-        private void ButtonLoadBase_MouseEnter(object sender, EventArgs e)
+        private void buttonLoadBase_MouseEnter(object sender, EventArgs e)
         {
             if (checkBoxHelp.Checked)
             {
@@ -1687,13 +1798,13 @@ namespace PhacoxsInjector
             }
         }
 
-        private void LabelTitleId_MouseEnter(object sender, EventArgs e)
+        private void labelTitleId_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.TitleID;
             labelHelpText.Text = HelpString.TitleIDDescription;
         }
 
-        private void PanelLoadedBase_MouseEnter(object sender, EventArgs e)
+        private void panelLoadedBase_MouseEnter(object sender, EventArgs e)
         {
             if (Injector != null)
             {
@@ -1733,31 +1844,31 @@ namespace PhacoxsInjector
             else labelHelpText.Text = "";
         }
 
-        private void LabelLoadedBase_MouseEnter(object sender, EventArgs e)
+        private void labelLoadedBase_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.Base;
             labelHelpText.Text = HelpString.BaseDescription;
         }
 
-        private void ButtonLoadBase_MouseLeave(object sender, EventArgs e)
+        private void buttonLoadBase_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void LabelTitleId_MouseLeave(object sender, EventArgs e)
+        private void labelTitleId_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void PanelLoadedBase_MouseLeave(object sender, EventArgs e)
+        private void panelLoadedBase_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void LabelLoadedBase_MouseLeave(object sender, EventArgs e)
+        private void labelLoadedBase_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
@@ -1782,6 +1893,36 @@ namespace PhacoxsInjector
             labelHelpText.Text = HelpString.AspectRatioDescription;
         }
 
+        private void labelSpeed_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.Speed;
+            labelHelpText.Text = HelpString.SpeedDescription;
+        }
+
+        private void comboBoxSpeed_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.Speed;
+            labelHelpText.Text = HelpString.SpeedDescription;
+        }
+
+        private void labelPlayers_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.Players;
+            labelHelpText.Text = HelpString.PlayersDescription;
+        }
+
+        private void comboBoxPlayers_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.Players;
+            labelHelpText.Text = HelpString.PlayersDescription;
+        }
+
+        private void labelSoundVolume_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.SoundVolume;
+            labelHelpText.Text = HelpString.SoundVolumeDescription;
+        }
+
         private void labelAspectRatio_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
@@ -1800,57 +1941,123 @@ namespace PhacoxsInjector
             labelHelpText.Text = "";
         }
 
+        private void labelSpeed_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void comboBoxSpeed_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void labelPlayers_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void comboBoxPlayers_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void labelSoundVolume_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
         //********************************************************************************
-        private void CheckBoxDarkFilter_MouseEnter(object sender, EventArgs e)
+        private void checkBoxDarkFilter_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.DarkFilter;
             labelHelpText.Text = HelpString.DarkFilterDescription;
         }
 
-        private void CheckBoxWidescreen_MouseEnter(object sender, EventArgs e)
+        private void checkBoxWidescreen_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.Widescreen;
             labelHelpText.Text = HelpString.WidescreenDescription;
         }
 
-        private void LabelZoom_MouseEnter(object sender, EventArgs e)
+        private void labelZoomH_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.Zoom;
             labelHelpText.Text = HelpString.ZoomDescription;
         }
 
-        private void CheckBoxDarkFilter_MouseLeave(object sender, EventArgs e)
+        private void labelZoomV_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.Zoom;
+            labelHelpText.Text = HelpString.ZoomDescription;
+        }
+
+        private void labelTranslationX_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.Translation;
+            labelHelpText.Text = HelpString.TranslationDescription;
+        }
+
+        private void labelTranslationY_MouseEnter(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = HelpString.Translation;
+            labelHelpText.Text = HelpString.TranslationDescription;
+        }
+
+        private void checkBoxDarkFilter_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void CheckBoxWidescreen_MouseLeave(object sender, EventArgs e)
+        private void checkBoxWidescreen_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void LabelZoom_MouseLeave(object sender, EventArgs e)
+        private void labelZoomH_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void labelZoomV_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void labelTranslationX_MouseLeave(object sender, EventArgs e)
+        {
+            groupBoxHelp.Text = "";
+            labelHelpText.Text = "";
+        }
+
+        private void labelTranslationY_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
         //********************************************************************************
-        private void LabelConfigFile_MouseEnter(object sender, EventArgs e)
+        private void labelConfigFile_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.N64ConfigFile;
             labelHelpText.Text = HelpString.N64ConfigFileDescription;
         }
 
-        private void TextBoxConfigFile_MouseEnter(object sender, EventArgs e)
+        private void textBoxConfigFile_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.N64ConfigFile;
             labelHelpText.Text = HelpString.N64ConfigFileDescription;
         }
 
-        private void ButtonConfigFile_MouseEnter(object sender, EventArgs e)
+        private void buttonConfigFile_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.ChooseN64ConfigFile;
             labelHelpText.Text = HelpString.ChooseN64ConfigFileDescription;
@@ -1862,19 +2069,19 @@ namespace PhacoxsInjector
             labelHelpText.Text = HelpString.EditN64ConfigFileDescription;
         }
 
-        private void LabelConfigFile_MouseLeave(object sender, EventArgs e)
+        private void labelConfigFile_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void TextBoxConfigFile_MouseLeave(object sender, EventArgs e)
+        private void textBoxConfigFile_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void ButtonConfigFile_MouseLeave(object sender, EventArgs e)
+        private void buttonConfigFile_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
@@ -1890,49 +2097,49 @@ namespace PhacoxsInjector
 
         #region HelpImages
 
-        private void ButtonMenuIcon_MouseEnter(object sender, EventArgs e)
+        private void buttonMenuIcon_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.Icon;
             labelHelpText.Text = HelpString.IconDescription;
         }
 
-        private void ButtonBootDrc_MouseEnter(object sender, EventArgs e)
+        private void buttonBootDrc_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.GamePad;
             labelHelpText.Text = HelpString.GamePadDescription;
         }
 
-        private void ButtonBootTv_MouseEnter(object sender, EventArgs e)
+        private void buttonBootTv_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.TV;
             labelHelpText.Text = HelpString.TVDescription;
         }
 
-        private void ButtonTitleScreen_MouseEnter(object sender, EventArgs e)
+        private void buttonTitleScreen_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.TitleScreen;
             labelHelpText.Text = HelpString.TitleScreenDescription;
         }
 
-        private void ButtonMenuIcon_MouseLeave(object sender, EventArgs e)
+        private void buttonMenuIcon_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void ButtonBootDrc_MouseLeave(object sender, EventArgs e)
+        private void buttonBootDrc_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void ButtonBootTv_MouseLeave(object sender, EventArgs e)
+        private void buttonBootTv_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void ButtonTitleScreen_MouseLeave(object sender, EventArgs e)
+        private void buttonTitleScreen_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
@@ -2013,7 +2220,7 @@ namespace PhacoxsInjector
         }
 
         //********************************************************************************
-        private void CheckBoxShowName_MouseEnter(object sender, EventArgs e)
+        private void checkBoxShowName_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.ShowName;
             labelHelpText.Text = HelpString.ShowNameDescription;
@@ -2025,19 +2232,19 @@ namespace PhacoxsInjector
             labelHelpText.Text = HelpString.ReleaseDateDescription;
         }
 
-        private void LabelPlayers_MouseEnter(object sender, EventArgs e)
+        private void labelShowPlayers_MouseEnter(object sender, EventArgs e)
         {
-            groupBoxHelp.Text = HelpString.Players;
-            labelHelpText.Text = HelpString.PlayersDescription;
+            groupBoxHelp.Text = HelpString.ShowPlayers;
+            labelHelpText.Text = HelpString.ShowPlayersDescription;
         }
 
-        private void ComboBoxPlayers_MouseEnter(object sender, EventArgs e)
+        private void comboBoxShowPlayers_MouseEnter(object sender, EventArgs e)
         {
-            groupBoxHelp.Text = HelpString.Players;
-            labelHelpText.Text = HelpString.PlayersDescription;
+            groupBoxHelp.Text = HelpString.ShowPlayers;
+            labelHelpText.Text = HelpString.ShowPlayersDescription;
         }
 
-        private void CheckBoxShowName_MouseLeave(object sender, EventArgs e)
+        private void checkBoxShowName_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
@@ -2049,50 +2256,50 @@ namespace PhacoxsInjector
             labelHelpText.Text = "";
         }
 
-        private void LabelPlayers_MouseLeave(object sender, EventArgs e)
+        private void labelShowPlayers_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void ComboBoxPlayers_MouseLeave(object sender, EventArgs e)
+        private void comboBoxShowPlayers_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
         //********************************************************************************
-        private void PictureBoxMenuIcon_MouseEnter(object sender, EventArgs e)
+        private void pictureBoxMenuIcon_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.IconPreview;
             labelHelpText.Text = HelpString.IconPreviewDescription;
         }
 
-        private void PictureBoxBootDrc_MouseEnter(object sender, EventArgs e)
+        private void pictureBoxBootDrc_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.GamePadPreview;
             labelHelpText.Text = HelpString.GamePadPreviewDescription;
         }
 
-        private void PictureBoxBootTv_MouseEnter(object sender, EventArgs e)
+        private void pictureBoxBootTv_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.TVPreview;
             labelHelpText.Text = HelpString.TVPreviewDescription;
         }
 
-        private void PictureBoxMenuIcon_MouseLeave(object sender, EventArgs e)
+        private void pictureBoxMenuIcon_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void PictureBoxBootDrc_MouseLeave(object sender, EventArgs e)
+        private void pictureBoxBootDrc_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void PictureBoxBootTv_MouseLeave(object sender, EventArgs e)
+        private void pictureBoxBootTv_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
@@ -2102,7 +2309,7 @@ namespace PhacoxsInjector
 
         #region HelpInjecting
 
-        private void ButtonInjectPack_MouseEnter(object sender, EventArgs e)
+        private void buttonInjectPack_MouseEnter(object sender, EventArgs e)
         {
             if (checkBoxHelp.Checked)
             {
@@ -2113,43 +2320,43 @@ namespace PhacoxsInjector
             }
         }
 
-        private void ButtonInjectNotPack_MouseEnter(object sender, EventArgs e)
+        private void buttonInjectNotPack_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.NotPack;
             labelHelpText.Text = HelpString.NotPackDescription;
         }
 
-        private void PanelPackingQuestion_MouseEnter(object sender, EventArgs e)
+        private void panelPackingQuestion_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.Injecting;
             labelHelpText.Text = HelpString.EnableInjecting;
         }
 
-        private void TextBoxLog_MouseEnter(object sender, EventArgs e)
+        private void textBoxLog_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.Log;
             labelHelpText.Text = HelpString.LogDescription;
         }
 
-        private void ButtonInjectPack_MouseLeave(object sender, EventArgs e)
+        private void buttonInjectPack_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void ButtonInjectNotPack_MouseLeave(object sender, EventArgs e)
+        private void buttonInjectNotPack_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void PanelPackingQuestion_MouseLeave(object sender, EventArgs e)
+        private void panelPackingQuestion_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void TextBoxLog_MouseLeave(object sender, EventArgs e)
+        private void textBoxLog_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
@@ -2159,19 +2366,19 @@ namespace PhacoxsInjector
 
         #region HelpSettings
 
-        private void LabelCommonKey_MouseEnter(object sender, EventArgs e)
+        private void labelCommonKey_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.WiiUCommonKey;
             labelHelpText.Text = HelpString.WiiUCommonKeyDescription;
         }
 
-        private void TextBoxCommonKey_MouseEnter(object sender, EventArgs e)
+        private void textBoxCommonKey_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.WiiUCommonKey;
             labelHelpText.Text = HelpString.WiiUCommonKeyBoxDescription;
         }
 
-        private void PanelValidKey_MouseEnter(object sender, EventArgs e)
+        private void panelValidKey_MouseEnter(object sender, EventArgs e)
         {
             if (textBoxCommonKey.Enabled)
             {
@@ -2185,31 +2392,31 @@ namespace PhacoxsInjector
             }
         }
 
-        private void CheckBoxHelp_MouseEnter(object sender, EventArgs e)
+        private void checkBoxHelp_MouseEnter(object sender, EventArgs e)
         {
             groupBoxHelp.Text = HelpString.HelpBox;
             labelHelpText.Text = HelpString.HelpDescription;
         }
 
-        private void LabelCommonKey_MouseLeave(object sender, EventArgs e)
+        private void labelCommonKey_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void TextBoxCommonKey_MouseLeave(object sender, EventArgs e)
+        private void textBoxCommonKey_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void PanelValidKey_MouseLeave(object sender, EventArgs e)
+        private void panelValidKey_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";
         }
 
-        private void CheckBoxHelp_MouseLeave(object sender, EventArgs e)
+        private void checkBoxHelp_MouseLeave(object sender, EventArgs e)
         {
             groupBoxHelp.Text = "";
             labelHelpText.Text = "";

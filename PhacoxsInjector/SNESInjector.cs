@@ -15,6 +15,9 @@ namespace PhacoxsInjector
         };
 
         public AspectRatio AspectRatioValue;
+        public byte Speed;
+        public byte Players;
+        public byte SoundVolume;
 
         public override string TitleId
         {
@@ -67,6 +70,21 @@ namespace PhacoxsInjector
 
         protected override void InjectRom()
         {
+            byte speed = (byte)(Speed == 50 ? 50 : 60);
+            byte players = (byte)(Players == 4 ? 4 : Players == 3 ? 3 : 2);
+            byte romType;
+            switch ((Rom as RomSNES).Mode)
+            {
+                case RomSNES.Subformat.LoROM:
+                    romType = 20;
+                    break;
+                case RomSNES.Subformat.HiROM:
+                    romType = 21;
+                    break;
+                default:
+                    romType = 0;
+                    break;
+            }
             short widthTv;
             short widthDrc;
             switch (AspectRatioValue)
@@ -90,7 +108,7 @@ namespace PhacoxsInjector
 
             DirectoryInfo code = new DirectoryInfo(BasePath + "\\code");
             FileInfo[] rpxFiles = code.GetFiles("*.rpx");
-            RPXSNES.Inject(rpxFiles[0].FullName, RomPath, Environment.CurrentDirectory + "\\resources\\snes.rpx", widthTv, widthDrc);
+            RPXSNES.Inject(rpxFiles[0].FullName, RomPath, Environment.CurrentDirectory + "\\resources\\snes.rpx", speed, players, SoundVolume, romType, widthTv, widthDrc);
 
             File.Delete(rpxFiles[0].FullName);
             File.Move(Environment.CurrentDirectory + "\\resources\\snes.rpx", rpxFiles[0].FullName);

@@ -9,7 +9,7 @@ namespace PhacoxsInjector
 {
     public abstract class WiiUInjector
     {
-        public const string Release = "1.0.9"; //CllVersionReplace "major.minor.revision"
+        public const string Release = "1.1"; //CllVersionReplace "major.minor"
 
         protected string RomPath;
         protected RomFile Rom;
@@ -134,6 +134,19 @@ namespace PhacoxsInjector
                     return false;
                 else
                     return true;
+            }
+        }
+        public bool BaseSupportsSoundVolume
+        {
+            get
+            {
+                if (Base != null &&
+                    Base is VCSNES &&
+                    ((Base as VCSNES).Type == VCSNES.eType.B1 ||
+                    (Base as VCSNES).Type == VCSNES.eType.B2))
+                    return true;
+                else
+                    return false;
             }
         }
 

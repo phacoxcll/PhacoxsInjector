@@ -26,10 +26,11 @@ namespace PhacoxsInjector
         }
 
         public static void Inject(string sourcebase, string sourcerom, string destination,
+            byte speed, byte players, byte soundVolume, byte romType,
             short widthTv = 1920, short widthDrc = 854, short heightTv = 1080, short heightDrc = 480)
         {
             RPXSNES rpx = new RPXSNES(sourcebase);
-            rpx.Edit(sourcerom, widthTv, widthDrc, heightTv, heightDrc, destination);
+            rpx.Edit(sourcerom, destination, speed, players, soundVolume, romType, widthTv, widthDrc, heightTv, heightDrc);
         }
 
         private VCType GetVCType()
@@ -109,14 +110,15 @@ namespace PhacoxsInjector
                 return VCType.Unknown;
         }
 
-        protected override byte[] GetNewRodata(uint crcsSum, byte[] rodata, string rom)
+        protected override byte[] GetNewRodata(uint crcsSum, byte[] rodata, string rom,
+            byte speed, byte players, byte soundVolume, byte romType)
         {
             //int romOffset = ReadInt32(rodata, 0x28); //ROM offset (Always 0x00000030)
-            //int footerOffset = ReadInt32(rodata, 0x34); //Footer offset            
+            int footerOffset = ReadInt32(rodata, 0x34); //Footer offset            
             //int romSize = ReadInt32(rodata, footerOffset + 0x21); //ROM size
-            int romSize = VCSNES.GetVC(crcsSum).ROMSize;
+            VCSNES vc = VCSNES.GetVC(crcsSum);
 
-            if (romSize == -1)
+            if (vc.ROMSize == -1)
                 throw new FormatException("The source RPXSNES is unknown.");
 
             FileStream fs = File.Open(rom, FileMode.Open);
@@ -132,16 +134,25 @@ namespace PhacoxsInjector
             else
                 throw new FormatException("The source ROM has an invalid size.");
 
-            if (romBytes.Length - smcHeaderSize > romSize)
+            if (romBytes.Length - smcHeaderSize > vc.ROMSize)
                 throw new FormatException("The source ROM is too large for this base.");
 
-            int paddingLength = romSize - (romBytes.Length - smcHeaderSize);
+            int paddingLength = vc.ROMSize - (romBytes.Length - smcHeaderSize);
             byte[] padding = new byte[paddingLength];
 
             MemoryStream ms = new MemoryStream(rodata);
             ms.Position = 0x50;//romOffset + 0x20;
             ms.Write(romBytes, smcHeaderSize, romBytes.Length - smcHeaderSize);
             ms.Write(padding, 0, padding.Length);
+            ms.Position = footerOffset + 0x20;
+            ms.WriteByte(speed);
+            ms.Position = footerOffset + 0x2F;
+            ms.WriteByte(players);
+            if (vc.ExtendedFooter)
+            {
+                ms.WriteByte(soundVolume);
+                ms.WriteByte(romType);
+            }
             rodata = ms.ToArray();
             ms.Close();
 

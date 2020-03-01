@@ -248,7 +248,9 @@ namespace PhacoxsInjector
             FileName = filename;
         }
 
-        protected void Edit(string rom, short widthTv, short widthDrc, short heightTv, short heightDrc, string destination)
+        protected void Edit(string rom, string destination,
+            byte speed, byte players, byte soundVolume, byte romType,
+            short widthTv, short widthDrc, short heightTv, short heightDrc)
         {
             FileStream fs = File.Open(FileName, FileMode.Open);
             byte[] rodata = new byte[SectionHeader[RodataSectionIndex].sh_size];
@@ -263,7 +265,7 @@ namespace PhacoxsInjector
             {
                 if ((SectionHeader[RodataSectionIndex].sh_flags & 0x08000000) == 0x08000000)//Section Header Flag RPL ZLIB
                     rodata = Decompress(rodata);
-                rodata = GetNewRodata(CRCsSum, rodata, rom);
+                rodata = GetNewRodata(CRCsSum, rodata, rom, speed, players, soundVolume, romType);
                 CRC[RodataSectionIndex] = Cll.Security.ComputeCRC32(rodata, 0, rodata.Length);
                 if ((SectionHeader[RodataSectionIndex].sh_flags & 0x08000000) == 0x08000000)//Section Header Flag RPL ZLIB
                     rodata = Compress(rodata);
@@ -356,7 +358,8 @@ namespace PhacoxsInjector
             dest.Close();
         }
 
-        protected abstract byte[] GetNewRodata(uint crcsSum, byte[] rodata, string rom);
+        protected abstract byte[] GetNewRodata(uint crcsSum, byte[] rodata, string rom,
+            byte speed, byte players, byte soundVolume, byte romType);
 
         protected abstract int GetAspectRatioOffset(uint crcsSum);
 

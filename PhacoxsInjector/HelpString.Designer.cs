@@ -700,7 +700,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Number of game players that will appear in the template images..
+        ///   Busca una cadena traducida similar a Indicates the maximum number of players that supports the game you want to inject..
         /// </summary>
         internal static string PlayersDescription {
             get {
@@ -817,6 +817,24 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Players.
+        /// </summary>
+        internal static string ShowPlayers {
+            get {
+                return ResourceManager.GetString("ShowPlayers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Number of game players that will appear in the template images..
+        /// </summary>
+        internal static string ShowPlayersDescription {
+            get {
+                return ResourceManager.GetString("ShowPlayersDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a The base did not load. Use one of the SNES games released for the Wii U VC..
         /// </summary>
         internal static string SNESBaseErrorDescription {
@@ -831,6 +849,42 @@ namespace PhacoxsInjector {
         internal static string SNESBaseSelect {
             get {
                 return ResourceManager.GetString("SNESBaseSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sound volume.
+        /// </summary>
+        internal static string SoundVolume {
+            get {
+                return ResourceManager.GetString("SoundVolume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modify the volume of the game audio. Official games do not exceed 140. (This option is only available in Super Famicom or SNES base games Type B1 and Type B2)..
+        /// </summary>
+        internal static string SoundVolumeDescription {
+            get {
+                return ResourceManager.GetString("SoundVolumeDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Speed.
+        /// </summary>
+        internal static string Speed {
+            get {
+                return ResourceManager.GetString("Speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Choose the frame rate that corresponds to the region of the game you want to inject. 60 FPS for NTSC games (USA/JPN) or 50 FPS for PAL games (EUR)..
+        /// </summary>
+        internal static string SpeedDescription {
+            get {
+                return ResourceManager.GetString("SpeedDescription", resourceCulture);
             }
         }
         
@@ -867,6 +921,24 @@ namespace PhacoxsInjector {
         internal static string TitleScreenDescription {
             get {
                 return ResourceManager.GetString("TitleScreenDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Translation.
+        /// </summary>
+        internal static string Translation {
+            get {
+                return ResourceManager.GetString("Translation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Scroll the game display area. If you move it too much, you can leave the screen..
+        /// </summary>
+        internal static string TranslationDescription {
+            get {
+                return ResourceManager.GetString("TranslationDescription", resourceCulture);
             }
         }
         
@@ -1033,7 +1105,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Enlarge or reduce the viewing area of the game. If you expand it a lot I could crop the image of the game..
+        ///   Busca una cadena traducida similar a Enlarge or reduce the viewing area of the game. If you expand it a lot you can leave the screen..
         /// </summary>
         internal static string ZoomDescription {
             get {

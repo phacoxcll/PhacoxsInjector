@@ -9,7 +9,10 @@ namespace PhacoxsInjector
     {
         public bool DarkFilter;
         public bool Widescreen;
-        public float Scale;
+        public float ScaleX;
+        public float ScaleY;
+        public float TranslationX;
+        public float TranslationY;
 
         public string ConfigFilePath
         { private set; get; }
@@ -47,7 +50,7 @@ namespace PhacoxsInjector
                     int flags = Base.Index;
                     flags |= DarkFilter ? 0x80 : 0;
                     flags |= Widescreen ? 0x40 : 0;
-                    flags |= Scale != 1.0F ? 0x20 : 0;
+                    flags |= ScaleX != 1.0F ? 0x20 : (ScaleY != 1.0F ? 0x20 : (TranslationX != 0.0F ? 0x20 : (TranslationY != 0.0F ? 0x20 : 0)));
 
                     return "0005000064" + crc.ToString("X4") + ((byte)(flags)).ToString("X2");
                 }
@@ -67,7 +70,10 @@ namespace PhacoxsInjector
 
             DarkFilter = true;
             Widescreen = false;
-            Scale = 1.0F;
+            ScaleX = 1.0F;
+            ScaleY = 1.0F;
+            TranslationX = 0.0F;
+            TranslationY = 0.0F;
         }
 
         public override void SetRom(string romPath)
@@ -120,7 +126,10 @@ namespace PhacoxsInjector
                 byte[] widescreenB = Widescreen ?
                     new byte[] { 0x44, 0xF0, 0, 0 } :
                     new byte[] { 0x44, 0xB4, 0, 0 };
-                byte[] scaleB = BitConverter.GetBytes(Scale);
+                byte[] scaleXB = BitConverter.GetBytes(ScaleX);
+                byte[] scaleYB = BitConverter.GetBytes(ScaleY);
+                byte[] translationXB = BitConverter.GetBytes(TranslationX);
+                byte[] translationYB = BitConverter.GetBytes(TranslationY);
 
                 byte[] magic = new byte[4];
                 uint offset = 0;
@@ -189,16 +198,26 @@ namespace PhacoxsInjector
 
                                 if (name == "frame")
                                 {
-                                    fs.Position = offset + 0x44;//Scale
-                                    fs.WriteByte(scaleB[3]);
-                                    fs.WriteByte(scaleB[2]);
-                                    fs.WriteByte(scaleB[1]);
-                                    fs.WriteByte(scaleB[0]);
-                                    fs.Position = offset + 0x48;//Scale
-                                    fs.WriteByte(scaleB[3]);
-                                    fs.WriteByte(scaleB[2]);
-                                    fs.WriteByte(scaleB[1]);
-                                    fs.WriteByte(scaleB[0]);
+                                    fs.Position = offset + 0x2C;//TranslationX
+                                    fs.WriteByte(translationXB[3]);
+                                    fs.WriteByte(translationXB[2]);
+                                    fs.WriteByte(translationXB[1]);
+                                    fs.WriteByte(translationXB[0]);
+                                    fs.Position = offset + 0x30;//TranslationX
+                                    fs.WriteByte(translationYB[3]);
+                                    fs.WriteByte(translationYB[2]);
+                                    fs.WriteByte(translationYB[1]);
+                                    fs.WriteByte(translationYB[0]);
+                                    fs.Position = offset + 0x44;//ScaleX
+                                    fs.WriteByte(scaleXB[3]);
+                                    fs.WriteByte(scaleXB[2]);
+                                    fs.WriteByte(scaleXB[1]);
+                                    fs.WriteByte(scaleXB[0]);
+                                    fs.Position = offset + 0x48;//ScaleY
+                                    fs.WriteByte(scaleYB[3]);
+                                    fs.WriteByte(scaleYB[2]);
+                                    fs.WriteByte(scaleYB[1]);
+                                    fs.WriteByte(scaleYB[0]);
                                     fs.Position = offset + 0x4C;//Widescreen
                                     fs.Write(widescreenB, 0, 4);
                                 }
@@ -236,14 +255,32 @@ namespace PhacoxsInjector
 
         private void InjectConfigFile()
         {
-            if (Directory.Exists(BasePath + "\\content\\config"))
-                Directory.Delete(BasePath + "\\content\\config", true);
-            Directory.CreateDirectory(BasePath + "\\content\\config");
+            if (RomIsValid)
+            {
+                if (Directory.Exists(BasePath + "\\content\\config"))
+                    Directory.Delete(BasePath + "\\content\\config", true);
+                Directory.CreateDirectory(BasePath + "\\content\\config");
 
-            if (!ConfigFileIsValid)            
-                File.Create(BasePath + "\\content\\config\\U" + Rom.ProductCodeVersion + ".z64.ini").Close();
-            else
-                VCN64ConfigFile.Copy(ConfigFilePath, BasePath + "\\content\\config\\U" + Rom.ProductCodeVersion + ".z64.ini");
+                if (!ConfigFileIsValid)
+                    File.Create(BasePath + "\\content\\config\\U" + Rom.ProductCodeVersion + ".z64.ini").Close();
+                else
+                    VCN64ConfigFile.Copy(ConfigFilePath, BasePath + "\\content\\config\\U" + Rom.ProductCodeVersion + ".z64.ini");
+            }
+            else if (ConfigFileIsValid)
+            {
+                string[] files = Directory.GetFiles(BasePath + "\\content\\rom");
+
+                if (files.Length > 1)
+                    throw new Exception("The folder \"" + BasePath + "\\content\\rom\" contains more than one file.");
+
+                string filename = Path.GetFileName(files[0]);
+
+                if (Directory.Exists(BasePath + "\\content\\config"))
+                    Directory.Delete(BasePath + "\\content\\config", true);
+                Directory.CreateDirectory(BasePath + "\\content\\config");
+
+                VCN64ConfigFile.Copy(ConfigFilePath, BasePath + "\\content\\config\\" + filename + ".ini");
+            }
         }
 
         protected override void InjectRom()

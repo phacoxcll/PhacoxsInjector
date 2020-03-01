@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhacoxsInjectorGUI));
             this.buttonRom = new System.Windows.Forms.Button();
             this.buttonConfigFile = new System.Windows.Forms.Button();
@@ -38,21 +39,33 @@
             this.textBoxConfigFile = new System.Windows.Forms.TextBox();
             this.buttonInjectPack = new System.Windows.Forms.Button();
             this.buttonTitleScreen = new System.Windows.Forms.Button();
-            this.comboBoxPlayers = new System.Windows.Forms.ComboBox();
-            this.labelPlayers = new System.Windows.Forms.Label();
+            this.comboBoxShowPlayers = new System.Windows.Forms.ComboBox();
+            this.labelShowPlayers = new System.Windows.Forms.Label();
             this.checkBoxShowName = new System.Windows.Forms.CheckBox();
             this.buttonBootDrc = new System.Windows.Forms.Button();
             this.buttonMenuIcon = new System.Windows.Forms.Button();
             this.buttonBootTv = new System.Windows.Forms.Button();
             this.groupBoxVCSettings = new System.Windows.Forms.GroupBox();
-            this.buttonEditConfigFile = new System.Windows.Forms.Button();
-            this.checkBoxDarkFilter = new System.Windows.Forms.CheckBox();
-            this.numericUpDownZoom = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxWidescreen = new System.Windows.Forms.CheckBox();
-            this.labelZoom = new System.Windows.Forms.Label();
+            this.labelAspectRatio = new System.Windows.Forms.Label();
+            this.numericUpDownSoundVolume = new System.Windows.Forms.NumericUpDown();
             this.comboBoxAspectRatioSNES = new System.Windows.Forms.ComboBox();
             this.comboBoxAspectRatioNES = new System.Windows.Forms.ComboBox();
-            this.labelAspectRatio = new System.Windows.Forms.Label();
+            this.labelSoundVolume = new System.Windows.Forms.Label();
+            this.labelSpeed = new System.Windows.Forms.Label();
+            this.comboBoxSpeed = new System.Windows.Forms.ComboBox();
+            this.labelPlayers = new System.Windows.Forms.Label();
+            this.comboBoxPlayers = new System.Windows.Forms.ComboBox();
+            this.buttonEditConfigFile = new System.Windows.Forms.Button();
+            this.checkBoxDarkFilter = new System.Windows.Forms.CheckBox();
+            this.numericUpDownTranslationY = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxWidescreen = new System.Windows.Forms.CheckBox();
+            this.labelZoomH = new System.Windows.Forms.Label();
+            this.labelTranslationY = new System.Windows.Forms.Label();
+            this.labelTranslationX = new System.Windows.Forms.Label();
+            this.numericUpDownZoomV = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownZoomH = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownTranslationX = new System.Windows.Forms.NumericUpDown();
+            this.labelZoomV = new System.Windows.Forms.Label();
             this.labelTitleId = new System.Windows.Forms.Label();
             this.labelBy = new System.Windows.Forms.Label();
             this.labelLoadedBase = new System.Windows.Forms.Label();
@@ -62,6 +75,7 @@
             this.buttonLoadBase = new System.Windows.Forms.Button();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panelLoadedBase = new System.Windows.Forms.Panel();
             this.textBoxLNLine2 = new System.Windows.Forms.TextBox();
             this.labelRomInfo = new System.Windows.Forms.Label();
             this.textBoxShortName = new System.Windows.Forms.TextBox();
@@ -69,7 +83,11 @@
             this.checkBoxLongName = new System.Windows.Forms.CheckBox();
             this.labeShortName = new System.Windows.Forms.Label();
             this.panelInjecting = new System.Windows.Forms.Panel();
+            this.panelPackingQuestion = new System.Windows.Forms.Panel();
             this.textBoxLog = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonInjectNotPack = new System.Windows.Forms.Button();
             this.buttonMain = new System.Windows.Forms.Button();
             this.buttonImages = new System.Windows.Forms.Button();
@@ -79,6 +97,9 @@
             this.buttonNDSIconBGColor = new System.Windows.Forms.Button();
             this.checkBoxReleaseDate = new System.Windows.Forms.CheckBox();
             this.numericUpDownReleaseDate = new System.Windows.Forms.NumericUpDown();
+            this.pictureBoxBootTv = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMenuIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBootDrc = new System.Windows.Forms.PictureBox();
             this.checkBoxKeepBootDrc = new System.Windows.Forms.CheckBox();
             this.checkBoxKeepMenuIcon = new System.Windows.Forms.CheckBox();
             this.checkBoxKeepBootTv = new System.Windows.Forms.CheckBox();
@@ -94,23 +115,23 @@
             this.groupBoxHelp = new System.Windows.Forms.GroupBox();
             this.labelHelpText = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.panelLoadedBase = new System.Windows.Forms.Panel();
-            this.panelPackingQuestion = new System.Windows.Forms.Panel();
-            this.pictureBoxBootTv = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMenuIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBootDrc = new System.Windows.Forms.PictureBox();
             this.groupBoxVCSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoundVolume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationX)).BeginInit();
             this.panelMain.SuspendLayout();
             this.panelInjecting.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.panelImages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReleaseDate)).BeginInit();
-            this.panelSettings.SuspendLayout();
-            this.panelMenu.SuspendLayout();
-            this.groupBoxHelp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootTv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootDrc)).BeginInit();
+            this.panelSettings.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.groupBoxHelp.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRom
@@ -123,9 +144,9 @@
             this.buttonRom.ForeColor = System.Drawing.Color.White;
             this.buttonRom.Name = "buttonRom";
             this.buttonRom.UseVisualStyleBackColor = false;
-            this.buttonRom.Click += new System.EventHandler(this.ButtonRom_Click);
-            this.buttonRom.MouseEnter += new System.EventHandler(this.ButtonRom_MouseEnter);
-            this.buttonRom.MouseLeave += new System.EventHandler(this.ButtonRom_MouseLeave);
+            this.buttonRom.Click += new System.EventHandler(this.buttonRom_Click);
+            this.buttonRom.MouseEnter += new System.EventHandler(this.buttonRom_MouseEnter);
+            this.buttonRom.MouseLeave += new System.EventHandler(this.buttonRom_MouseLeave);
             // 
             // buttonConfigFile
             // 
@@ -138,24 +159,24 @@
             this.buttonConfigFile.Name = "buttonConfigFile";
             this.buttonConfigFile.UseVisualStyleBackColor = false;
             this.buttonConfigFile.Click += new System.EventHandler(this.buttonConfigFile_Click);
-            this.buttonConfigFile.MouseEnter += new System.EventHandler(this.ButtonConfigFile_MouseEnter);
-            this.buttonConfigFile.MouseLeave += new System.EventHandler(this.ButtonConfigFile_MouseLeave);
+            this.buttonConfigFile.MouseEnter += new System.EventHandler(this.buttonConfigFile_MouseEnter);
+            this.buttonConfigFile.MouseLeave += new System.EventHandler(this.buttonConfigFile_MouseLeave);
             // 
             // labelRom
             // 
             resources.ApplyResources(this.labelRom, "labelRom");
             this.labelRom.ForeColor = System.Drawing.Color.White;
             this.labelRom.Name = "labelRom";
-            this.labelRom.MouseEnter += new System.EventHandler(this.LabelRom_MouseEnter);
-            this.labelRom.MouseLeave += new System.EventHandler(this.LabelRom_MouseLeave);
+            this.labelRom.MouseEnter += new System.EventHandler(this.labelRom_MouseEnter);
+            this.labelRom.MouseLeave += new System.EventHandler(this.labelRom_MouseLeave);
             // 
             // labelConfigFile
             // 
             resources.ApplyResources(this.labelConfigFile, "labelConfigFile");
             this.labelConfigFile.ForeColor = System.Drawing.Color.White;
             this.labelConfigFile.Name = "labelConfigFile";
-            this.labelConfigFile.MouseEnter += new System.EventHandler(this.LabelConfigFile_MouseEnter);
-            this.labelConfigFile.MouseLeave += new System.EventHandler(this.LabelConfigFile_MouseLeave);
+            this.labelConfigFile.MouseEnter += new System.EventHandler(this.labelConfigFile_MouseEnter);
+            this.labelConfigFile.MouseLeave += new System.EventHandler(this.labelConfigFile_MouseLeave);
             // 
             // textBoxRom
             // 
@@ -165,8 +186,8 @@
             resources.ApplyResources(this.textBoxRom, "textBoxRom");
             this.textBoxRom.Name = "textBoxRom";
             this.textBoxRom.TabStop = false;
-            this.textBoxRom.MouseEnter += new System.EventHandler(this.TextBoxRom_MouseEnter);
-            this.textBoxRom.MouseLeave += new System.EventHandler(this.TextBoxRom_MouseLeave);
+            this.textBoxRom.MouseEnter += new System.EventHandler(this.textBoxRom_MouseEnter);
+            this.textBoxRom.MouseLeave += new System.EventHandler(this.textBoxRom_MouseLeave);
             // 
             // textBoxConfigFile
             // 
@@ -176,8 +197,8 @@
             resources.ApplyResources(this.textBoxConfigFile, "textBoxConfigFile");
             this.textBoxConfigFile.Name = "textBoxConfigFile";
             this.textBoxConfigFile.TabStop = false;
-            this.textBoxConfigFile.MouseEnter += new System.EventHandler(this.TextBoxConfigFile_MouseEnter);
-            this.textBoxConfigFile.MouseLeave += new System.EventHandler(this.TextBoxConfigFile_MouseLeave);
+            this.textBoxConfigFile.MouseEnter += new System.EventHandler(this.textBoxConfigFile_MouseEnter);
+            this.textBoxConfigFile.MouseLeave += new System.EventHandler(this.textBoxConfigFile_MouseLeave);
             // 
             // buttonInjectPack
             // 
@@ -190,8 +211,8 @@
             this.buttonInjectPack.Name = "buttonInjectPack";
             this.buttonInjectPack.UseVisualStyleBackColor = false;
             this.buttonInjectPack.Click += new System.EventHandler(this.buttonInjectPack_Click);
-            this.buttonInjectPack.MouseEnter += new System.EventHandler(this.ButtonInjectPack_MouseEnter);
-            this.buttonInjectPack.MouseLeave += new System.EventHandler(this.ButtonInjectPack_MouseLeave);
+            this.buttonInjectPack.MouseEnter += new System.EventHandler(this.buttonInjectPack_MouseEnter);
+            this.buttonInjectPack.MouseLeave += new System.EventHandler(this.buttonInjectPack_MouseLeave);
             // 
             // buttonTitleScreen
             // 
@@ -204,33 +225,33 @@
             this.buttonTitleScreen.Name = "buttonTitleScreen";
             this.buttonTitleScreen.UseVisualStyleBackColor = false;
             this.buttonTitleScreen.Click += new System.EventHandler(this.buttonTitleScreen_Click);
-            this.buttonTitleScreen.MouseEnter += new System.EventHandler(this.ButtonTitleScreen_MouseEnter);
-            this.buttonTitleScreen.MouseLeave += new System.EventHandler(this.ButtonTitleScreen_MouseLeave);
+            this.buttonTitleScreen.MouseEnter += new System.EventHandler(this.buttonTitleScreen_MouseEnter);
+            this.buttonTitleScreen.MouseLeave += new System.EventHandler(this.buttonTitleScreen_MouseLeave);
             // 
-            // comboBoxPlayers
+            // comboBoxShowPlayers
             // 
-            this.comboBoxPlayers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            resources.ApplyResources(this.comboBoxPlayers, "comboBoxPlayers");
-            this.comboBoxPlayers.ForeColor = System.Drawing.Color.White;
-            this.comboBoxPlayers.FormattingEnabled = true;
-            this.comboBoxPlayers.Items.AddRange(new object[] {
-            resources.GetString("comboBoxPlayers.Items"),
-            resources.GetString("comboBoxPlayers.Items1"),
-            resources.GetString("comboBoxPlayers.Items2"),
-            resources.GetString("comboBoxPlayers.Items3"),
-            resources.GetString("comboBoxPlayers.Items4")});
-            this.comboBoxPlayers.Name = "comboBoxPlayers";
-            this.comboBoxPlayers.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayers_SelectedIndexChanged);
-            this.comboBoxPlayers.MouseEnter += new System.EventHandler(this.ComboBoxPlayers_MouseEnter);
-            this.comboBoxPlayers.MouseLeave += new System.EventHandler(this.ComboBoxPlayers_MouseLeave);
+            this.comboBoxShowPlayers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            resources.ApplyResources(this.comboBoxShowPlayers, "comboBoxShowPlayers");
+            this.comboBoxShowPlayers.ForeColor = System.Drawing.Color.White;
+            this.comboBoxShowPlayers.FormattingEnabled = true;
+            this.comboBoxShowPlayers.Items.AddRange(new object[] {
+            resources.GetString("comboBoxShowPlayers.Items"),
+            resources.GetString("comboBoxShowPlayers.Items1"),
+            resources.GetString("comboBoxShowPlayers.Items2"),
+            resources.GetString("comboBoxShowPlayers.Items3"),
+            resources.GetString("comboBoxShowPlayers.Items4")});
+            this.comboBoxShowPlayers.Name = "comboBoxShowPlayers";
+            this.comboBoxShowPlayers.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayers_SelectedIndexChanged);
+            this.comboBoxShowPlayers.MouseEnter += new System.EventHandler(this.comboBoxShowPlayers_MouseEnter);
+            this.comboBoxShowPlayers.MouseLeave += new System.EventHandler(this.comboBoxShowPlayers_MouseLeave);
             // 
-            // labelPlayers
+            // labelShowPlayers
             // 
-            resources.ApplyResources(this.labelPlayers, "labelPlayers");
-            this.labelPlayers.ForeColor = System.Drawing.Color.White;
-            this.labelPlayers.Name = "labelPlayers";
-            this.labelPlayers.MouseEnter += new System.EventHandler(this.LabelPlayers_MouseEnter);
-            this.labelPlayers.MouseLeave += new System.EventHandler(this.LabelPlayers_MouseLeave);
+            resources.ApplyResources(this.labelShowPlayers, "labelShowPlayers");
+            this.labelShowPlayers.ForeColor = System.Drawing.Color.White;
+            this.labelShowPlayers.Name = "labelShowPlayers";
+            this.labelShowPlayers.MouseEnter += new System.EventHandler(this.labelShowPlayers_MouseEnter);
+            this.labelShowPlayers.MouseLeave += new System.EventHandler(this.labelShowPlayers_MouseLeave);
             // 
             // checkBoxShowName
             // 
@@ -241,8 +262,8 @@
             this.checkBoxShowName.Name = "checkBoxShowName";
             this.checkBoxShowName.UseVisualStyleBackColor = true;
             this.checkBoxShowName.CheckedChanged += new System.EventHandler(this.checkBoxShowName_CheckedChanged);
-            this.checkBoxShowName.MouseEnter += new System.EventHandler(this.CheckBoxShowName_MouseEnter);
-            this.checkBoxShowName.MouseLeave += new System.EventHandler(this.CheckBoxShowName_MouseLeave);
+            this.checkBoxShowName.MouseEnter += new System.EventHandler(this.checkBoxShowName_MouseEnter);
+            this.checkBoxShowName.MouseLeave += new System.EventHandler(this.checkBoxShowName_MouseLeave);
             // 
             // buttonBootDrc
             // 
@@ -255,8 +276,8 @@
             this.buttonBootDrc.Name = "buttonBootDrc";
             this.buttonBootDrc.UseVisualStyleBackColor = false;
             this.buttonBootDrc.Click += new System.EventHandler(this.buttonBootDrc_Click);
-            this.buttonBootDrc.MouseEnter += new System.EventHandler(this.ButtonBootDrc_MouseEnter);
-            this.buttonBootDrc.MouseLeave += new System.EventHandler(this.ButtonBootDrc_MouseLeave);
+            this.buttonBootDrc.MouseEnter += new System.EventHandler(this.buttonBootDrc_MouseEnter);
+            this.buttonBootDrc.MouseLeave += new System.EventHandler(this.buttonBootDrc_MouseLeave);
             // 
             // buttonMenuIcon
             // 
@@ -269,8 +290,8 @@
             this.buttonMenuIcon.Name = "buttonMenuIcon";
             this.buttonMenuIcon.UseVisualStyleBackColor = false;
             this.buttonMenuIcon.Click += new System.EventHandler(this.buttonMenuIcon_Click);
-            this.buttonMenuIcon.MouseEnter += new System.EventHandler(this.ButtonMenuIcon_MouseEnter);
-            this.buttonMenuIcon.MouseLeave += new System.EventHandler(this.ButtonMenuIcon_MouseLeave);
+            this.buttonMenuIcon.MouseEnter += new System.EventHandler(this.buttonMenuIcon_MouseEnter);
+            this.buttonMenuIcon.MouseLeave += new System.EventHandler(this.buttonMenuIcon_MouseLeave);
             // 
             // buttonBootTv
             // 
@@ -283,93 +304,63 @@
             this.buttonBootTv.Name = "buttonBootTv";
             this.buttonBootTv.UseVisualStyleBackColor = false;
             this.buttonBootTv.Click += new System.EventHandler(this.buttonBootTv_Click);
-            this.buttonBootTv.MouseEnter += new System.EventHandler(this.ButtonBootTv_MouseEnter);
-            this.buttonBootTv.MouseLeave += new System.EventHandler(this.ButtonBootTv_MouseLeave);
+            this.buttonBootTv.MouseEnter += new System.EventHandler(this.buttonBootTv_MouseEnter);
+            this.buttonBootTv.MouseLeave += new System.EventHandler(this.buttonBootTv_MouseLeave);
             // 
             // groupBoxVCSettings
             // 
+            this.groupBoxVCSettings.Controls.Add(this.numericUpDownSoundVolume);
             this.groupBoxVCSettings.Controls.Add(this.buttonEditConfigFile);
+            this.groupBoxVCSettings.Controls.Add(this.labelAspectRatio);
             this.groupBoxVCSettings.Controls.Add(this.checkBoxDarkFilter);
-            this.groupBoxVCSettings.Controls.Add(this.numericUpDownZoom);
-            this.groupBoxVCSettings.Controls.Add(this.labelConfigFile);
-            this.groupBoxVCSettings.Controls.Add(this.checkBoxWidescreen);
-            this.groupBoxVCSettings.Controls.Add(this.textBoxConfigFile);
-            this.groupBoxVCSettings.Controls.Add(this.labelZoom);
-            this.groupBoxVCSettings.Controls.Add(this.buttonConfigFile);
+            this.groupBoxVCSettings.Controls.Add(this.numericUpDownTranslationY);
             this.groupBoxVCSettings.Controls.Add(this.comboBoxAspectRatioSNES);
             this.groupBoxVCSettings.Controls.Add(this.comboBoxAspectRatioNES);
-            this.groupBoxVCSettings.Controls.Add(this.labelAspectRatio);
+            this.groupBoxVCSettings.Controls.Add(this.labelConfigFile);
+            this.groupBoxVCSettings.Controls.Add(this.labelSoundVolume);
+            this.groupBoxVCSettings.Controls.Add(this.labelSpeed);
+            this.groupBoxVCSettings.Controls.Add(this.checkBoxWidescreen);
+            this.groupBoxVCSettings.Controls.Add(this.comboBoxSpeed);
+            this.groupBoxVCSettings.Controls.Add(this.labelPlayers);
+            this.groupBoxVCSettings.Controls.Add(this.textBoxConfigFile);
+            this.groupBoxVCSettings.Controls.Add(this.comboBoxPlayers);
+            this.groupBoxVCSettings.Controls.Add(this.numericUpDownZoomH);
+            this.groupBoxVCSettings.Controls.Add(this.buttonConfigFile);
+            this.groupBoxVCSettings.Controls.Add(this.numericUpDownZoomV);
+            this.groupBoxVCSettings.Controls.Add(this.numericUpDownTranslationX);
+            this.groupBoxVCSettings.Controls.Add(this.labelZoomH);
+            this.groupBoxVCSettings.Controls.Add(this.labelTranslationX);
+            this.groupBoxVCSettings.Controls.Add(this.labelZoomV);
+            this.groupBoxVCSettings.Controls.Add(this.labelTranslationY);
             this.groupBoxVCSettings.ForeColor = System.Drawing.Color.White;
             resources.ApplyResources(this.groupBoxVCSettings, "groupBoxVCSettings");
             this.groupBoxVCSettings.Name = "groupBoxVCSettings";
             this.groupBoxVCSettings.TabStop = false;
             // 
-            // buttonEditConfigFile
+            // labelAspectRatio
             // 
-            this.buttonEditConfigFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonEditConfigFile.FlatAppearance.BorderSize = 0;
-            this.buttonEditConfigFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
-            this.buttonEditConfigFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.buttonEditConfigFile, "buttonEditConfigFile");
-            this.buttonEditConfigFile.ForeColor = System.Drawing.Color.White;
-            this.buttonEditConfigFile.Name = "buttonEditConfigFile";
-            this.buttonEditConfigFile.UseVisualStyleBackColor = false;
-            this.buttonEditConfigFile.Click += new System.EventHandler(this.buttonEditConfigFile_Click);
-            this.buttonEditConfigFile.MouseEnter += new System.EventHandler(this.buttonEditConfigFile_MouseEnter);
-            this.buttonEditConfigFile.MouseLeave += new System.EventHandler(this.buttonEditConfigFile_MouseLeave);
+            resources.ApplyResources(this.labelAspectRatio, "labelAspectRatio");
+            this.labelAspectRatio.Name = "labelAspectRatio";
+            this.labelAspectRatio.MouseEnter += new System.EventHandler(this.labelAspectRatio_MouseEnter);
+            this.labelAspectRatio.MouseLeave += new System.EventHandler(this.labelAspectRatio_MouseLeave);
             // 
-            // checkBoxDarkFilter
+            // numericUpDownSoundVolume
             // 
-            resources.ApplyResources(this.checkBoxDarkFilter, "checkBoxDarkFilter");
-            this.checkBoxDarkFilter.Checked = true;
-            this.checkBoxDarkFilter.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDarkFilter.Name = "checkBoxDarkFilter";
-            this.checkBoxDarkFilter.UseVisualStyleBackColor = true;
-            this.checkBoxDarkFilter.MouseEnter += new System.EventHandler(this.CheckBoxDarkFilter_MouseEnter);
-            this.checkBoxDarkFilter.MouseLeave += new System.EventHandler(this.CheckBoxDarkFilter_MouseLeave);
-            // 
-            // numericUpDownZoom
-            // 
-            this.numericUpDownZoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.numericUpDownZoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDownZoom.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownZoom.Increment = new decimal(new int[] {
-            5,
+            this.numericUpDownSoundVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.numericUpDownSoundVolume.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownSoundVolume.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.numericUpDownSoundVolume, "numericUpDownSoundVolume");
+            this.numericUpDownSoundVolume.Maximum = new decimal(new int[] {
+            255,
             0,
             0,
             0});
-            resources.ApplyResources(this.numericUpDownZoom, "numericUpDownZoom");
-            this.numericUpDownZoom.Maximum = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.numericUpDownZoom.Minimum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDownZoom.Name = "numericUpDownZoom";
-            this.numericUpDownZoom.Value = new decimal(new int[] {
+            this.numericUpDownSoundVolume.Name = "numericUpDownSoundVolume";
+            this.numericUpDownSoundVolume.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            // 
-            // checkBoxWidescreen
-            // 
-            resources.ApplyResources(this.checkBoxWidescreen, "checkBoxWidescreen");
-            this.checkBoxWidescreen.Name = "checkBoxWidescreen";
-            this.checkBoxWidescreen.UseVisualStyleBackColor = true;
-            this.checkBoxWidescreen.MouseEnter += new System.EventHandler(this.CheckBoxWidescreen_MouseEnter);
-            this.checkBoxWidescreen.MouseLeave += new System.EventHandler(this.CheckBoxWidescreen_MouseLeave);
-            // 
-            // labelZoom
-            // 
-            resources.ApplyResources(this.labelZoom, "labelZoom");
-            this.labelZoom.Name = "labelZoom";
-            this.labelZoom.MouseEnter += new System.EventHandler(this.LabelZoom_MouseEnter);
-            this.labelZoom.MouseLeave += new System.EventHandler(this.LabelZoom_MouseLeave);
             // 
             // comboBoxAspectRatioSNES
             // 
@@ -400,20 +391,213 @@
             this.comboBoxAspectRatioNES.MouseEnter += new System.EventHandler(this.comboBoxAspectRatioNES_MouseEnter);
             this.comboBoxAspectRatioNES.MouseLeave += new System.EventHandler(this.comboBoxAspectRatioNES_MouseLeave);
             // 
-            // labelAspectRatio
+            // labelSoundVolume
             // 
-            resources.ApplyResources(this.labelAspectRatio, "labelAspectRatio");
-            this.labelAspectRatio.Name = "labelAspectRatio";
-            this.labelAspectRatio.MouseEnter += new System.EventHandler(this.labelAspectRatio_MouseEnter);
-            this.labelAspectRatio.MouseLeave += new System.EventHandler(this.labelAspectRatio_MouseLeave);
+            resources.ApplyResources(this.labelSoundVolume, "labelSoundVolume");
+            this.labelSoundVolume.Name = "labelSoundVolume";
+            this.labelSoundVolume.MouseEnter += new System.EventHandler(this.labelSoundVolume_MouseEnter);
+            this.labelSoundVolume.MouseLeave += new System.EventHandler(this.labelSoundVolume_MouseLeave);
+            // 
+            // labelSpeed
+            // 
+            resources.ApplyResources(this.labelSpeed, "labelSpeed");
+            this.labelSpeed.Name = "labelSpeed";
+            this.labelSpeed.MouseEnter += new System.EventHandler(this.labelSpeed_MouseEnter);
+            this.labelSpeed.MouseLeave += new System.EventHandler(this.labelSpeed_MouseLeave);
+            // 
+            // comboBoxSpeed
+            // 
+            this.comboBoxSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            resources.ApplyResources(this.comboBoxSpeed, "comboBoxSpeed");
+            this.comboBoxSpeed.ForeColor = System.Drawing.Color.White;
+            this.comboBoxSpeed.FormattingEnabled = true;
+            this.comboBoxSpeed.Items.AddRange(new object[] {
+            resources.GetString("comboBoxSpeed.Items"),
+            resources.GetString("comboBoxSpeed.Items1")});
+            this.comboBoxSpeed.Name = "comboBoxSpeed";
+            this.comboBoxSpeed.MouseEnter += new System.EventHandler(this.comboBoxSpeed_MouseEnter);
+            this.comboBoxSpeed.MouseLeave += new System.EventHandler(this.comboBoxSpeed_MouseLeave);
+            // 
+            // labelPlayers
+            // 
+            resources.ApplyResources(this.labelPlayers, "labelPlayers");
+            this.labelPlayers.Name = "labelPlayers";
+            this.labelPlayers.MouseEnter += new System.EventHandler(this.labelPlayers_MouseEnter);
+            this.labelPlayers.MouseLeave += new System.EventHandler(this.labelPlayers_MouseLeave);
+            // 
+            // comboBoxPlayers
+            // 
+            this.comboBoxPlayers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            resources.ApplyResources(this.comboBoxPlayers, "comboBoxPlayers");
+            this.comboBoxPlayers.ForeColor = System.Drawing.Color.White;
+            this.comboBoxPlayers.FormattingEnabled = true;
+            this.comboBoxPlayers.Items.AddRange(new object[] {
+            resources.GetString("comboBoxPlayers.Items"),
+            resources.GetString("comboBoxPlayers.Items1"),
+            resources.GetString("comboBoxPlayers.Items2")});
+            this.comboBoxPlayers.Name = "comboBoxPlayers";
+            this.comboBoxPlayers.MouseEnter += new System.EventHandler(this.comboBoxPlayers_MouseEnter);
+            this.comboBoxPlayers.MouseLeave += new System.EventHandler(this.comboBoxPlayers_MouseLeave);
+            // 
+            // buttonEditConfigFile
+            // 
+            this.buttonEditConfigFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonEditConfigFile.FlatAppearance.BorderSize = 0;
+            this.buttonEditConfigFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
+            this.buttonEditConfigFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.buttonEditConfigFile, "buttonEditConfigFile");
+            this.buttonEditConfigFile.ForeColor = System.Drawing.Color.White;
+            this.buttonEditConfigFile.Name = "buttonEditConfigFile";
+            this.buttonEditConfigFile.UseVisualStyleBackColor = false;
+            this.buttonEditConfigFile.Click += new System.EventHandler(this.buttonEditConfigFile_Click);
+            this.buttonEditConfigFile.MouseEnter += new System.EventHandler(this.buttonEditConfigFile_MouseEnter);
+            this.buttonEditConfigFile.MouseLeave += new System.EventHandler(this.buttonEditConfigFile_MouseLeave);
+            // 
+            // checkBoxDarkFilter
+            // 
+            resources.ApplyResources(this.checkBoxDarkFilter, "checkBoxDarkFilter");
+            this.checkBoxDarkFilter.Checked = true;
+            this.checkBoxDarkFilter.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDarkFilter.Name = "checkBoxDarkFilter";
+            this.checkBoxDarkFilter.UseVisualStyleBackColor = true;
+            this.checkBoxDarkFilter.MouseEnter += new System.EventHandler(this.checkBoxDarkFilter_MouseEnter);
+            this.checkBoxDarkFilter.MouseLeave += new System.EventHandler(this.checkBoxDarkFilter_MouseLeave);
+            // 
+            // numericUpDownTranslationY
+            // 
+            this.numericUpDownTranslationY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.numericUpDownTranslationY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownTranslationY.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.numericUpDownTranslationY, "numericUpDownTranslationY");
+            this.numericUpDownTranslationY.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDownTranslationY.Minimum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownTranslationY.Name = "numericUpDownTranslationY";
+            // 
+            // checkBoxWidescreen
+            // 
+            resources.ApplyResources(this.checkBoxWidescreen, "checkBoxWidescreen");
+            this.checkBoxWidescreen.Name = "checkBoxWidescreen";
+            this.checkBoxWidescreen.UseVisualStyleBackColor = true;
+            this.checkBoxWidescreen.MouseEnter += new System.EventHandler(this.checkBoxWidescreen_MouseEnter);
+            this.checkBoxWidescreen.MouseLeave += new System.EventHandler(this.checkBoxWidescreen_MouseLeave);
+            // 
+            // labelZoomH
+            // 
+            resources.ApplyResources(this.labelZoomH, "labelZoomH");
+            this.labelZoomH.Name = "labelZoomH";
+            this.labelZoomH.MouseEnter += new System.EventHandler(this.labelZoomH_MouseEnter);
+            this.labelZoomH.MouseLeave += new System.EventHandler(this.labelZoomH_MouseLeave);
+            // 
+            // labelTranslationY
+            // 
+            resources.ApplyResources(this.labelTranslationY, "labelTranslationY");
+            this.labelTranslationY.Name = "labelTranslationY";
+            this.labelTranslationY.MouseEnter += new System.EventHandler(this.labelTranslationY_MouseEnter);
+            this.labelTranslationY.MouseLeave += new System.EventHandler(this.labelTranslationY_MouseLeave);
+            // 
+            // labelTranslationX
+            // 
+            resources.ApplyResources(this.labelTranslationX, "labelTranslationX");
+            this.labelTranslationX.Name = "labelTranslationX";
+            this.labelTranslationX.MouseEnter += new System.EventHandler(this.labelTranslationX_MouseEnter);
+            this.labelTranslationX.MouseLeave += new System.EventHandler(this.labelTranslationX_MouseLeave);
+            // 
+            // numericUpDownZoomV
+            // 
+            this.numericUpDownZoomV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.numericUpDownZoomV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownZoomV.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownZoomV.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDownZoomV, "numericUpDownZoomV");
+            this.numericUpDownZoomV.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDownZoomV.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDownZoomV.Name = "numericUpDownZoomV";
+            this.numericUpDownZoomV.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownZoomH
+            // 
+            this.numericUpDownZoomH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.numericUpDownZoomH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownZoomH.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownZoomH.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDownZoomH, "numericUpDownZoomH");
+            this.numericUpDownZoomH.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDownZoomH.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDownZoomH.Name = "numericUpDownZoomH";
+            this.numericUpDownZoomH.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownTranslationX
+            // 
+            this.numericUpDownTranslationX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.numericUpDownTranslationX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownTranslationX.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.numericUpDownTranslationX, "numericUpDownTranslationX");
+            this.numericUpDownTranslationX.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDownTranslationX.Minimum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownTranslationX.Name = "numericUpDownTranslationX";
+            // 
+            // labelZoomV
+            // 
+            resources.ApplyResources(this.labelZoomV, "labelZoomV");
+            this.labelZoomV.Name = "labelZoomV";
+            this.labelZoomV.MouseEnter += new System.EventHandler(this.labelZoomV_MouseEnter);
+            this.labelZoomV.MouseLeave += new System.EventHandler(this.labelZoomV_MouseLeave);
             // 
             // labelTitleId
             // 
             resources.ApplyResources(this.labelTitleId, "labelTitleId");
             this.labelTitleId.ForeColor = System.Drawing.Color.White;
             this.labelTitleId.Name = "labelTitleId";
-            this.labelTitleId.MouseEnter += new System.EventHandler(this.LabelTitleId_MouseEnter);
-            this.labelTitleId.MouseLeave += new System.EventHandler(this.LabelTitleId_MouseLeave);
+            this.labelTitleId.MouseEnter += new System.EventHandler(this.labelTitleId_MouseEnter);
+            this.labelTitleId.MouseLeave += new System.EventHandler(this.labelTitleId_MouseLeave);
             // 
             // labelBy
             // 
@@ -426,24 +610,24 @@
             resources.ApplyResources(this.labelLoadedBase, "labelLoadedBase");
             this.labelLoadedBase.ForeColor = System.Drawing.Color.White;
             this.labelLoadedBase.Name = "labelLoadedBase";
-            this.labelLoadedBase.MouseEnter += new System.EventHandler(this.LabelLoadedBase_MouseEnter);
-            this.labelLoadedBase.MouseLeave += new System.EventHandler(this.LabelLoadedBase_MouseLeave);
+            this.labelLoadedBase.MouseEnter += new System.EventHandler(this.labelLoadedBase_MouseEnter);
+            this.labelLoadedBase.MouseLeave += new System.EventHandler(this.labelLoadedBase_MouseLeave);
             // 
             // panelValidKey
             // 
             this.panelValidKey.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.panelValidKey, "panelValidKey");
             this.panelValidKey.Name = "panelValidKey";
-            this.panelValidKey.MouseEnter += new System.EventHandler(this.PanelValidKey_MouseEnter);
-            this.panelValidKey.MouseLeave += new System.EventHandler(this.PanelValidKey_MouseLeave);
+            this.panelValidKey.MouseEnter += new System.EventHandler(this.panelValidKey_MouseEnter);
+            this.panelValidKey.MouseLeave += new System.EventHandler(this.panelValidKey_MouseLeave);
             // 
             // labelCommonKey
             // 
             resources.ApplyResources(this.labelCommonKey, "labelCommonKey");
             this.labelCommonKey.ForeColor = System.Drawing.Color.White;
             this.labelCommonKey.Name = "labelCommonKey";
-            this.labelCommonKey.MouseEnter += new System.EventHandler(this.LabelCommonKey_MouseEnter);
-            this.labelCommonKey.MouseLeave += new System.EventHandler(this.LabelCommonKey_MouseLeave);
+            this.labelCommonKey.MouseEnter += new System.EventHandler(this.labelCommonKey_MouseEnter);
+            this.labelCommonKey.MouseLeave += new System.EventHandler(this.labelCommonKey_MouseLeave);
             // 
             // textBoxCommonKey
             // 
@@ -453,8 +637,8 @@
             resources.ApplyResources(this.textBoxCommonKey, "textBoxCommonKey");
             this.textBoxCommonKey.Name = "textBoxCommonKey";
             this.textBoxCommonKey.TextChanged += new System.EventHandler(this.textBoxCommonKey_TextChanged);
-            this.textBoxCommonKey.MouseEnter += new System.EventHandler(this.TextBoxCommonKey_MouseEnter);
-            this.textBoxCommonKey.MouseLeave += new System.EventHandler(this.TextBoxCommonKey_MouseLeave);
+            this.textBoxCommonKey.MouseEnter += new System.EventHandler(this.textBoxCommonKey_MouseEnter);
+            this.textBoxCommonKey.MouseLeave += new System.EventHandler(this.textBoxCommonKey_MouseLeave);
             // 
             // buttonLoadBase
             // 
@@ -467,8 +651,8 @@
             this.buttonLoadBase.Name = "buttonLoadBase";
             this.buttonLoadBase.UseVisualStyleBackColor = false;
             this.buttonLoadBase.Click += new System.EventHandler(this.buttonLoadBase_Click);
-            this.buttonLoadBase.MouseEnter += new System.EventHandler(this.ButtonLoadBase_MouseEnter);
-            this.buttonLoadBase.MouseLeave += new System.EventHandler(this.ButtonLoadBase_MouseLeave);
+            this.buttonLoadBase.MouseEnter += new System.EventHandler(this.buttonLoadBase_MouseEnter);
+            this.buttonLoadBase.MouseLeave += new System.EventHandler(this.buttonLoadBase_MouseLeave);
             // 
             // panelMain
             // 
@@ -490,6 +674,15 @@
             resources.ApplyResources(this.panelMain, "panelMain");
             this.panelMain.Name = "panelMain";
             // 
+            // panelLoadedBase
+            // 
+            this.panelLoadedBase.BackColor = System.Drawing.Color.Transparent;
+            this.panelLoadedBase.BackgroundImage = global::PhacoxsInjector.Properties.Resources.x_mark_16;
+            resources.ApplyResources(this.panelLoadedBase, "panelLoadedBase");
+            this.panelLoadedBase.Name = "panelLoadedBase";
+            this.panelLoadedBase.MouseEnter += new System.EventHandler(this.panelLoadedBase_MouseEnter);
+            this.panelLoadedBase.MouseLeave += new System.EventHandler(this.panelLoadedBase_MouseLeave);
+            // 
             // textBoxLNLine2
             // 
             this.textBoxLNLine2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
@@ -497,16 +690,16 @@
             resources.ApplyResources(this.textBoxLNLine2, "textBoxLNLine2");
             this.textBoxLNLine2.ForeColor = System.Drawing.Color.White;
             this.textBoxLNLine2.Name = "textBoxLNLine2";
-            this.textBoxLNLine2.MouseEnter += new System.EventHandler(this.TextBoxLNLine2_MouseEnter);
-            this.textBoxLNLine2.MouseLeave += new System.EventHandler(this.TextBoxLNLine2_MouseLeave);
+            this.textBoxLNLine2.MouseEnter += new System.EventHandler(this.textBoxLNLine2_MouseEnter);
+            this.textBoxLNLine2.MouseLeave += new System.EventHandler(this.textBoxLNLine2_MouseLeave);
             // 
             // labelRomInfo
             // 
             resources.ApplyResources(this.labelRomInfo, "labelRomInfo");
             this.labelRomInfo.ForeColor = System.Drawing.Color.White;
             this.labelRomInfo.Name = "labelRomInfo";
-            this.labelRomInfo.MouseEnter += new System.EventHandler(this.LabelRomInfo_MouseEnter);
-            this.labelRomInfo.MouseLeave += new System.EventHandler(this.LabelRomInfo_MouseLeave);
+            this.labelRomInfo.MouseEnter += new System.EventHandler(this.labelRomInfo_MouseEnter);
+            this.labelRomInfo.MouseLeave += new System.EventHandler(this.labelRomInfo_MouseLeave);
             // 
             // textBoxShortName
             // 
@@ -516,8 +709,8 @@
             resources.ApplyResources(this.textBoxShortName, "textBoxShortName");
             this.textBoxShortName.Name = "textBoxShortName";
             this.textBoxShortName.TextChanged += new System.EventHandler(this.textBoxShortName_TextChanged);
-            this.textBoxShortName.MouseEnter += new System.EventHandler(this.TextBoxShortName_MouseEnter);
-            this.textBoxShortName.MouseLeave += new System.EventHandler(this.TextBoxShortName_MouseLeave);
+            this.textBoxShortName.MouseEnter += new System.EventHandler(this.textBoxShortName_MouseEnter);
+            this.textBoxShortName.MouseLeave += new System.EventHandler(this.textBoxShortName_MouseLeave);
             // 
             // textBoxLNLine1
             // 
@@ -526,8 +719,8 @@
             resources.ApplyResources(this.textBoxLNLine1, "textBoxLNLine1");
             this.textBoxLNLine1.ForeColor = System.Drawing.Color.White;
             this.textBoxLNLine1.Name = "textBoxLNLine1";
-            this.textBoxLNLine1.MouseEnter += new System.EventHandler(this.TextBoxLNLine1_MouseEnter);
-            this.textBoxLNLine1.MouseLeave += new System.EventHandler(this.TextBoxLNLine1_MouseLeave);
+            this.textBoxLNLine1.MouseEnter += new System.EventHandler(this.textBoxLNLine1_MouseEnter);
+            this.textBoxLNLine1.MouseLeave += new System.EventHandler(this.textBoxLNLine1_MouseLeave);
             // 
             // checkBoxLongName
             // 
@@ -536,16 +729,16 @@
             this.checkBoxLongName.Name = "checkBoxLongName";
             this.checkBoxLongName.UseVisualStyleBackColor = true;
             this.checkBoxLongName.CheckedChanged += new System.EventHandler(this.checkBoxLongName_CheckedChanged);
-            this.checkBoxLongName.MouseEnter += new System.EventHandler(this.CheckBoxLongName_MouseEnter);
-            this.checkBoxLongName.MouseLeave += new System.EventHandler(this.CheckBoxLongName_MouseLeave);
+            this.checkBoxLongName.MouseEnter += new System.EventHandler(this.checkBoxLongName_MouseEnter);
+            this.checkBoxLongName.MouseLeave += new System.EventHandler(this.checkBoxLongName_MouseLeave);
             // 
             // labeShortName
             // 
             resources.ApplyResources(this.labeShortName, "labeShortName");
             this.labeShortName.ForeColor = System.Drawing.Color.White;
             this.labeShortName.Name = "labeShortName";
-            this.labeShortName.MouseEnter += new System.EventHandler(this.LabeShortName_MouseEnter);
-            this.labeShortName.MouseLeave += new System.EventHandler(this.LabeShortName_MouseLeave);
+            this.labeShortName.MouseEnter += new System.EventHandler(this.labeShortName_MouseEnter);
+            this.labeShortName.MouseLeave += new System.EventHandler(this.labeShortName_MouseLeave);
             // 
             // panelInjecting
             // 
@@ -557,15 +750,45 @@
             resources.ApplyResources(this.panelInjecting, "panelInjecting");
             this.panelInjecting.Name = "panelInjecting";
             // 
+            // panelPackingQuestion
+            // 
+            this.panelPackingQuestion.BackColor = System.Drawing.Color.Transparent;
+            this.panelPackingQuestion.BackgroundImage = global::PhacoxsInjector.Properties.Resources.question;
+            resources.ApplyResources(this.panelPackingQuestion, "panelPackingQuestion");
+            this.panelPackingQuestion.Name = "panelPackingQuestion";
+            this.panelPackingQuestion.MouseEnter += new System.EventHandler(this.panelPackingQuestion_MouseEnter);
+            this.panelPackingQuestion.MouseLeave += new System.EventHandler(this.panelPackingQuestion_MouseLeave);
+            // 
             // textBoxLog
             // 
             this.textBoxLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.textBoxLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxLog.ContextMenuStrip = this.contextMenuStrip;
             resources.ApplyResources(this.textBoxLog, "textBoxLog");
             this.textBoxLog.ForeColor = System.Drawing.Color.White;
             this.textBoxLog.Name = "textBoxLog";
-            this.textBoxLog.MouseEnter += new System.EventHandler(this.TextBoxLog_MouseEnter);
-            this.textBoxLog.MouseLeave += new System.EventHandler(this.TextBoxLog_MouseLeave);
+            this.textBoxLog.MouseEnter += new System.EventHandler(this.textBoxLog_MouseEnter);
+            this.textBoxLog.MouseLeave += new System.EventHandler(this.textBoxLog_MouseLeave);
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyToolStripMenuItem,
+            this.selectAllToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            resources.ApplyResources(this.contextMenuStrip, "contextMenuStrip");
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
+            // selectAllToolStripMenuItem
+            // 
+            this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
+            resources.ApplyResources(this.selectAllToolStripMenuItem, "selectAllToolStripMenuItem");
+            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
             // 
             // buttonInjectNotPack
             // 
@@ -577,8 +800,8 @@
             this.buttonInjectNotPack.Name = "buttonInjectNotPack";
             this.buttonInjectNotPack.UseVisualStyleBackColor = false;
             this.buttonInjectNotPack.Click += new System.EventHandler(this.buttonInjectNotPack_Click);
-            this.buttonInjectNotPack.MouseEnter += new System.EventHandler(this.ButtonInjectNotPack_MouseEnter);
-            this.buttonInjectNotPack.MouseLeave += new System.EventHandler(this.ButtonInjectNotPack_MouseLeave);
+            this.buttonInjectNotPack.MouseEnter += new System.EventHandler(this.buttonInjectNotPack_MouseEnter);
+            this.buttonInjectNotPack.MouseLeave += new System.EventHandler(this.buttonInjectNotPack_MouseLeave);
             // 
             // buttonMain
             // 
@@ -611,9 +834,9 @@
             this.panelImages.Controls.Add(this.buttonBootTv);
             this.panelImages.Controls.Add(this.numericUpDownReleaseDate);
             this.panelImages.Controls.Add(this.buttonMenuIcon);
-            this.panelImages.Controls.Add(this.labelPlayers);
+            this.panelImages.Controls.Add(this.labelShowPlayers);
             this.panelImages.Controls.Add(this.pictureBoxBootTv);
-            this.panelImages.Controls.Add(this.comboBoxPlayers);
+            this.panelImages.Controls.Add(this.comboBoxShowPlayers);
             this.panelImages.Controls.Add(this.buttonBootDrc);
             this.panelImages.Controls.Add(this.pictureBoxMenuIcon);
             this.panelImages.Controls.Add(this.pictureBoxBootDrc);
@@ -691,6 +914,36 @@
             this.numericUpDownReleaseDate.MouseUp += new System.Windows.Forms.MouseEventHandler(this.numericUpDownReleaseDate_MouseUp);
             this.numericUpDownReleaseDate.Validated += new System.EventHandler(this.numericUpDownReleaseDate_Validated);
             // 
+            // pictureBoxBootTv
+            // 
+            this.pictureBoxBootTv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pictureBoxBootTv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBootTv, "pictureBoxBootTv");
+            this.pictureBoxBootTv.Name = "pictureBoxBootTv";
+            this.pictureBoxBootTv.TabStop = false;
+            this.pictureBoxBootTv.MouseEnter += new System.EventHandler(this.pictureBoxBootTv_MouseEnter);
+            this.pictureBoxBootTv.MouseLeave += new System.EventHandler(this.pictureBoxBootTv_MouseLeave);
+            // 
+            // pictureBoxMenuIcon
+            // 
+            this.pictureBoxMenuIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pictureBoxMenuIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxMenuIcon, "pictureBoxMenuIcon");
+            this.pictureBoxMenuIcon.Name = "pictureBoxMenuIcon";
+            this.pictureBoxMenuIcon.TabStop = false;
+            this.pictureBoxMenuIcon.MouseEnter += new System.EventHandler(this.pictureBoxMenuIcon_MouseEnter);
+            this.pictureBoxMenuIcon.MouseLeave += new System.EventHandler(this.pictureBoxMenuIcon_MouseLeave);
+            // 
+            // pictureBoxBootDrc
+            // 
+            this.pictureBoxBootDrc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.pictureBoxBootDrc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBootDrc, "pictureBoxBootDrc");
+            this.pictureBoxBootDrc.Name = "pictureBoxBootDrc";
+            this.pictureBoxBootDrc.TabStop = false;
+            this.pictureBoxBootDrc.MouseEnter += new System.EventHandler(this.pictureBoxBootDrc_MouseEnter);
+            this.pictureBoxBootDrc.MouseLeave += new System.EventHandler(this.pictureBoxBootDrc_MouseLeave);
+            // 
             // checkBoxKeepBootDrc
             // 
             resources.ApplyResources(this.checkBoxKeepBootDrc, "checkBoxKeepBootDrc");
@@ -739,8 +992,8 @@
             this.checkBoxHelp.Name = "checkBoxHelp";
             this.checkBoxHelp.UseVisualStyleBackColor = true;
             this.checkBoxHelp.CheckedChanged += new System.EventHandler(this.checkBoxHelp_CheckedChanged);
-            this.checkBoxHelp.MouseEnter += new System.EventHandler(this.CheckBoxHelp_MouseEnter);
-            this.checkBoxHelp.MouseLeave += new System.EventHandler(this.CheckBoxHelp_MouseLeave);
+            this.checkBoxHelp.MouseEnter += new System.EventHandler(this.checkBoxHelp_MouseEnter);
+            this.checkBoxHelp.MouseLeave += new System.EventHandler(this.checkBoxHelp_MouseLeave);
             // 
             // comboBoxLanguage
             // 
@@ -833,54 +1086,6 @@
             resources.ApplyResources(this.labelHelpText, "labelHelpText");
             this.labelHelpText.Name = "labelHelpText";
             // 
-            // panelLoadedBase
-            // 
-            this.panelLoadedBase.BackColor = System.Drawing.Color.Transparent;
-            this.panelLoadedBase.BackgroundImage = global::PhacoxsInjector.Properties.Resources.x_mark_16;
-            resources.ApplyResources(this.panelLoadedBase, "panelLoadedBase");
-            this.panelLoadedBase.Name = "panelLoadedBase";
-            this.panelLoadedBase.MouseEnter += new System.EventHandler(this.PanelLoadedBase_MouseEnter);
-            this.panelLoadedBase.MouseLeave += new System.EventHandler(this.PanelLoadedBase_MouseLeave);
-            // 
-            // panelPackingQuestion
-            // 
-            this.panelPackingQuestion.BackColor = System.Drawing.Color.Transparent;
-            this.panelPackingQuestion.BackgroundImage = global::PhacoxsInjector.Properties.Resources.question;
-            resources.ApplyResources(this.panelPackingQuestion, "panelPackingQuestion");
-            this.panelPackingQuestion.Name = "panelPackingQuestion";
-            this.panelPackingQuestion.MouseEnter += new System.EventHandler(this.PanelPackingQuestion_MouseEnter);
-            this.panelPackingQuestion.MouseLeave += new System.EventHandler(this.PanelPackingQuestion_MouseLeave);
-            // 
-            // pictureBoxBootTv
-            // 
-            this.pictureBoxBootTv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pictureBoxBootTv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxBootTv, "pictureBoxBootTv");
-            this.pictureBoxBootTv.Name = "pictureBoxBootTv";
-            this.pictureBoxBootTv.TabStop = false;
-            this.pictureBoxBootTv.MouseEnter += new System.EventHandler(this.PictureBoxBootTv_MouseEnter);
-            this.pictureBoxBootTv.MouseLeave += new System.EventHandler(this.PictureBoxBootTv_MouseLeave);
-            // 
-            // pictureBoxMenuIcon
-            // 
-            this.pictureBoxMenuIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pictureBoxMenuIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxMenuIcon, "pictureBoxMenuIcon");
-            this.pictureBoxMenuIcon.Name = "pictureBoxMenuIcon";
-            this.pictureBoxMenuIcon.TabStop = false;
-            this.pictureBoxMenuIcon.MouseEnter += new System.EventHandler(this.PictureBoxMenuIcon_MouseEnter);
-            this.pictureBoxMenuIcon.MouseLeave += new System.EventHandler(this.PictureBoxMenuIcon_MouseLeave);
-            // 
-            // pictureBoxBootDrc
-            // 
-            this.pictureBoxBootDrc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.pictureBoxBootDrc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxBootDrc, "pictureBoxBootDrc");
-            this.pictureBoxBootDrc.Name = "pictureBoxBootDrc";
-            this.pictureBoxBootDrc.TabStop = false;
-            this.pictureBoxBootDrc.MouseEnter += new System.EventHandler(this.PictureBoxBootDrc_MouseEnter);
-            this.pictureBoxBootDrc.MouseLeave += new System.EventHandler(this.PictureBoxBootDrc_MouseLeave);
-            // 
             // PhacoxsInjectorGUI
             // 
             resources.ApplyResources(this, "$this");
@@ -899,21 +1104,26 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PhacoxsInjectorGUI_FormClosed);
             this.groupBoxVCSettings.ResumeLayout(false);
             this.groupBoxVCSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoundVolume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationX)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.panelInjecting.ResumeLayout(false);
             this.panelInjecting.PerformLayout();
+            this.contextMenuStrip.ResumeLayout(false);
             this.panelImages.ResumeLayout(false);
             this.panelImages.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReleaseDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootTv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootDrc)).EndInit();
             this.panelSettings.ResumeLayout(false);
             this.panelSettings.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.groupBoxHelp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootTv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenuIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBootDrc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -943,12 +1153,12 @@
         private System.Windows.Forms.PictureBox pictureBoxBootDrc;
         private System.Windows.Forms.Button buttonBootDrc;
         private System.Windows.Forms.Label labelBy;
-        private System.Windows.Forms.ComboBox comboBoxPlayers;
-        private System.Windows.Forms.Label labelPlayers;
+        private System.Windows.Forms.ComboBox comboBoxShowPlayers;
+        private System.Windows.Forms.Label labelShowPlayers;
         private System.Windows.Forms.CheckBox checkBoxShowName;
         private System.Windows.Forms.Button buttonTitleScreen;
-        private System.Windows.Forms.NumericUpDown numericUpDownZoom;
-        private System.Windows.Forms.Label labelZoom;
+        private System.Windows.Forms.NumericUpDown numericUpDownZoomH;
+        private System.Windows.Forms.Label labelZoomH;
         private System.Windows.Forms.CheckBox checkBoxWidescreen;
         private System.Windows.Forms.CheckBox checkBoxDarkFilter;
         private System.Windows.Forms.GroupBox groupBoxVCSettings;
@@ -990,5 +1200,20 @@
         private System.Windows.Forms.CheckBox checkBoxKeepMenuIcon;
         private System.Windows.Forms.CheckBox checkBoxKeepBootTv;
         private System.Windows.Forms.Panel panelImages;
+        private System.Windows.Forms.Label labelSoundVolume;
+        private System.Windows.Forms.Label labelPlayers;
+        private System.Windows.Forms.Label labelSpeed;
+        private System.Windows.Forms.ComboBox comboBoxPlayers;
+        private System.Windows.Forms.ComboBox comboBoxSpeed;
+        private System.Windows.Forms.NumericUpDown numericUpDownSoundVolume;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown numericUpDownTranslationY;
+        private System.Windows.Forms.Label labelTranslationY;
+        private System.Windows.Forms.NumericUpDown numericUpDownTranslationX;
+        private System.Windows.Forms.Label labelTranslationX;
+        private System.Windows.Forms.NumericUpDown numericUpDownZoomV;
+        private System.Windows.Forms.Label labelZoomV;
     }
 }

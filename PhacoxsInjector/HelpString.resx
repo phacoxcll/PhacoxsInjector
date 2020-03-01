@@ -268,10 +268,10 @@
   <data name="Injecting" xml:space="preserve">
     <value>Injecting</value>
   </data>
-  <data name="Players" xml:space="preserve">
+  <data name="ShowPlayers" xml:space="preserve">
     <value>Players</value>
   </data>
-  <data name="PlayersDescription" xml:space="preserve">
+  <data name="ShowPlayersDescription" xml:space="preserve">
     <value>Number of game players that will appear in the template images.</value>
   </data>
   <data name="ProductCode" xml:space="preserve">
@@ -363,7 +363,7 @@
     <value>Zoom</value>
   </data>
   <data name="ZoomDescription" xml:space="preserve">
-    <value>Enlarge or reduce the viewing area of the game. If you expand it a lot I could crop the image of the game.</value>
+    <value>Enlarge or reduce the viewing area of the game. If you expand it a lot you can leave the screen.</value>
   </data>
   <data name="SNESBaseSelect" xml:space="preserve">
     <value>Select the game folder of the Wii U SNES VC that you want to use as base.</value>
@@ -451,5 +451,29 @@
   </data>
   <data name="NDSIconBackgroundDescription" xml:space="preserve">
     <value>Some icons do not look good with a black background; you can change it to the color you prefer.</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>Translation</value>
+  </data>
+  <data name="TranslationDescription" xml:space="preserve">
+    <value>Scroll the game display area. If you move it too much, you can leave the screen.</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="SpeedDescription" xml:space="preserve">
+    <value>Choose the frame rate that corresponds to the region of the game you want to inject. 60 FPS for NTSC games (USA/JPN) or 50 FPS for PAL games (EUR).</value>
+  </data>
+  <data name="SoundVolume" xml:space="preserve">
+    <value>Sound volume</value>
+  </data>
+  <data name="SoundVolumeDescription" xml:space="preserve">
+    <value>Modify the volume of the game audio. Official games do not exceed 140. (This option is only available in Super Famicom or SNES base games Type B1 and Type B2).</value>
+  </data>
+  <data name="Players" xml:space="preserve">
+    <value>Players</value>
+  </data>
+  <data name="PlayersDescription" xml:space="preserve">
+    <value>Indicates the maximum number of players that supports the game you want to inject.</value>
   </data>
 </root>

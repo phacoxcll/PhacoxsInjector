@@ -15,6 +15,8 @@ namespace PhacoxsInjector
         };
 
         public AspectRatio AspectRatioValue;
+        public byte Speed;
+        public byte Players;
 
         public override string TitleId
         {
@@ -67,20 +69,22 @@ namespace PhacoxsInjector
 
         protected override void InjectRom()
         {
+            byte speed = (byte)(Speed == 50 ? 50 : 60);
+            byte players = (byte)(Players == 4 ? 4 : Players == 3 ? 3 : 2);
             short widthTv;
             short widthDrc;
             switch (AspectRatioValue)
             {
                 case AspectRatio.H8V7:
-                    widthTv = 2348;
-                    widthDrc = 1045;
+                    widthTv = 2347;
+                    widthDrc = 1044;
                     break;
                 case AspectRatio.H4V3:
                     widthTv = 2012;
-                    widthDrc = 896;
+                    widthDrc = 895;
                     break;
                 case AspectRatio.H16V9:
-                    widthTv = 1510;
+                    widthTv = 1509;
                     widthDrc = 671;
                     break;
                 default:
@@ -94,7 +98,7 @@ namespace PhacoxsInjector
 
             DirectoryInfo code = new DirectoryInfo(BasePath + "\\code");
             FileInfo[] rpxFiles = code.GetFiles("*.rpx");
-            RPXNES.Inject(rpxFiles[0].FullName, RomPath, Environment.CurrentDirectory + "\\resources\\nes.rpx", widthTv, widthDrc);
+            RPXNES.Inject(rpxFiles[0].FullName, RomPath, Environment.CurrentDirectory + "\\resources\\nes.rpx", speed, players, 0, 0, widthTv, widthDrc);
 
             File.Delete(rpxFiles[0].FullName);
             File.Move(Environment.CurrentDirectory + "\\resources\\nes.rpx", rpxFiles[0].FullName);

@@ -327,10 +327,10 @@
   <data name="PackDescription" xml:space="preserve">
     <value>Realiza la inyección y empaca el resultado en la ruta que selecciones. Para WUP Installer.</value>
   </data>
-  <data name="Players" xml:space="preserve">
+  <data name="ShowPlayers" xml:space="preserve">
     <value>Players</value>
   </data>
-  <data name="PlayersDescription" xml:space="preserve">
+  <data name="ShowPlayersDescription" xml:space="preserve">
     <value>Número de jugadores del juego que se aparecerá en las imágenes plantilla.</value>
   </data>
   <data name="ProductCode" xml:space="preserve">
@@ -442,6 +442,30 @@
     <value>Zoom</value>
   </data>
   <data name="ZoomDescription" xml:space="preserve">
-    <value>Amplia o reduce el área de visualización del juego. Si la amplias mucho pude recortar la imagen del juego.</value>
+    <value>Amplia o reduce el área de visualización del juego. Si la amplias mucho puede salirse de la pantalla.</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>Translación</value>
+  </data>
+  <data name="TranslationDescription" xml:space="preserve">
+    <value>Desplaza el área de visualización del juego. Si la desplazas demasiado puede salirse de la pantalla.</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Velocidad</value>
+  </data>
+  <data name="SpeedDescription" xml:space="preserve">
+    <value>Elige la velocidad de fotogramas que corresponda a la región del juego que quieres inyectar. 60 FPS para juegos NTSC (USA/JPN) o 50 FPS para juegos PAL (EUR).</value>
+  </data>
+  <data name="SoundVolume" xml:space="preserve">
+    <value>Volumen</value>
+  </data>
+  <data name="SoundVolumeDescription" xml:space="preserve">
+    <value>Modifica el volumen del audio del juego. Ningún juego oficial rebasa los 140. (Esta opción sólo está disponible en jugos base de Super Famicom o SNES Tipo B1 y Tipo B2).</value>
+  </data>
+  <data name="Players" xml:space="preserve">
+    <value>Jugadores</value>
+  </data>
+  <data name="PlayersDescription" xml:space="preserve">
+    <value>Indica el número máximo de jugadores que soporta el juego que quieres inyectar.</value>
   </data>
 </root>

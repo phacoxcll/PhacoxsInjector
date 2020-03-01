@@ -131,7 +131,7 @@
     <value>Archivo de configuración:</value>
   </data>
   <data name="textBoxConfigFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 46</value>
+    <value>215, 49</value>
   </data>
   <data name="textBoxConfigFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>291, 13</value>
@@ -151,14 +151,8 @@
   <data name="buttonMenuIcon.Text" xml:space="preserve">
     <value>Icono</value>
   </data>
-  <data name="buttonEditConfigFile.Text" xml:space="preserve">
-    <value>Editar</value>
-  </data>
-  <data name="comboBoxAspectRatioSNES.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 22</value>
-  </data>
-  <data name="comboBoxAspectRatioNES.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 22</value>
+  <data name="groupBoxVCSettings.Text" xml:space="preserve">
+    <value>Configuración de la Consola Virtual</value>
   </data>
   <data name="labelAspectRatio.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 13</value>
@@ -166,8 +160,50 @@
   <data name="labelAspectRatio.Text" xml:space="preserve">
     <value>Relación de aspecto:</value>
   </data>
-  <data name="groupBoxVCSettings.Text" xml:space="preserve">
-    <value>Configuración de la Consola Virtual</value>
+  <data name="numericUpDownSoundVolume.Location" type="System.Drawing.Point, System.Drawing">
+    <value>523, 29</value>
+  </data>
+  <data name="comboBoxAspectRatioSNES.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="labelSoundVolume.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 31</value>
+  </data>
+  <data name="labelSoundVolume.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="labelSoundVolume.Text" xml:space="preserve">
+    <value>Volumen:</value>
+  </data>
+  <data name="comboBoxAspectRatioNES.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 28</value>
+  </data>
+  <data name="comboBoxSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 28</value>
+  </data>
+  <data name="labelPlayers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>365, 31</value>
+  </data>
+  <data name="labelPlayers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="labelPlayers.Text" xml:space="preserve">
+    <value>Jugadores:</value>
+  </data>
+  <data name="comboBoxPlayers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>430, 28</value>
+  </data>
+  <data name="labelSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 31</value>
+  </data>
+  <data name="labelSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="labelSpeed.Text" xml:space="preserve">
+    <value>Velocidad:</value>
+  </data>
+  <data name="buttonEditConfigFile.Text" xml:space="preserve">
+    <value>Editar</value>
   </data>
   <data name="buttonLoadBase.Text" xml:space="preserve">
     <value>Cargar base</value>

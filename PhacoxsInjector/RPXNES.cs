@@ -24,10 +24,11 @@ namespace PhacoxsInjector
         }
 
         public static void Inject(string sourcebase, string sourcerom, string destination,
+            byte speed, byte players, byte soundVolume, byte romType,
             short widthTv = 1920, short widthDrc = 854, short heightTv = 1080, short heightDrc = 480)
         {
             RPXNES rpx = new RPXNES(sourcebase);
-            rpx.Edit(sourcerom, widthTv, widthDrc, heightTv,  heightDrc, destination);
+            rpx.Edit(sourcerom, destination, speed, players, soundVolume, romType, widthTv, widthDrc, heightTv, heightDrc);
         }
 
         private VCType GetVCType()
@@ -67,22 +68,23 @@ namespace PhacoxsInjector
                 return VCType.Unknown;
         }
 
-        protected override byte[] GetNewRodata(uint crcsSum, byte[] rodata, string rom)
+        protected override byte[] GetNewRodata(uint crcsSum, byte[] rodata, string rom,
+            byte speed, byte players, byte soundVolume, byte romType)
         {
             //int romOffset = ReadInt32(rodata, 0x28); //ROM offset (Always 0x00000030)
-            //int footerOffset = ReadInt32(rodata, 0x2C); //Footer offset
+            int footerOffset = ReadInt32(rodata, 0x2C); //Footer offset
             /*int romSize =
                 (rodata[0x20 + romOffset] == 'N' &&
                 rodata[0x21 + romOffset] == 'E' &&
                 rodata[0x22 + romOffset] == 'S') ?
                 rodata[0x24 + romOffset] * 16384 + rodata[0x25 + romOffset] * 8192 + 16 :            
                 footerOffset - romOffset;*/
-            VCNES vcnes = VCNES.GetVC(crcsSum);
+            VCNES vc = VCNES.GetVC(crcsSum);
 
-            if (vcnes.ROMSize == -1)
+            if (vc.ROMSize == -1)
                 throw new FormatException("The source RPXNES is unknown.");
 
-            int romSize = vcnes.ROMSize + (vcnes.FDSROM ? 0 : 16);
+            int romSize = vc.ROMSize + (vc.FDSROM ? 0 : 16);
 
             FileStream fs = File.Open(rom, FileMode.Open);
             byte[] romBytes = new byte[fs.Length];
@@ -99,6 +101,10 @@ namespace PhacoxsInjector
             ms.Position = 0x50;//romOffset + 0x20;
             ms.Write(romBytes, 0, romBytes.Length);
             ms.Write(padding, 0, padding.Length);
+            ms.Position = footerOffset + 0x20;
+            ms.WriteByte(speed);
+            ms.Position = footerOffset + 0x2A;
+            ms.WriteByte(players);
             rodata = ms.ToArray();
             ms.Close();
 
