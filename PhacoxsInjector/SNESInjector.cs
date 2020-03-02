@@ -72,18 +72,21 @@ namespace PhacoxsInjector
         {
             byte speed = (byte)(Speed == 50 ? 50 : 60);
             byte players = (byte)(Players == 4 ? 4 : Players == 3 ? 3 : 2);
-            byte romType;
-            switch ((Rom as RomSNES).Mode)
+            byte romType = 0;
+            if (RomIsValid)
             {
-                case RomSNES.Subformat.LoROM:
-                    romType = 20;
-                    break;
-                case RomSNES.Subformat.HiROM:
-                    romType = 21;
-                    break;
-                default:
-                    romType = 0;
-                    break;
+                switch ((Rom as RomSNES).Mode)
+                {
+                    case RomSNES.Subformat.LoROM:
+                        romType = 20;
+                        break;
+                    case RomSNES.Subformat.HiROM:
+                        romType = 21;
+                        break;
+                    default:
+                        romType = 0;
+                        break;
+                }
             }
             short widthTv;
             short widthDrc;
