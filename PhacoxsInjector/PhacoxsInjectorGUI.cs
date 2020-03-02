@@ -266,7 +266,7 @@ namespace PhacoxsInjector
             comboBoxPlayers.SelectedIndex = 0;
             labelSoundVolume.Visible = false;
             numericUpDownSoundVolume.Visible = false;
-            numericUpDownSoundVolume.Value = 100;
+            numericUpDownSoundVolume.Value = 0;
 
             checkBoxDarkFilter.Visible = false;
             checkBoxDarkFilter.Checked = true;
