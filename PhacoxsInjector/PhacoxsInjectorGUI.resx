@@ -1603,63 +1603,6 @@ Title:</value>
   <data name="&gt;&gt;panelMain.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;panelPackingQuestion.Name" xml:space="preserve">
-    <value>panelPackingQuestion</value>
-  </data>
-  <data name="&gt;&gt;panelPackingQuestion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelPackingQuestion.Parent" xml:space="preserve">
-    <value>panelInjecting</value>
-  </data>
-  <data name="&gt;&gt;panelPackingQuestion.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxLog.Name" xml:space="preserve">
-    <value>textBoxLog</value>
-  </data>
-  <data name="&gt;&gt;textBoxLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxLog.Parent" xml:space="preserve">
-    <value>panelInjecting</value>
-  </data>
-  <data name="&gt;&gt;textBoxLog.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonInjectNotPack.Name" xml:space="preserve">
-    <value>buttonInjectNotPack</value>
-  </data>
-  <data name="&gt;&gt;buttonInjectNotPack.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonInjectNotPack.Parent" xml:space="preserve">
-    <value>panelInjecting</value>
-  </data>
-  <data name="&gt;&gt;buttonInjectNotPack.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelInjecting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 0</value>
-  </data>
-  <data name="panelInjecting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>603, 254</value>
-  </data>
-  <data name="panelInjecting.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;panelInjecting.Name" xml:space="preserve">
-    <value>panelInjecting</value>
-  </data>
-  <data name="&gt;&gt;panelInjecting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelInjecting.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelInjecting.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="panelPackingQuestion.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
@@ -1687,6 +1630,18 @@ Title:</value>
   <metadata name="contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>427, 17</value>
   </metadata>
+  <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="selectAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="selectAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Select All</value>
+  </data>
   <data name="contextMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 48</value>
   </data>
@@ -1726,18 +1681,6 @@ Title:</value>
   <data name="&gt;&gt;textBoxLog.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
-  </data>
-  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="selectAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
-  </data>
-  <data name="selectAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Select All</value>
-  </data>
   <data name="buttonInjectNotPack.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1770,6 +1713,27 @@ Title:</value>
   </data>
   <data name="&gt;&gt;buttonInjectNotPack.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="panelInjecting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 0</value>
+  </data>
+  <data name="panelInjecting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>603, 254</value>
+  </data>
+  <data name="panelInjecting.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;panelInjecting.Name" xml:space="preserve">
+    <value>panelInjecting</value>
+  </data>
+  <data name="&gt;&gt;panelInjecting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelInjecting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelInjecting.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="buttonMain.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1836,159 +1800,6 @@ Title:</value>
   </data>
   <data name="&gt;&gt;buttonImages.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUseNDSIcon.Name" xml:space="preserve">
-    <value>checkBoxUseNDSIcon</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUseNDSIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUseNDSIcon.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;checkBoxUseNDSIcon.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelNDSIcon.Name" xml:space="preserve">
-    <value>panelNDSIcon</value>
-  </data>
-  <data name="&gt;&gt;panelNDSIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelNDSIcon.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;panelNDSIcon.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonNDSIconBGColor.Name" xml:space="preserve">
-    <value>buttonNDSIconBGColor</value>
-  </data>
-  <data name="&gt;&gt;buttonNDSIconBGColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonNDSIconBGColor.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;buttonNDSIconBGColor.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;checkBoxReleaseDate.Name" xml:space="preserve">
-    <value>checkBoxReleaseDate</value>
-  </data>
-  <data name="&gt;&gt;checkBoxReleaseDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxReleaseDate.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;checkBoxReleaseDate.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownReleaseDate.Name" xml:space="preserve">
-    <value>numericUpDownReleaseDate</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownReleaseDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownReleaseDate.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownReleaseDate.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootTv.Name" xml:space="preserve">
-    <value>pictureBoxBootTv</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootTv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootTv.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootTv.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxMenuIcon.Name" xml:space="preserve">
-    <value>pictureBoxMenuIcon</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxMenuIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxMenuIcon.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxMenuIcon.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootDrc.Name" xml:space="preserve">
-    <value>pictureBoxBootDrc</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootDrc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootDrc.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBootDrc.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootDrc.Name" xml:space="preserve">
-    <value>checkBoxKeepBootDrc</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootDrc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootDrc.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootDrc.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepMenuIcon.Name" xml:space="preserve">
-    <value>checkBoxKeepMenuIcon</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepMenuIcon.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepMenuIcon.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepMenuIcon.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootTv.Name" xml:space="preserve">
-    <value>checkBoxKeepBootTv</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootTv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootTv.Parent" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;checkBoxKeepBootTv.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="panelImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 0</value>
-  </data>
-  <data name="panelImages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>603, 254</value>
-  </data>
-  <data name="panelImages.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;panelImages.Name" xml:space="preserve">
-    <value>panelImages</value>
-  </data>
-  <data name="&gt;&gt;panelImages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelImages.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelImages.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="checkBoxUseNDSIcon.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2293,62 +2104,26 @@ Title:</value>
   <data name="&gt;&gt;checkBoxKeepBootTv.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="&gt;&gt;checkBoxHelp.Name" xml:space="preserve">
-    <value>checkBoxHelp</value>
-  </data>
-  <data name="&gt;&gt;checkBoxHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxHelp.Parent" xml:space="preserve">
-    <value>panelSettings</value>
-  </data>
-  <data name="&gt;&gt;checkBoxHelp.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;comboBoxLanguage.Name" xml:space="preserve">
-    <value>comboBoxLanguage</value>
-  </data>
-  <data name="&gt;&gt;comboBoxLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxLanguage.Parent" xml:space="preserve">
-    <value>panelSettings</value>
-  </data>
-  <data name="&gt;&gt;comboBoxLanguage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelLanguage.Name" xml:space="preserve">
-    <value>labelLanguage</value>
-  </data>
-  <data name="&gt;&gt;labelLanguage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelLanguage.Parent" xml:space="preserve">
-    <value>panelSettings</value>
-  </data>
-  <data name="&gt;&gt;labelLanguage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="panelSettings.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelImages.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 0</value>
   </data>
-  <data name="panelSettings.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelImages.Size" type="System.Drawing.Size, System.Drawing">
     <value>603, 254</value>
   </data>
-  <data name="panelSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="panelImages.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
-  <data name="&gt;&gt;panelSettings.Name" xml:space="preserve">
-    <value>panelSettings</value>
+  <data name="&gt;&gt;panelImages.Name" xml:space="preserve">
+    <value>panelImages</value>
   </data>
-  <data name="&gt;&gt;panelSettings.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelImages.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelSettings.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelImages.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelSettings.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;panelImages.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="checkBoxHelp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2440,6 +2215,27 @@ Title:</value>
   <data name="&gt;&gt;labelLanguage.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="panelSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 0</value>
+  </data>
+  <data name="panelSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>603, 254</value>
+  </data>
+  <data name="panelSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.Name" xml:space="preserve">
+    <value>panelSettings</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelSettings.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="buttonInjecting.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -2504,51 +2300,6 @@ Title:</value>
     <value>panelMenu</value>
   </data>
   <data name="&gt;&gt;buttonSettings.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;comboBoxConsole.Name" xml:space="preserve">
-    <value>comboBoxConsole</value>
-  </data>
-  <data name="&gt;&gt;comboBoxConsole.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxConsole.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;comboBoxConsole.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panelConsole.Name" xml:space="preserve">
-    <value>panelConsole</value>
-  </data>
-  <data name="&gt;&gt;panelConsole.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelConsole.Parent" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;panelConsole.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 340</value>
-  </data>
-  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
-    <value>panelMenu</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="comboBoxConsole.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -2626,6 +2377,42 @@ Title:</value>
   <data name="&gt;&gt;panelConsole.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="panelMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 340</value>
+  </data>
+  <data name="panelMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Name" xml:space="preserve">
+    <value>panelMenu</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelHelpText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="labelHelpText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelHelpText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="labelHelpText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 56</value>
+  </data>
+  <data name="labelHelpText.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
   <data name="&gt;&gt;labelHelpText.Name" xml:space="preserve">
     <value>labelHelpText</value>
   </data>
@@ -2661,33 +2448,6 @@ Title:</value>
   </data>
   <data name="&gt;&gt;groupBoxHelp.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="labelHelpText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="labelHelpText.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelHelpText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 16</value>
-  </data>
-  <data name="labelHelpText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 56</value>
-  </data>
-  <data name="labelHelpText.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;labelHelpText.Name" xml:space="preserve">
-    <value>labelHelpText</value>
-  </data>
-  <data name="&gt;&gt;labelHelpText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelHelpText.Parent" xml:space="preserve">
-    <value>groupBoxHelp</value>
-  </data>
-  <data name="&gt;&gt;labelHelpText.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="colorDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>313, 17</value>

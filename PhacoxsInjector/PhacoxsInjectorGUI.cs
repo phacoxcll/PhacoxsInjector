@@ -835,6 +835,11 @@ namespace PhacoxsInjector
                         labelSoundVolume.Visible = true;
                         numericUpDownSoundVolume.Visible = true;
                     }
+                    else
+                    {
+                        labelSoundVolume.Visible = false;
+                        numericUpDownSoundVolume.Visible = false;
+                    }
                     Cll.Log.WriteLine("Loaded base:" + Injector.LoadedBase);
                     return true;
                 }
@@ -1450,7 +1455,8 @@ namespace PhacoxsInjector
                         Cll.Log.WriteLine("SNES Aspect Ratio: " + (Injector as SNESInjector).AspectRatioValue.ToString());
                         Cll.Log.WriteLine("SNES Speed (FPS): " + (Injector as SNESInjector).Speed.ToString());
                         Cll.Log.WriteLine("SNES Players: " + (Injector as SNESInjector).Players.ToString());
-                        Cll.Log.WriteLine("SNES Sound Volume: " + (Injector as SNESInjector).SoundVolume.ToString());
+                        if (Injector.BaseSupportsSoundVolume)
+                            Cll.Log.WriteLine("SNES Sound Volume: " + (Injector as SNESInjector).SoundVolume.ToString());
                     }
                     else if (mode == RomFile.Format.N64)
                     {

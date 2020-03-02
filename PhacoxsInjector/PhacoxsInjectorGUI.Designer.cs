@@ -46,26 +46,26 @@
             this.buttonMenuIcon = new System.Windows.Forms.Button();
             this.buttonBootTv = new System.Windows.Forms.Button();
             this.groupBoxVCSettings = new System.Windows.Forms.GroupBox();
-            this.labelAspectRatio = new System.Windows.Forms.Label();
             this.numericUpDownSoundVolume = new System.Windows.Forms.NumericUpDown();
+            this.buttonEditConfigFile = new System.Windows.Forms.Button();
+            this.labelAspectRatio = new System.Windows.Forms.Label();
+            this.checkBoxDarkFilter = new System.Windows.Forms.CheckBox();
+            this.numericUpDownTranslationY = new System.Windows.Forms.NumericUpDown();
             this.comboBoxAspectRatioSNES = new System.Windows.Forms.ComboBox();
             this.comboBoxAspectRatioNES = new System.Windows.Forms.ComboBox();
             this.labelSoundVolume = new System.Windows.Forms.Label();
             this.labelSpeed = new System.Windows.Forms.Label();
+            this.checkBoxWidescreen = new System.Windows.Forms.CheckBox();
             this.comboBoxSpeed = new System.Windows.Forms.ComboBox();
             this.labelPlayers = new System.Windows.Forms.Label();
             this.comboBoxPlayers = new System.Windows.Forms.ComboBox();
-            this.buttonEditConfigFile = new System.Windows.Forms.Button();
-            this.checkBoxDarkFilter = new System.Windows.Forms.CheckBox();
-            this.numericUpDownTranslationY = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxWidescreen = new System.Windows.Forms.CheckBox();
-            this.labelZoomH = new System.Windows.Forms.Label();
-            this.labelTranslationY = new System.Windows.Forms.Label();
-            this.labelTranslationX = new System.Windows.Forms.Label();
-            this.numericUpDownZoomV = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownZoomH = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownZoomV = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownTranslationX = new System.Windows.Forms.NumericUpDown();
+            this.labelZoomH = new System.Windows.Forms.Label();
+            this.labelTranslationX = new System.Windows.Forms.Label();
             this.labelZoomV = new System.Windows.Forms.Label();
+            this.labelTranslationY = new System.Windows.Forms.Label();
             this.labelTitleId = new System.Windows.Forms.Label();
             this.labelBy = new System.Windows.Forms.Label();
             this.labelLoadedBase = new System.Windows.Forms.Label();
@@ -118,8 +118,8 @@
             this.groupBoxVCSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoundVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationX)).BeginInit();
             this.panelMain.SuspendLayout();
             this.panelInjecting.SuspendLayout();
@@ -337,13 +337,6 @@
             this.groupBoxVCSettings.Name = "groupBoxVCSettings";
             this.groupBoxVCSettings.TabStop = false;
             // 
-            // labelAspectRatio
-            // 
-            resources.ApplyResources(this.labelAspectRatio, "labelAspectRatio");
-            this.labelAspectRatio.Name = "labelAspectRatio";
-            this.labelAspectRatio.MouseEnter += new System.EventHandler(this.labelAspectRatio_MouseEnter);
-            this.labelAspectRatio.MouseLeave += new System.EventHandler(this.labelAspectRatio_MouseLeave);
-            // 
             // numericUpDownSoundVolume
             // 
             this.numericUpDownSoundVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -356,11 +349,55 @@
             0,
             0});
             this.numericUpDownSoundVolume.Name = "numericUpDownSoundVolume";
-            this.numericUpDownSoundVolume.Value = new decimal(new int[] {
-            100,
+            // 
+            // buttonEditConfigFile
+            // 
+            this.buttonEditConfigFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonEditConfigFile.FlatAppearance.BorderSize = 0;
+            this.buttonEditConfigFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
+            this.buttonEditConfigFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.buttonEditConfigFile, "buttonEditConfigFile");
+            this.buttonEditConfigFile.ForeColor = System.Drawing.Color.White;
+            this.buttonEditConfigFile.Name = "buttonEditConfigFile";
+            this.buttonEditConfigFile.UseVisualStyleBackColor = false;
+            this.buttonEditConfigFile.Click += new System.EventHandler(this.buttonEditConfigFile_Click);
+            this.buttonEditConfigFile.MouseEnter += new System.EventHandler(this.buttonEditConfigFile_MouseEnter);
+            this.buttonEditConfigFile.MouseLeave += new System.EventHandler(this.buttonEditConfigFile_MouseLeave);
+            // 
+            // labelAspectRatio
+            // 
+            resources.ApplyResources(this.labelAspectRatio, "labelAspectRatio");
+            this.labelAspectRatio.Name = "labelAspectRatio";
+            this.labelAspectRatio.MouseEnter += new System.EventHandler(this.labelAspectRatio_MouseEnter);
+            this.labelAspectRatio.MouseLeave += new System.EventHandler(this.labelAspectRatio_MouseLeave);
+            // 
+            // checkBoxDarkFilter
+            // 
+            resources.ApplyResources(this.checkBoxDarkFilter, "checkBoxDarkFilter");
+            this.checkBoxDarkFilter.Checked = true;
+            this.checkBoxDarkFilter.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDarkFilter.Name = "checkBoxDarkFilter";
+            this.checkBoxDarkFilter.UseVisualStyleBackColor = true;
+            this.checkBoxDarkFilter.MouseEnter += new System.EventHandler(this.checkBoxDarkFilter_MouseEnter);
+            this.checkBoxDarkFilter.MouseLeave += new System.EventHandler(this.checkBoxDarkFilter_MouseLeave);
+            // 
+            // numericUpDownTranslationY
+            // 
+            this.numericUpDownTranslationY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.numericUpDownTranslationY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownTranslationY.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.numericUpDownTranslationY, "numericUpDownTranslationY");
+            this.numericUpDownTranslationY.Maximum = new decimal(new int[] {
+            200,
             0,
             0,
             0});
+            this.numericUpDownTranslationY.Minimum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownTranslationY.Name = "numericUpDownTranslationY";
             // 
             // comboBoxAspectRatioSNES
             // 
@@ -405,6 +442,14 @@
             this.labelSpeed.MouseEnter += new System.EventHandler(this.labelSpeed_MouseEnter);
             this.labelSpeed.MouseLeave += new System.EventHandler(this.labelSpeed_MouseLeave);
             // 
+            // checkBoxWidescreen
+            // 
+            resources.ApplyResources(this.checkBoxWidescreen, "checkBoxWidescreen");
+            this.checkBoxWidescreen.Name = "checkBoxWidescreen";
+            this.checkBoxWidescreen.UseVisualStyleBackColor = true;
+            this.checkBoxWidescreen.MouseEnter += new System.EventHandler(this.checkBoxWidescreen_MouseEnter);
+            this.checkBoxWidescreen.MouseLeave += new System.EventHandler(this.checkBoxWidescreen_MouseLeave);
+            // 
             // comboBoxSpeed
             // 
             this.comboBoxSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -439,76 +484,33 @@
             this.comboBoxPlayers.MouseEnter += new System.EventHandler(this.comboBoxPlayers_MouseEnter);
             this.comboBoxPlayers.MouseLeave += new System.EventHandler(this.comboBoxPlayers_MouseLeave);
             // 
-            // buttonEditConfigFile
+            // numericUpDownZoomH
             // 
-            this.buttonEditConfigFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonEditConfigFile.FlatAppearance.BorderSize = 0;
-            this.buttonEditConfigFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
-            this.buttonEditConfigFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.buttonEditConfigFile, "buttonEditConfigFile");
-            this.buttonEditConfigFile.ForeColor = System.Drawing.Color.White;
-            this.buttonEditConfigFile.Name = "buttonEditConfigFile";
-            this.buttonEditConfigFile.UseVisualStyleBackColor = false;
-            this.buttonEditConfigFile.Click += new System.EventHandler(this.buttonEditConfigFile_Click);
-            this.buttonEditConfigFile.MouseEnter += new System.EventHandler(this.buttonEditConfigFile_MouseEnter);
-            this.buttonEditConfigFile.MouseLeave += new System.EventHandler(this.buttonEditConfigFile_MouseLeave);
-            // 
-            // checkBoxDarkFilter
-            // 
-            resources.ApplyResources(this.checkBoxDarkFilter, "checkBoxDarkFilter");
-            this.checkBoxDarkFilter.Checked = true;
-            this.checkBoxDarkFilter.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDarkFilter.Name = "checkBoxDarkFilter";
-            this.checkBoxDarkFilter.UseVisualStyleBackColor = true;
-            this.checkBoxDarkFilter.MouseEnter += new System.EventHandler(this.checkBoxDarkFilter_MouseEnter);
-            this.checkBoxDarkFilter.MouseLeave += new System.EventHandler(this.checkBoxDarkFilter_MouseLeave);
-            // 
-            // numericUpDownTranslationY
-            // 
-            this.numericUpDownTranslationY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.numericUpDownTranslationY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDownTranslationY.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.numericUpDownTranslationY, "numericUpDownTranslationY");
-            this.numericUpDownTranslationY.Maximum = new decimal(new int[] {
+            this.numericUpDownZoomH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.numericUpDownZoomH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownZoomH.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownZoomH.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            resources.ApplyResources(this.numericUpDownZoomH, "numericUpDownZoomH");
+            this.numericUpDownZoomH.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
-            this.numericUpDownTranslationY.Minimum = new decimal(new int[] {
-            200,
+            this.numericUpDownZoomH.Minimum = new decimal(new int[] {
+            50,
             0,
             0,
-            -2147483648});
-            this.numericUpDownTranslationY.Name = "numericUpDownTranslationY";
-            // 
-            // checkBoxWidescreen
-            // 
-            resources.ApplyResources(this.checkBoxWidescreen, "checkBoxWidescreen");
-            this.checkBoxWidescreen.Name = "checkBoxWidescreen";
-            this.checkBoxWidescreen.UseVisualStyleBackColor = true;
-            this.checkBoxWidescreen.MouseEnter += new System.EventHandler(this.checkBoxWidescreen_MouseEnter);
-            this.checkBoxWidescreen.MouseLeave += new System.EventHandler(this.checkBoxWidescreen_MouseLeave);
-            // 
-            // labelZoomH
-            // 
-            resources.ApplyResources(this.labelZoomH, "labelZoomH");
-            this.labelZoomH.Name = "labelZoomH";
-            this.labelZoomH.MouseEnter += new System.EventHandler(this.labelZoomH_MouseEnter);
-            this.labelZoomH.MouseLeave += new System.EventHandler(this.labelZoomH_MouseLeave);
-            // 
-            // labelTranslationY
-            // 
-            resources.ApplyResources(this.labelTranslationY, "labelTranslationY");
-            this.labelTranslationY.Name = "labelTranslationY";
-            this.labelTranslationY.MouseEnter += new System.EventHandler(this.labelTranslationY_MouseEnter);
-            this.labelTranslationY.MouseLeave += new System.EventHandler(this.labelTranslationY_MouseLeave);
-            // 
-            // labelTranslationX
-            // 
-            resources.ApplyResources(this.labelTranslationX, "labelTranslationX");
-            this.labelTranslationX.Name = "labelTranslationX";
-            this.labelTranslationX.MouseEnter += new System.EventHandler(this.labelTranslationX_MouseEnter);
-            this.labelTranslationX.MouseLeave += new System.EventHandler(this.labelTranslationX_MouseLeave);
+            0});
+            this.numericUpDownZoomH.Name = "numericUpDownZoomH";
+            this.numericUpDownZoomH.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // numericUpDownZoomV
             // 
@@ -538,34 +540,6 @@
             0,
             0});
             // 
-            // numericUpDownZoomH
-            // 
-            this.numericUpDownZoomH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.numericUpDownZoomH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDownZoomH.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownZoomH.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            resources.ApplyResources(this.numericUpDownZoomH, "numericUpDownZoomH");
-            this.numericUpDownZoomH.Maximum = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            this.numericUpDownZoomH.Minimum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.numericUpDownZoomH.Name = "numericUpDownZoomH";
-            this.numericUpDownZoomH.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            // 
             // numericUpDownTranslationX
             // 
             this.numericUpDownTranslationX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -584,12 +558,33 @@
             -2147483648});
             this.numericUpDownTranslationX.Name = "numericUpDownTranslationX";
             // 
+            // labelZoomH
+            // 
+            resources.ApplyResources(this.labelZoomH, "labelZoomH");
+            this.labelZoomH.Name = "labelZoomH";
+            this.labelZoomH.MouseEnter += new System.EventHandler(this.labelZoomH_MouseEnter);
+            this.labelZoomH.MouseLeave += new System.EventHandler(this.labelZoomH_MouseLeave);
+            // 
+            // labelTranslationX
+            // 
+            resources.ApplyResources(this.labelTranslationX, "labelTranslationX");
+            this.labelTranslationX.Name = "labelTranslationX";
+            this.labelTranslationX.MouseEnter += new System.EventHandler(this.labelTranslationX_MouseEnter);
+            this.labelTranslationX.MouseLeave += new System.EventHandler(this.labelTranslationX_MouseLeave);
+            // 
             // labelZoomV
             // 
             resources.ApplyResources(this.labelZoomV, "labelZoomV");
             this.labelZoomV.Name = "labelZoomV";
             this.labelZoomV.MouseEnter += new System.EventHandler(this.labelZoomV_MouseEnter);
             this.labelZoomV.MouseLeave += new System.EventHandler(this.labelZoomV_MouseLeave);
+            // 
+            // labelTranslationY
+            // 
+            resources.ApplyResources(this.labelTranslationY, "labelTranslationY");
+            this.labelTranslationY.Name = "labelTranslationY";
+            this.labelTranslationY.MouseEnter += new System.EventHandler(this.labelTranslationY_MouseEnter);
+            this.labelTranslationY.MouseLeave += new System.EventHandler(this.labelTranslationY_MouseLeave);
             // 
             // labelTitleId
             // 
@@ -1106,8 +1101,8 @@
             this.groupBoxVCSettings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoundVolume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownZoomV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationX)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
