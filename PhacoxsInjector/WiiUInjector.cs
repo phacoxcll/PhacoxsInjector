@@ -142,8 +142,7 @@ namespace PhacoxsInjector
             {
                 if (Base != null &&
                     Base is VCSNES &&
-                    ((Base as VCSNES).Type == VCSNES.eType.B1 ||
-                    (Base as VCSNES).Type == VCSNES.eType.B2))
+                    (Base as VCSNES).ExtendedFooter)
                     return true;
                 else
                     return false;

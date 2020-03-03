@@ -862,7 +862,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Modify the volume of the game audio. Official games do not exceed 140. (This option is only available in Super Famicom or SNES base games Type B1 and Type B2)..
+        ///   Busca una cadena traducida similar a Modify the volume of the game audio. Official games do not exceed 140. (This option is only available in Super Famicom or SNES base juices with &quot;Extended footer: True&quot;)..
         /// </summary>
         internal static string SoundVolumeDescription {
             get {

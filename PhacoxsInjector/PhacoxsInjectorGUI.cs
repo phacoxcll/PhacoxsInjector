@@ -266,7 +266,7 @@ namespace PhacoxsInjector
             comboBoxPlayers.SelectedIndex = 0;
             labelSoundVolume.Visible = false;
             numericUpDownSoundVolume.Visible = false;
-            numericUpDownSoundVolume.Value = 0;
+            numericUpDownSoundVolume.Value = 100;
 
             checkBoxDarkFilter.Visible = false;
             checkBoxDarkFilter.Checked = true;
@@ -1450,13 +1450,15 @@ namespace PhacoxsInjector
                             default: (Injector as SNESInjector).Players = 2; break;
                             case 1: (Injector as SNESInjector).Players = 3; break;
                             case 2: (Injector as SNESInjector).Players = 4; break;
-                        }
-                        (Injector as SNESInjector).SoundVolume = (byte)(numericUpDownSoundVolume.Value);
+                        }                            
                         Cll.Log.WriteLine("SNES Aspect Ratio: " + (Injector as SNESInjector).AspectRatioValue.ToString());
                         Cll.Log.WriteLine("SNES Speed (FPS): " + (Injector as SNESInjector).Speed.ToString());
                         Cll.Log.WriteLine("SNES Players: " + (Injector as SNESInjector).Players.ToString());
                         if (Injector.BaseSupportsSoundVolume)
+                        {
+                            (Injector as SNESInjector).SoundVolume = (byte)(numericUpDownSoundVolume.Value);
                             Cll.Log.WriteLine("SNES Sound Volume: " + (Injector as SNESInjector).SoundVolume.ToString());
+                        }
                     }
                     else if (mode == RomFile.Format.N64)
                     {

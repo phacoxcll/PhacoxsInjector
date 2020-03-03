@@ -36,6 +36,8 @@ namespace PhacoxsInjector
             Base = GetLoadedBase();
 
             AspectRatioValue = AspectRatio.Default;
+            Speed = 60;
+            Players = 2;
         }
 
         public override void SetRom(string romPath)

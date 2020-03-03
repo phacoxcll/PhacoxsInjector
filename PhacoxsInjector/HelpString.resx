@@ -468,7 +468,7 @@
     <value>Sound volume</value>
   </data>
   <data name="SoundVolumeDescription" xml:space="preserve">
-    <value>Modify the volume of the game audio. Official games do not exceed 140. (This option is only available in Super Famicom or SNES base games Type B1 and Type B2).</value>
+    <value>Modify the volume of the game audio. Official games do not exceed 140. (This option is only available in Super Famicom or SNES base juices with "Extended footer: True").</value>
   </data>
   <data name="Players" xml:space="preserve">
     <value>Players</value>

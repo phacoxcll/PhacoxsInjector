@@ -349,6 +349,11 @@
             0,
             0});
             this.numericUpDownSoundVolume.Name = "numericUpDownSoundVolume";
+            this.numericUpDownSoundVolume.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // buttonEditConfigFile
             // 
