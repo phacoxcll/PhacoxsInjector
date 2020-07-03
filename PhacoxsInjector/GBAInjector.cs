@@ -70,13 +70,37 @@ namespace PhacoxsInjector
                 sw.Close();
             }
 
-            Process decrypt = Process.Start(Environment.CurrentDirectory + "\\resources\\gba\\inject.bat",
-            "\"" + BasePath + "\\content\\alldata.psb.m\" \"" + RomPath + "\" \"" + Environment.CurrentDirectory + "\\resources\\gba\\tmp.psb.m\"");
-            decrypt.WaitForExit();
+            string tmpRomPath = Path.Combine(Environment.CurrentDirectory, "resources", "gba", "tmp.gba");
+            File.Copy(RomPath, tmpRomPath, true);
 
-            if (decrypt.ExitCode == 0)
+            int paddingSize = 0;
+            if (Rom.Size < 1048576)
+                paddingSize = 1048576 - Rom.Size;
+            else if (Rom.Size < 2097152)
+                paddingSize = 2097152 - Rom.Size;
+            else if (Rom.Size < 4194304)
+                paddingSize = 4194304 - Rom.Size;
+            else if (Rom.Size < 8388608)
+                paddingSize = 8388608 - Rom.Size;
+            else if (Rom.Size < 16777216)
+                paddingSize = 16777216 - Rom.Size;
+            else if (Rom.Size < 33554432)
+                paddingSize = 33554432 - Rom.Size;
+
+            byte[] padding = new byte[paddingSize];
+            FileStream fs = File.Open(tmpRomPath, FileMode.Open);
+            fs.Position = fs.Length;
+            fs.Write(padding, 0, paddingSize);
+            fs.Close();
+
+            Process psb = Process.Start(Environment.CurrentDirectory + "\\resources\\gba\\inject.bat",
+            "\"" + BasePath + "\\content\\alldata.psb.m\" \"" + tmpRomPath + "\" \"" + Environment.CurrentDirectory + "\\resources\\gba\\tmp.psb.m\"");
+            psb.WaitForExit();
+
+            if (psb.ExitCode == 0)
             {
-                decrypt.Dispose();
+                psb.Dispose();
+                File.Delete(tmpRomPath);
                 File.Delete(BasePath + "\\content\\alldata.bin");
                 File.Delete(BasePath + "\\content\\alldata.psb.m");
                 File.Move(Environment.CurrentDirectory + "\\resources\\gba\\tmp.bin", BasePath + "\\content\\alldata.bin");
@@ -84,17 +108,22 @@ namespace PhacoxsInjector
             }
             else
             {
-                decrypt.Dispose();
+                psb.Dispose();
                 throw new Exception("psb.exe fail.");
             }
         }
 
         protected override WiiUVC GetLoadedBase()
         {
+            return GetBase(BasePath);
+        }
+
+        public VCGBA GetBase(string path)
+        {
             try
             {
-                ValidateBase(BasePath);            
-                FileStream fs = File.Open(BasePath + "\\code\\m2engage.rpx", FileMode.Open);
+                ValidateBase(path);
+                FileStream fs = File.Open(path + "\\code\\m2engage.rpx", FileMode.Open);
                 uint hash = Cll.Security.ComputeCRC32(fs);
                 fs.Close();
                 return VCGBA.GetVC(hash);
@@ -105,7 +134,7 @@ namespace PhacoxsInjector
             }
         }
 
-        protected override void ValidateBase(string path)
+        public override void ValidateBase(string path)
         {
             string[] folders = {
             };
@@ -125,7 +154,7 @@ namespace PhacoxsInjector
             ValidateBase(folders, files);
         }
 
-        protected override void ValidateEncryptedBase(string path)
+        public override void ValidateEncryptedBase(string path)
         {
             ValidateEncryptedBase(path, "m2engage.rpx");
         }
