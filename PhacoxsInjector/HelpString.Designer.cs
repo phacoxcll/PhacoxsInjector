@@ -286,7 +286,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Select the game folder of the Wii U GBA VC that you want to use as base..
+        ///   Busca una cadena traducida similar a Select a Wii U GBA Virtual Console game..
         /// </summary>
         internal static string GBABaseSelect {
             get {
@@ -448,7 +448,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Change the current base game..
+        ///   Busca una cadena traducida similar a A base game is not a ROM, it is a Wii U Virtual Console game. The base game is essential, since this will obtain the necessary files to run the ROM on the Wii U. Although not all ROMs are compatible with the Wii U Virtual Console..
         /// </summary>
         internal static string LoadBaseDescription {
             get {
@@ -538,6 +538,15 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a You are about to change the application mode, having previously selected a ROM. The change will make you have to select a ROM again..
+        /// </summary>
+        internal static string ModeSelectWarning {
+            get {
+                return ResourceManager.GetString("ModeSelectWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a The base did not load. Use one of the N64 games released for the Wii U VC..
         /// </summary>
         internal static string N64BaseErrorDescription {
@@ -547,7 +556,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Select the game folder of the Wii U N64 VC that you want to use as base..
+        ///   Busca una cadena traducida similar a Select a Wii U N64 Virtual Console game..
         /// </summary>
         internal static string N64BaseSelect {
             get {
@@ -592,7 +601,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Select the game folder of the Wii U NDS VC that you want to use as base..
+        ///   Busca una cadena traducida similar a Select a Wii U NDS Virtual Console game..
         /// </summary>
         internal static string NDSBaseSelect {
             get {
@@ -646,7 +655,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Select the game folder of the Wii U NES VC that you want to use as base..
+        ///   Busca una cadena traducida similar a Select a Wii U NES Virtual Console game..
         /// </summary>
         internal static string NESBaseSelect {
             get {
@@ -844,7 +853,7 @@ namespace PhacoxsInjector {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Select the game folder of the Wii U SNES VC that you want to use as base..
+        ///   Busca una cadena traducida similar a Select a Wii U SNES Virtual Console game..
         /// </summary>
         internal static string SNESBaseSelect {
             get {
