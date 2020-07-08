@@ -12,7 +12,7 @@ namespace PhacoxsInjector
             get
             {
                 if (BaseIsLoaded && RomIsValid)
-                    return "000500006A" + Rom.HashCRC16.ToString("X4") + Base.Index.ToString("X2");
+                    return "000500026A" + Rom.HashCRC16.ToString("X4") + Base.Index.ToString("X2");
                 else
                     return "";
             }
