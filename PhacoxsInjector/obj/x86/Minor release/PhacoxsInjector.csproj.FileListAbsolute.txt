@@ -1,0 +1,17 @@
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.csprojAssemblyReference.cache
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.HelpString.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.PhacoxsInjectorGUI.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.Properties.Resources.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.HelpString.es.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.PhacoxsInjectorGUI.es.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.csproj.GenerateResource.cache
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\bin\x86\Minor release\PhacoxsInjector.exe.config
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\bin\x86\Minor release\PhacoxsInjector.exe
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\bin\x86\Minor release\PhacoxsInjector.pdb
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\bin\x86\Minor release\es\PhacoxsInjector.resources.dll
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\bin\x86\Minor release\VCN64Config.exe
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\bin\x86\Minor release\VCN64Config.pdb
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\es\PhacoxsInjector.resources.dll
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.csproj.CopyComplete
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.exe
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x86\Minor release\PhacoxsInjector.pdb

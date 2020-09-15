@@ -202,46 +202,90 @@ namespace PhacoxsInjector
         
         private void comboBoxConsole_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RomFile.Format mode;
             switch (comboBoxConsole.SelectedIndex)
             {
                 case 1:
-                    Mode = RomFile.Format.Famicom;
-                    Cll.Log.WriteLine("Changed mode to Famicom.");
+                    mode = RomFile.Format.Famicom;
                     break;
                 case 2:
-                    Mode = RomFile.Format.NES;
-                    Cll.Log.WriteLine("Changed mode to NES.");
+                    mode = RomFile.Format.NES;
                     break;
                 case 3:
-                    Mode = RomFile.Format.SuperFamicom;
-                    Cll.Log.WriteLine("Changed mode to Super Famicom.");
+                    mode = RomFile.Format.SuperFamicom;
                     break;
                 case 4:
-                    Mode = RomFile.Format.SNES_EUR;
-                    Cll.Log.WriteLine("Changed mode to SNES (EUR).");
+                    mode = RomFile.Format.SNES_EUR;
                     break;
                 case 5:
-                    Mode = RomFile.Format.SNES_USA;
-                    Cll.Log.WriteLine("Changed mode to SNES (USA).");
+                    mode = RomFile.Format.SNES_USA;
                     break;
                 case 6:
-                    Mode = RomFile.Format.N64;
-                    Cll.Log.WriteLine("Changed mode to N64.");
+                    mode = RomFile.Format.N64;
                     break;
                 case 7:
-                    Mode = RomFile.Format.GBA;
-                    Cll.Log.WriteLine("Changed mode to GBA.");
+                    mode = RomFile.Format.GBA;
                     break;
                 case 8:
-                    Mode = RomFile.Format.NDS;
-                    Cll.Log.WriteLine("Changed mode to NDS.");
+                    mode = RomFile.Format.NDS;
                     break;
                 default:
-                    Mode = RomFile.Format.Indeterminate;
-                    Cll.Log.WriteLine("Changed mode to Indeterminate.");
+                    mode = RomFile.Format.Indeterminate;
                     break;
             }
-            ChangeGUI(Mode);
+
+            if (Mode != mode)
+            {
+                if (Injector != null && Injector.RomIsValid)
+                {
+                    if (MessageBox.Show(HelpString.ModeSelectWarning, HelpString.Warning, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                    {
+                        ChangeMode(mode);
+                    }
+                    else
+                    {
+                        switch (Mode)
+                        {
+                            case RomFile.Format.Famicom:
+                                comboBoxConsole.SelectedIndex = 1;
+                                break;
+                            case RomFile.Format.NES:
+                                comboBoxConsole.SelectedIndex = 2;
+                                break;
+                            case RomFile.Format.SuperFamicom:
+                                comboBoxConsole.SelectedIndex = 3;
+                                break;
+                            case RomFile.Format.SNES_EUR:
+                                comboBoxConsole.SelectedIndex = 4;
+                                break;
+                            case RomFile.Format.SNES_USA:
+                                comboBoxConsole.SelectedIndex = 5;
+                                break;
+                            case RomFile.Format.N64:
+                                comboBoxConsole.SelectedIndex = 6;
+                                break;
+                            case RomFile.Format.GBA:
+                                comboBoxConsole.SelectedIndex = 7;
+                                break;
+                            case RomFile.Format.NDS:
+                                comboBoxConsole.SelectedIndex = 8;
+                                break;
+                            default:
+                                comboBoxConsole.SelectedIndex = 0;
+                                break;
+                        }
+                    }
+                }
+                else
+                    ChangeMode(mode);
+            }
+        }
+
+        private void ChangeMode(RomFile.Format mode)
+        {
+            Mode = mode;
+            Cll.Log.WriteLine("Changed mode to " + mode.ToString() + ".");
+            ChangeGUI(mode);
         }
 
         private void ChangeGUI(RomFile.Format mode)
@@ -255,9 +299,9 @@ namespace PhacoxsInjector
 
             labelAspectRatio.Visible = false;
             comboBoxAspectRatioNES.Visible = false;
-            comboBoxAspectRatioNES.SelectedIndex = 0;
+            comboBoxAspectRatioNES.SelectedIndex = 1;
             comboBoxAspectRatioSNES.Visible = false;
-            comboBoxAspectRatioSNES.SelectedIndex = 0;
+            comboBoxAspectRatioSNES.SelectedIndex = 1;
             labelSpeed.Visible = false;
             comboBoxSpeed.Visible = false;
             comboBoxSpeed.SelectedIndex = 0;
@@ -269,7 +313,7 @@ namespace PhacoxsInjector
             numericUpDownSoundVolume.Value = 100;
 
             checkBoxDarkFilter.Visible = false;
-            checkBoxDarkFilter.Checked = true;
+            checkBoxDarkFilter.Checked = false;
             checkBoxWidescreen.Visible = false;
             checkBoxWidescreen.Checked = false;
             labelZoomH.Visible = false;
@@ -289,6 +333,12 @@ namespace PhacoxsInjector
             textBoxConfigFile.Visible = false;
             textBoxConfigFile.Text = "";
             buttonEditConfigFile.Visible = false;
+
+            buttonLayoutFile.Visible = false;
+            labelLayoutFile.Visible = false;
+            textBoxLayoutFile.Visible = false;
+            textBoxLayoutFile.Text = "";
+            buttonEditLayoutFile.Visible = false;
 
             buttonTitleScreen.Enabled = true;
             checkBoxKeepMenuIcon.Checked = false;
@@ -445,6 +495,7 @@ namespace PhacoxsInjector
                     bootPath = "resources\\images\\boot_nds.png";
                     iconPath = "resources\\images\\icon.png";
                     titleScreenPath = "resources\\images\\title_screen_nds.png";
+                    checkBoxDarkFilter.Visible = true;
                     checkBoxUseNDSIcon.Visible = true;
                     panelNDSIcon.Visible = true;
                     buttonNDSIconBGColor.Visible = true;
@@ -827,21 +878,32 @@ namespace PhacoxsInjector
                 try
                 {
                     Injector.LoadBase(folderBrowserDialog.SelectedPath);
-                    Cll.Log.WriteLine("The base is valid.");
-                    labelLoadedBase.Text = Injector.LoadedBase;
-                    panelLoadedBase.BackgroundImage = Properties.Resources.checkmark_16;
-                    if (Injector.BaseSupportsSoundVolume)
+
+                    if (Injector.LoadedBase != "")
                     {
-                        labelSoundVolume.Visible = true;
-                        numericUpDownSoundVolume.Visible = true;
+                        Cll.Log.WriteLine("The base is valid.");
+                        Cll.Log.WriteLine("Loaded base:" + Injector.LoadedBase);
+                        labelLoadedBase.Text = Injector.LoadedBase;
+                        panelLoadedBase.BackgroundImage = Properties.Resources.checkmark_16;
+                        if (Injector.BaseSupportsSoundVolume)
+                        {
+                            labelSoundVolume.Visible = true;
+                            numericUpDownSoundVolume.Visible = true;
+                        }
+                        else
+                        {
+                            labelSoundVolume.Visible = false;
+                            numericUpDownSoundVolume.Visible = false;
+                        }
+                        return true;
                     }
                     else
                     {
-                        labelSoundVolume.Visible = false;
-                        numericUpDownSoundVolume.Visible = false;
+                        Cll.Log.WriteLine("The base is invalid.");
+                        labelLoadedBase.Text = HelpString.BaseInvalid;
+                        panelLoadedBase.BackgroundImage = Properties.Resources.x_mark_16;
+                        Cll.Log.WriteLine("Could not load base.");
                     }
-                    Cll.Log.WriteLine("Loaded base:" + Injector.LoadedBase);
-                    return true;
                 }
                 catch (Exception e)
                 {
@@ -1474,6 +1536,11 @@ namespace PhacoxsInjector
                         Cll.Log.WriteLine("N64 Vertical Zoom: " + ((Injector as N64Injector).ScaleY * 100).ToString());
                         Cll.Log.WriteLine("N64 Translation X: " + (Injector as N64Injector).TranslationX.ToString());
                         Cll.Log.WriteLine("N64 Translation Y: " + (Injector as N64Injector).TranslationY.ToString());
+                    }
+                    else if (mode == RomFile.Format.NDS)
+                    {
+                        (Injector as NDSInjector).DarkFilter = checkBoxDarkFilter.Checked;
+                        Cll.Log.WriteLine("NDS DarkFilter: " + (Injector as NDSInjector).DarkFilter.ToString());
                     }
 
                     UpdateBootName();

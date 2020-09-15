@@ -36,10 +36,16 @@ namespace PhacoxsInjector
                 shortTitle[0] = header[0x0D];
                 shortTitle[1] = header[0x0E];
                 region = header[0x0F];
-                Version = header[0x1E];
-                FormatCode = (char)uniqueCode;
-                ShortId = Encoding.ASCII.GetString(shortTitle);
-                RegionCode = (char)region;
+
+                if (Useful.IsUpperLetterOrDigit(uniqueCode))
+                    FormatCode = (char)uniqueCode;
+                if (Useful.IsUpperLetterOrDigit(shortTitle[0]) &&
+                    Useful.IsUpperLetterOrDigit(shortTitle[1]))
+                    ShortId = Encoding.ASCII.GetString(shortTitle);
+                if (Useful.IsUpperLetterOrDigit(region))
+                    RegionCode = (char)region;
+                if (Useful.IsUpperLetterOrDigit(header[0x1E]))
+                    Version = header[0x1E];
 
                 byte[] offsetBytes = new byte[4];
                 byte[] bitmapBytes = new byte[0x200];
@@ -148,11 +154,15 @@ namespace PhacoxsInjector
 
         public static bool Validate(string filename)
         {
-            byte[] header = new byte[0x200];
-            FileStream fs = File.OpenRead(filename);
-            fs.Read(header, 0, 0x200);
-            fs.Close();
-            return Validate(header);
+            if (File.Exists(filename))
+            {
+                byte[] header = new byte[0x200];
+                FileStream fs = File.OpenRead(filename);
+                fs.Read(header, 0, 0x200);
+                fs.Close();
+                return Validate(header);
+            }
+            return false;
         }
 
         ~RomNDS()

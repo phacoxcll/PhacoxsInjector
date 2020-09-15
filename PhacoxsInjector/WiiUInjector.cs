@@ -9,7 +9,7 @@ namespace PhacoxsInjector
 {
     public abstract class WiiUInjector
     {
-        public const string Release = "1.1"; //CllVersionReplace "major.minor"
+        public const string Release = "1.1.4"; //CllVersionReplace "major.minor.revision"
 
         protected string RomPath;
         protected RomFile Rom;
@@ -258,11 +258,7 @@ namespace PhacoxsInjector
             app_title_id.InnerText = titleId;
             app_group_id.InnerText = "0000" + id[5].ToString("X2") + id[6].ToString("X2");
 
-            if (Console != RomFile.Format.Famicom &&
-                Console != RomFile.Format.NES &&
-                Console != RomFile.Format.SuperFamicom &&
-                Console != RomFile.Format.SNES_EUR &&
-                Console != RomFile.Format.SNES_USA)
+            if (!Rom.ProductCode.Contains("?"))
                 meta_product_code.InnerText = "WUP-N-" + Rom.ProductCode;
 
             meta_title_id.InnerText = titleId;
@@ -353,9 +349,9 @@ namespace PhacoxsInjector
             }
         }
 
-        protected abstract void ValidateBase(string path);
+        public abstract void ValidateBase(string path);
 
-        protected abstract void ValidateEncryptedBase(string path);
+        public abstract void ValidateEncryptedBase(string path);
 
         protected void ValidateBase(string[] folders, string[] files)
         {

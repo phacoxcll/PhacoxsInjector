@@ -7,6 +7,11 @@ namespace PhacoxsInjector
 {
     public class NDSInjector : WiiUInjector
     {
+        public bool DarkFilter;
+
+        public string LayoutFilePath
+        { private set; get; }
+
         public Bitmap RomIcon
         {
             get
@@ -23,7 +28,7 @@ namespace PhacoxsInjector
             get
             {
                 if (BaseIsLoaded && RomIsValid)
-                    return "00050000D5" + Rom.HashCRC16.ToString("X4") + Base.Index.ToString("X2");
+                    return "00050002D5" + Rom.HashCRC16.ToString("X4") + Base.Index.ToString("X2");
                 else
                     return "";
             }            
@@ -42,6 +47,11 @@ namespace PhacoxsInjector
             Rom = new RomNDS(romPath);
         }
 
+        public void SetLayoutFile(string layoutFilePath)
+        {
+            LayoutFilePath = layoutFilePath;
+        }
+
         public override void Inject(bool encrypt, string outputPath, string shortName, string longName,
             Bitmap menuIconImg, Bitmap bootTvImg, Bitmap bootDrcImg)
         {
@@ -54,6 +64,9 @@ namespace PhacoxsInjector
             if (!BaseIsLoaded)
                 throw new Exception("The base is not ready.");
 
+            if (!InjectGameLayout())
+                throw new Exception("Failed.");
+
             InjectImages(menuIconImg, bootTvImg, bootDrcImg);
             if (RomIsValid)
             {
@@ -65,6 +78,34 @@ namespace PhacoxsInjector
                 NusContent.Encrypt(BasePath, outPath);
             else if (!Useful.DirectoryCopy(BasePath, outPath, true))
                 throw new Exception("\"" + BasePath + "\" copy failed.");
+        }
+
+        private bool InjectGameLayout()
+        {
+            StreamReader sr = null;
+            try
+            {
+                sr = File.OpenText(Path.Combine(BasePath, "content", "0010", "configuration_cafe.json"));
+                Cll.JSON.SyntacticAnalyzer syn = new Cll.JSON.SyntacticAnalyzer(sr);
+                Cll.JSON.Element json = syn.Run();
+                sr.Close();
+
+                Cll.JSON.Object config = (Cll.JSON.Object)json.Value.GetValue("configuration");
+
+                if (DarkFilter)
+                    config.GetValue("Display").SetValue("Brightness", new Cll.JSON.Number(80));
+                else
+                    config.GetValue("Display").SetValue("Brightness", new Cll.JSON.Number(100));
+
+                string text = json.ToString("");
+                File.WriteAllText(Path.Combine(BasePath, "content", "0010", "configuration_cafe.json"), text);
+
+                return true;
+            }
+            catch { }
+            finally { if (sr != null) sr.Close(); }
+
+            return false;
         }
 
         protected override void InjectRom()
@@ -91,10 +132,15 @@ namespace PhacoxsInjector
 
         protected override WiiUVC GetLoadedBase()
         {
+            return GetBase(BasePath);
+        }
+
+        public VCNDS GetBase(string path)
+        {
             try
             {
-                ValidateBase(BasePath);            
-                FileStream fs = File.Open(BasePath + "\\code\\hachihachi_ntr.rpx", FileMode.Open);
+                ValidateBase(path);
+                FileStream fs = File.Open(path + "\\code\\hachihachi_ntr.rpx", FileMode.Open);
                 uint hash = Cll.Security.ComputeCRC32(fs);
                 fs.Close();
                 return VCNDS.GetVC(hash);
@@ -105,11 +151,13 @@ namespace PhacoxsInjector
             }
         }
 
-        protected override void ValidateBase(string path)
+        public override void ValidateBase(string path)
         {
             string[] folders = {
                 path + "\\content\\0010\\assets",
-                path + "\\content\\0010\\data"
+                path + "\\content\\0010\\assets\\textures",
+                path + "\\content\\0010\\data",
+                path + "\\content\\0010\\data\\strings"
             };
 
             string[] files = {
@@ -126,8 +174,8 @@ namespace PhacoxsInjector
 
             ValidateBase(folders, files);
         }
-       
-        protected override void ValidateEncryptedBase(string path)
+
+        public override void ValidateEncryptedBase(string path)
         {
             ValidateEncryptedBase(path, "hachihachi_ntr.rpx");
         }

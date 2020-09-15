@@ -73,6 +73,14 @@ namespace PhacoxsInjector
             return true;
         }
 
+        public static bool IsUpperLetterOrDigit(byte c)
+        {
+            if (c >= 0x30 && c <= 0x39 || c >= 0x41 && c <= 0x5A)
+                return true;
+            else
+                return false;
+        }
+
         private static int GetHexVal(char hex)
         {
             int val = (int)hex;

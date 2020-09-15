@@ -52,7 +52,7 @@ namespace PhacoxsInjector
                     flags |= Widescreen ? 0x40 : 0;
                     flags |= ScaleX != 1.0F ? 0x20 : (ScaleY != 1.0F ? 0x20 : (TranslationX != 0.0F ? 0x20 : (TranslationY != 0.0F ? 0x20 : 0)));
 
-                    return "0005000064" + crc.ToString("X4") + ((byte)(flags)).ToString("X2");
+                    return "0005000264" + crc.ToString("X4") + ((byte)(flags)).ToString("X2");
                 }
                 else
                     return "";
@@ -294,10 +294,15 @@ namespace PhacoxsInjector
 
         protected override WiiUVC GetLoadedBase()
         {
+            return GetBase(BasePath);
+        }
+
+        public VCN64 GetBase(string path)
+        {
             try
             {
-                ValidateBase(BasePath);            
-                FileStream fs = File.Open(BasePath + "\\code\\VESSEL.rpx", FileMode.Open);
+                ValidateBase(path);
+                FileStream fs = File.Open(path + "\\code\\VESSEL.rpx", FileMode.Open);
                 uint hash = Cll.Security.ComputeCRC32(fs);
                 fs.Close();
                 return VCN64.GetVC(hash);
@@ -308,7 +313,7 @@ namespace PhacoxsInjector
             }
         }
 
-        protected override void ValidateBase(string path)
+        public override void ValidateBase(string path)
         {
             string[] folders = {
                 path + "\\content\\config",
@@ -328,10 +333,10 @@ namespace PhacoxsInjector
                 path + "\\meta\\meta.xml"
             };
 
-            ValidateBase(folders,files);
+            ValidateBase(folders, files);
         }
 
-        protected override void ValidateEncryptedBase(string path)
+        public override void ValidateEncryptedBase(string path)
         {
             ValidateEncryptedBase(path, "VESSEL.rpx");
         }

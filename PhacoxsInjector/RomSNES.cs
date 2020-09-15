@@ -43,23 +43,18 @@ namespace PhacoxsInjector
                     byte[] shortTitle = new byte[2];
                     byte region;
 
-                    if (data[headerOffset + 0x04] == 0x20 && data[headerOffset + 0x05] == 0x20)
-                    {
-                        uniqueCode = (byte)'?';
-                        shortTitle[0] = data[headerOffset + 0x02];
-                        shortTitle[1] = data[headerOffset + 0x03];
-                        region = (byte)'?';
-                    }
-                    else
-                    {
-                        uniqueCode = data[headerOffset + 0x02];
-                        shortTitle[0] = data[headerOffset + 0x03];
-                        shortTitle[1] = data[headerOffset + 0x04];
-                        region = data[headerOffset + 0x05];
-                    }
-                    FormatCode = (char)uniqueCode;
-                    ShortId = Encoding.ASCII.GetString(shortTitle);
-                    RegionCode = (char)region;
+                    uniqueCode = data[headerOffset + 0x02];
+                    shortTitle[0] = data[headerOffset + 0x03];
+                    shortTitle[1] = data[headerOffset + 0x04];
+                    region = data[headerOffset + 0x05];
+                    
+                    if (Useful.IsUpperLetterOrDigit(uniqueCode))
+                        FormatCode = (char)uniqueCode;
+                    if (Useful.IsUpperLetterOrDigit(shortTitle[0]) &&
+                        Useful.IsUpperLetterOrDigit(shortTitle[1]))
+                        ShortId = Encoding.ASCII.GetString(shortTitle);
+                    if (Useful.IsUpperLetterOrDigit(region))
+                        RegionCode = (char)region;
                 }
 
                 Version = data[headerOffset + 0x2B];
@@ -67,7 +62,7 @@ namespace PhacoxsInjector
                 byte[] titleBytes = new byte[21];
                 Array.Copy(data, headerOffset + 0x10, titleBytes, 0, 21);
                 int count = 21;
-                while (titleBytes[--count] == 0x20 && count > 0) ;
+                while (--count >= 0 && titleBytes[count] == 0x20) ;
                 Title = Encoding.ASCII.GetString(titleBytes, 0, count + 1);
                 Size = data.Length;
                 HashCRC16 = Cll.Security.ComputeCRC16_ARC(data, 0, data.Length);
@@ -187,13 +182,17 @@ namespace PhacoxsInjector
 
         public static bool Validate(string filename)
         {
-            FileStream fs = File.OpenRead(filename);
-            int smcHeaderSize = SMCHeaderSize((int)fs.Length);
-            byte[] data = GetData(fs, smcHeaderSize);
-            fs.Close();
-            int headerOffset = -1;
-            Subformat format = GetFormat(data, ref headerOffset);
-            return format != Subformat.Indeterminate;
+            if (File.Exists(filename))
+            {
+                FileStream fs = File.OpenRead(filename);
+                int smcHeaderSize = SMCHeaderSize((int)fs.Length);
+                byte[] data = GetData(fs, smcHeaderSize);
+                fs.Close();
+                int headerOffset = -1;
+                Subformat format = GetFormat(data, ref headerOffset);
+                return format != Subformat.Indeterminate;
+            }
+            return false;
         }
     }
 }

@@ -115,6 +115,10 @@
             this.groupBoxHelp = new System.Windows.Forms.GroupBox();
             this.labelHelpText = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.buttonEditLayoutFile = new System.Windows.Forms.Button();
+            this.labelLayoutFile = new System.Windows.Forms.Label();
+            this.textBoxLayoutFile = new System.Windows.Forms.TextBox();
+            this.buttonLayoutFile = new System.Windows.Forms.Button();
             this.groupBoxVCSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSoundVolume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTranslationY)).BeginInit();
@@ -309,6 +313,10 @@
             // 
             // groupBoxVCSettings
             // 
+            this.groupBoxVCSettings.Controls.Add(this.buttonEditLayoutFile);
+            this.groupBoxVCSettings.Controls.Add(this.labelLayoutFile);
+            this.groupBoxVCSettings.Controls.Add(this.textBoxLayoutFile);
+            this.groupBoxVCSettings.Controls.Add(this.buttonLayoutFile);
             this.groupBoxVCSettings.Controls.Add(this.numericUpDownSoundVolume);
             this.groupBoxVCSettings.Controls.Add(this.buttonEditConfigFile);
             this.groupBoxVCSettings.Controls.Add(this.labelAspectRatio);
@@ -1086,6 +1094,43 @@
             resources.ApplyResources(this.labelHelpText, "labelHelpText");
             this.labelHelpText.Name = "labelHelpText";
             // 
+            // buttonEditLayoutFile
+            // 
+            this.buttonEditLayoutFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonEditLayoutFile.FlatAppearance.BorderSize = 0;
+            this.buttonEditLayoutFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
+            this.buttonEditLayoutFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.buttonEditLayoutFile, "buttonEditLayoutFile");
+            this.buttonEditLayoutFile.ForeColor = System.Drawing.Color.White;
+            this.buttonEditLayoutFile.Name = "buttonEditLayoutFile";
+            this.buttonEditLayoutFile.UseVisualStyleBackColor = false;
+            // 
+            // labelLayoutFile
+            // 
+            resources.ApplyResources(this.labelLayoutFile, "labelLayoutFile");
+            this.labelLayoutFile.ForeColor = System.Drawing.Color.White;
+            this.labelLayoutFile.Name = "labelLayoutFile";
+            // 
+            // textBoxLayoutFile
+            // 
+            this.textBoxLayoutFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.textBoxLayoutFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLayoutFile.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.textBoxLayoutFile, "textBoxLayoutFile");
+            this.textBoxLayoutFile.Name = "textBoxLayoutFile";
+            this.textBoxLayoutFile.TabStop = false;
+            // 
+            // buttonLayoutFile
+            // 
+            this.buttonLayoutFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.buttonLayoutFile.FlatAppearance.BorderSize = 0;
+            this.buttonLayoutFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(110)))), ((int)(((byte)(190)))));
+            this.buttonLayoutFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.buttonLayoutFile, "buttonLayoutFile");
+            this.buttonLayoutFile.ForeColor = System.Drawing.Color.White;
+            this.buttonLayoutFile.Name = "buttonLayoutFile";
+            this.buttonLayoutFile.UseVisualStyleBackColor = false;
+            // 
             // PhacoxsInjectorGUI
             // 
             resources.ApplyResources(this, "$this");
@@ -1215,5 +1260,9 @@
         private System.Windows.Forms.Label labelTranslationX;
         private System.Windows.Forms.NumericUpDown numericUpDownZoomV;
         private System.Windows.Forms.Label labelZoomV;
+        private System.Windows.Forms.Button buttonEditLayoutFile;
+        private System.Windows.Forms.Label labelLayoutFile;
+        private System.Windows.Forms.TextBox textBoxLayoutFile;
+        private System.Windows.Forms.Button buttonLayoutFile;
     }
 }

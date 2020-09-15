@@ -38,7 +38,6 @@ namespace PhacoxsInjector
 
                 IsValid = true;
                 Console = Format.NES;
-
             }
             else                
                 throw new FormatException("It was not possible to determine the NES ROM format.");                
@@ -80,12 +79,16 @@ namespace PhacoxsInjector
 
         public static bool Validate(string filename)
         {
-            byte[] header = new byte[0x10];
-            FileStream fs = File.OpenRead(filename);
-            fs.Read(header, 0, 0x10);
-            fs.Close();
-            Subformat format = GetFormat(header);
-            return format != Subformat.Indeterminate;
+            if (File.Exists(filename))
+            {
+                byte[] header = new byte[0x10];
+                FileStream fs = File.OpenRead(filename);
+                fs.Read(header, 0, 0x10);
+                fs.Close();
+                Subformat format = GetFormat(header);
+                return format != Subformat.Indeterminate;
+            }
+            return false;
         }
     }
 }

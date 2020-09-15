@@ -1,0 +1,6 @@
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x64\Debug\PhacoxsInjector.HelpString.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x64\Debug\PhacoxsInjector.PhacoxsInjectorGUI.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x64\Debug\PhacoxsInjector.Properties.Resources.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x64\Debug\PhacoxsInjector.HelpString.es.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x64\Debug\PhacoxsInjector.PhacoxsInjectorGUI.es.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\x64\Debug\PhacoxsInjector.csproj.GenerateResource.cache

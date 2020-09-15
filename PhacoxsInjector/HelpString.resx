@@ -139,7 +139,7 @@
     <value>The base is invalid.</value>
   </data>
   <data name="NESBaseSelect" xml:space="preserve">
-    <value>Select the game folder of the Wii U NES VC that you want to use as base.</value>
+    <value>Select a Wii U NES Virtual Console game.</value>
   </data>
   <data name="ChooseN64ConfigFile" xml:space="preserve">
     <value>Choose N64 configuration file</value>
@@ -223,7 +223,7 @@
     <value>Load base</value>
   </data>
   <data name="LoadBaseDescription" xml:space="preserve">
-    <value>Change the current base game.</value>
+    <value>A base game is not a ROM, it is a Wii U Virtual Console game. The base game is essential, since this will obtain the necessary files to run the ROM on the Wii U. Although not all ROMs are compatible with the Wii U Virtual Console.</value>
   </data>
   <data name="LoadBaseWarningWiiUCK" xml:space="preserve">
     <value>Warning! You will not be able to load a packed base (WUP format). Enter the Wii U common key (see Settings section).</value>
@@ -366,16 +366,16 @@
     <value>Enlarge or reduce the viewing area of the game. If you expand it a lot you can leave the screen.</value>
   </data>
   <data name="SNESBaseSelect" xml:space="preserve">
-    <value>Select the game folder of the Wii U SNES VC that you want to use as base.</value>
+    <value>Select a Wii U SNES Virtual Console game.</value>
   </data>
   <data name="N64BaseSelect" xml:space="preserve">
-    <value>Select the game folder of the Wii U N64 VC that you want to use as base.</value>
+    <value>Select a Wii U N64 Virtual Console game.</value>
   </data>
   <data name="GBABaseSelect" xml:space="preserve">
-    <value>Select the game folder of the Wii U GBA VC that you want to use as base.</value>
+    <value>Select a Wii U GBA Virtual Console game.</value>
   </data>
   <data name="NDSBaseSelect" xml:space="preserve">
-    <value>Select the game folder of the Wii U NDS VC that you want to use as base.</value>
+    <value>Select a Wii U NDS Virtual Console game.</value>
   </data>
   <data name="NESBaseErrorDescription" xml:space="preserve">
     <value>The base did not load. Use one of the NES games released for the Wii U VC.</value>
@@ -475,5 +475,8 @@
   </data>
   <data name="PlayersDescription" xml:space="preserve">
     <value>Indicates the maximum number of players that supports the game you want to inject.</value>
+  </data>
+  <data name="ModeSelectWarning" xml:space="preserve">
+    <value>You are about to change the application mode, having previously selected a ROM. The change will make you have to select a ROM again.</value>
   </data>
 </root>

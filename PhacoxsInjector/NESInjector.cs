@@ -23,7 +23,7 @@ namespace PhacoxsInjector
             get
             {
                 if (BaseIsLoaded && RomIsValid)
-                    return "0005000061" + Rom.HashCRC16.ToString("X4") + Base.Index.ToString("X2");
+                    return "0005000261" + Rom.HashCRC16.ToString("X4") + Base.Index.ToString("X2");
                 else
                     return "";
             }
@@ -108,10 +108,15 @@ namespace PhacoxsInjector
 
         protected override WiiUVC GetLoadedBase()
         {
+            return GetBase(BasePath);
+        }
+
+        public VCNES GetBase(string path)
+        {
             try
             {
-                ValidateBase(BasePath, false);
-                RPXNES vc = ValidateRPX(BasePath);
+                ValidateBase(path, false);
+                RPXNES vc = ValidateRPX(path);
                 return VCNES.GetVC(vc.CRCsSum);
             }
             catch
@@ -119,7 +124,7 @@ namespace PhacoxsInjector
                 return null;
             }
         }
-        
+
         private RPXNES ValidateRPX(string path)
         {
             DirectoryInfo code = new DirectoryInfo(path + "\\code");
@@ -161,12 +166,12 @@ namespace PhacoxsInjector
                 ValidateRPX(path);
         }
 
-        protected override void ValidateBase(string path)
+        public override void ValidateBase(string path)
         {
             ValidateBase(path, true);
         }
 
-        protected override void ValidateEncryptedBase(string path)
+        public override void ValidateEncryptedBase(string path)
         {
             string appFileName = GetAppFileName(path);
 

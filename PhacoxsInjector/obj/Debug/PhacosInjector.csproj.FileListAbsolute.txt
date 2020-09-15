@@ -1,0 +1,10 @@
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\bin\Debug\PhacosInjector.exe
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\bin\Debug\PhacosInjector.pdb
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\obj\Debug\PhacosInjector.csprojAssemblyReference.cache
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\obj\Debug\PhacosInjector.Properties.Resources.resources
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\obj\Debug\PhacosInjector.csproj.GenerateResource.cache
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\obj\Debug\PhacosInjector.exe
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\obj\Debug\PhacosInjector.pdb
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\bin\Debug\PhacosInjector.exe.config
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\obj\Debug\PhacosInjector.HelpString.resources
+C:\Users\Alberto\source\repos\PhacosInjector\PhacosInjector\obj\Debug\PhacosInjector.PhacosInjectorGUI.resources

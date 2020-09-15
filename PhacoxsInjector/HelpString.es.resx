@@ -190,7 +190,7 @@
     <value>La base no se cargó. Usa uno los juegos de GBA lanzados para la consola virtual de Wii U.</value>
   </data>
   <data name="GBABaseSelect" xml:space="preserve">
-    <value>Selecciona la carpeta del juego de la consola virtual de GBA de Wii U que deseas usar como base.</value>
+    <value>Selecciona un juego de la Consola Virtual de GBA de Wii U.</value>
   </data>
   <data name="HelpBox" xml:space="preserve">
     <value>Ayuda</value>
@@ -244,7 +244,7 @@
     <value>Cargar base</value>
   </data>
   <data name="LoadBaseDescription" xml:space="preserve">
-    <value>Cambia el juego base actual.</value>
+    <value>Un juego base no es una ROM, es un juego de la Consola Virtual de Wii U. El juego base es esencial ya que de esté se obtendrán los archivos necesarios para ejecutar la ROM en la Wii U. Aunque no todas las ROM son compatibles con la Consola Virtual de Wii U.</value>
   </data>
   <data name="LoadBaseWarningWiiUCK" xml:space="preserve">
     <value>¡Advertencia! No podrás cargar una base empacada (formato WUP). Ingresa la clave común de Wii U (ve la sección de Ajustes).</value>
@@ -277,7 +277,7 @@
     <value>La base no se cargó. Usa uno los juegos de N64 lanzados para la consola virtual de Wii U.</value>
   </data>
   <data name="N64BaseSelect" xml:space="preserve">
-    <value>Selecciona la carpeta del juego de la consola virtual de N64 de Wii U que deseas usar como base.</value>
+    <value>Selecciona un juego de la Consola Virtual de N64 de Wii U.</value>
   </data>
   <data name="N64ConfigFile" xml:space="preserve">
     <value>Archivo de configuración</value>
@@ -292,7 +292,7 @@
     <value>La base no se cargó. Usa uno los juegos de NDS lanzados para la consola virtual de Wii U.</value>
   </data>
   <data name="NDSBaseSelect" xml:space="preserve">
-    <value>Selecciona la carpeta del juego de la consola virtual de NDS de Wii U que deseas usar como base.</value>
+    <value>Selecciona un juego de la Consola Virtual de NDS de Wii U.</value>
   </data>
   <data name="NDSIconBackground" xml:space="preserve">
     <value>Fondo del icono de NDS</value>
@@ -310,7 +310,7 @@
     <value>La base no se cargó. Usa uno los juegos de NES lanzados para la consola virtual de Wii U.</value>
   </data>
   <data name="NESBaseSelect" xml:space="preserve">
-    <value>Selecciona la carpeta del juego de la consola virtual de NES de Wii U que deseas usar como base.</value>
+    <value>Selecciona un juego de la Consola Virtual de NES de Wii U.</value>
   </data>
   <data name="NotPack" xml:space="preserve">
     <value>No empacar</value>
@@ -373,7 +373,7 @@
     <value>La base no se cargó. Usa uno los juegos de SNES lanzados para la consola virtual de Wii U.</value>
   </data>
   <data name="SNESBaseSelect" xml:space="preserve">
-    <value>Selecciona la carpeta del juego de la consola virtual de SNES de Wii U que deseas usar como base.</value>
+    <value>Selecciona un juego de la Consola Virtual de SNES de Wii U.</value>
   </data>
   <data name="TitleID" xml:space="preserve">
     <value>Title ID</value>
@@ -467,5 +467,8 @@
   </data>
   <data name="PlayersDescription" xml:space="preserve">
     <value>Indica el número máximo de jugadores que soporta el juego que quieres inyectar.</value>
+  </data>
+  <data name="ModeSelectWarning" xml:space="preserve">
+    <value>Estás a punto de cambiar el modo de aplicación, habiendo seleccionado una ROM previamente. El cambio hará que tengas que seleccionar una ROM nuevamente.</value>
   </data>
 </root>

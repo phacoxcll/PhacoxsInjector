@@ -1,0 +1,7 @@
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\Minor release\PhacoxsInjector.csprojAssemblyReference.cache
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\Minor release\PhacoxsInjector.HelpString.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\Minor release\PhacoxsInjector.PhacoxsInjectorGUI.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\Minor release\PhacoxsInjector.Properties.Resources.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\Minor release\PhacoxsInjector.HelpString.es.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\Minor release\PhacoxsInjector.PhacoxsInjectorGUI.es.resources
+C:\Users\Alberto\source\repos\PhacoxsInjector\PhacoxsInjector\obj\Minor release\PhacoxsInjector.csproj.GenerateResource.cache

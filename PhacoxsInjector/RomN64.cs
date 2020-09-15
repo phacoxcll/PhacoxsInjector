@@ -43,15 +43,21 @@ namespace PhacoxsInjector
                 shortTitle[0] = header[0x3C];
                 shortTitle[1] = header[0x3D];
                 region = header[0x3E];
-                Version = header[0x3F];
-                FormatCode = (char)uniqueCode;
-                ShortId = Encoding.ASCII.GetString(shortTitle);
-                RegionCode = (char)region;
+                
+                if (Useful.IsUpperLetterOrDigit(uniqueCode))
+                    FormatCode = (char)uniqueCode;
+                if (Useful.IsUpperLetterOrDigit(shortTitle[0]) &&
+                    Useful.IsUpperLetterOrDigit(shortTitle[1]))
+                    ShortId = Encoding.ASCII.GetString(shortTitle);
+                if (Useful.IsUpperLetterOrDigit(region))
+                    RegionCode = (char)region;
+                if (Useful.IsUpperLetterOrDigit(header[0x3F]))
+                    Version = header[0x3F];
 
                 byte[] titleBytes = new byte[20];
                 Array.Copy(header, 0x20, titleBytes, 0, 20);
                 int count = 20;
-                while (titleBytes[--count] == 0x20 && count > 0) ;
+                while (--count >= 0 && titleBytes[count] == 0x20) ;
                 Title = Encoding.ASCII.GetString(titleBytes, 0, count + 1);
 
                 fs = File.Open(filename, FileMode.Open);
@@ -93,14 +99,18 @@ namespace PhacoxsInjector
 
         public static bool Validate(string filename)
         {
-            byte[] header = new byte[0x40];
-            FileStream fs = File.OpenRead(filename);
-            int size = (int)fs.Length;
-            fs.Read(header, 0, 0x40);
-            fs.Close();
-            Subformat format = GetFormat(header);
-            return format == Subformat.BigEndian ||
-               (format != Subformat.Indeterminate && size % 4 == 0);
+            if (File.Exists(filename))
+            {
+                byte[] header = new byte[0x40];
+                FileStream fs = File.OpenRead(filename);
+                int size = (int)fs.Length;
+                fs.Read(header, 0, 0x40);
+                fs.Close();
+                Subformat format = GetFormat(header);
+                return format == Subformat.BigEndian ||
+                   (format != Subformat.Indeterminate && size % 4 == 0);
+            }
+            return false;
         }
 
         public static void ToBigEndian(string source, string destination)
